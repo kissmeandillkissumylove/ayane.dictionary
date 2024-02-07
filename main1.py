@@ -5,6 +5,8 @@
 from tkinter import *
 from tkinter import ttk
 
+ddc = {}
+
 
 def keypress(e):
 	if e.keycode == 86 and e.keysym != 'v':
@@ -19,6 +21,14 @@ def keypress(e):
 		widget = main_window.focus_get()
 		if isinstance(widget, ttk.Entry) or isinstance(widget, Text):
 			widget.event_generate("<<Cut>>")
+
+
+def start():
+	with open("database.txt", "r", encoding="utf-8") as database:
+		while database:
+			line = database.readline()
+			line = line.split("@")
+			ddc[line[0]] = [line[1], line[2]]
 
 
 def add_a_new_word():
@@ -36,8 +46,9 @@ def add_a_new_word():
 		result_text_label.configure(text="the translation field is too short")
 	else:
 		with open("database.txt", "a", encoding="utf-8") as database:
-			database.write("@{0}@{1}@{2}@\n".format(
+			database.write("{0}@{1}@{2}\n".format(
 				new_word, new_transcription, new_translation))
+
 
 # settings
 main_window = Tk()
@@ -62,10 +73,10 @@ screen_label = Label(
 
 start_button = Button(
 	master=main_window,
-	background="#DF1313",
+	background="green",
 	activebackground="#2D81B2",
 	text="sᴛᴀʀᴛ",
-	foreground="white",
+	foreground="black",
 	bd=2,
 )
 
