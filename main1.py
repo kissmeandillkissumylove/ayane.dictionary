@@ -5,15 +5,40 @@
 from tkinter import *
 from tkinter import ttk
 
+
+def keypress(e):
+	if e.keycode == 86 and e.keysym != 'v':
+		widget = main_window.focus_get()
+		if isinstance(widget, ttk.Entry) or isinstance(widget, Text):
+			widget.event_generate("<<Paste>>")
+	elif e.keycode == 67 and e.keysym != 'c':
+		widget = main_window.focus_get()
+		if isinstance(widget, ttk.Entry) or isinstance(widget, Text):
+			widget.event_generate("<<Copy>>")
+	elif e.keycode == 88 and e.keysym != 'x':
+		widget = main_window.focus_get()
+		if isinstance(widget, ttk.Entry) or isinstance(widget, Text):
+			widget.event_generate("<<Cut>>")
+
+
 def add_a_new_word():
-	new_word = word_text.get(1.0, END)
-	new_translate = translate_text.get(1.0, END)
-	if (len(new_word) - 1) <= 0 and (len(new_translate) - 1) <= 0:
+	new_word = word_text.get(1.0, "END-1c")
+	new_translation = translate_text.get(1.0, "END-1c")
+	new_transcription = transcription_text.get(1.0, "END-1c")
+	if (len(new_word) - 1) <= 0 and (len(new_translation) - 1) <= 0:
 		result_text_label.configure(text="the word and translation fields are too short")
 	elif (len(new_word) - 1) <= 0:
 		result_text_label.configure(text="the word field is too short")
-	elif (len(new_translate) - 1) <= 0:
+	elif (len(new_translation) - 1) <= 0:
 		result_text_label.configure(text="the translation field is too short")
+	else:
+		try:
+			with open("database.txt", "r+", encoding="utf-8") as database:
+				database.write("@{0}@{1}@{2}@\n".format(
+					new_word, new_transcription, new_translation))
+		except FileNotFoundError:
+			with open("database.txt", "x"):
+				pass
 
 
 # settings
@@ -203,5 +228,7 @@ translate_label.place(x=5, y=280, width=75, height=15)
 translate_text.place(x=85, y=280, width=210, height=15)
 result_of_the_operation_label.place(x=5, y=300, width=50, height=15)
 result_text_label.place(x=60, y=300, width=235, height=15)
+
+main_window.bind("<Control-KeyPress>", keypress)
 
 main_window.mainloop()
