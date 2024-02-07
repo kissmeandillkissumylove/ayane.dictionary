@@ -7,7 +7,7 @@ from tkinter import ttk
 
 # settings
 main_window = Tk()
-main_window.geometry("300x300+0+0")
+main_window.geometry("300x300+400+200")
 main_window.resizable(False, False)
 main_window.title("ᴋɪssᴍᴇᴀɴᴅɪʟʟᴋɪssᴜᴍʏʟöᴠᴇ")
 try:
@@ -40,6 +40,15 @@ next_button = Button(
 	background="#DF1313",
 	activebackground="#2D81B2",
 	text="ɴᴇxᴛ",
+	foreground="white",
+	bd=2,
+)
+
+show_button = Button(
+	master=main_window,
+	background="#DF1313",
+	activebackground="#2D81B2",
+	text="sʜᴏᴡ",
 	foreground="white",
 	bd=2,
 )
@@ -148,9 +157,10 @@ result_text_label = Label(
 )
 
 screen_label.place(x=5, y=5, width=290, height=150)
-start_button.place(x=5, y=160, width=90, height=25)
-next_button.place(x=105, y=160, width=90, height=25)
-forgot_button.place(x=205, y=160, width=90, height=25)
+start_button.place(x=5, y=162, width=70, height=25)
+next_button.place(x=80, y=162, width=70, height=25)
+show_button.place(x=155, y=162, width=70, height=25)
+forgot_button.place(x=230, y=162, width=65, height=25)
 mistakes_count_label.place(x=5, y=190, width=90, height=15)
 mistakes_counter_label.place(x=100, y=190, width=35, height=15)
 words_passed_count_label.place(x=140, y=190, width=110, height=15)
