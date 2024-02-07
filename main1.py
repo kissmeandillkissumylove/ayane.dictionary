@@ -5,9 +5,20 @@
 from tkinter import *
 from tkinter import ttk
 
+def add_a_new_word():
+	new_word = word_text.get(1.0, END)
+	new_translate = translate_text.get(1.0, END)
+	if (len(new_word) - 1) <= 0 and (len(new_translate) - 1) <= 0:
+		result_text_label.configure(text="the word and translation fields are too short")
+	elif (len(new_word) - 1) <= 0:
+		result_text_label.configure(text="the word field is too short")
+	elif (len(new_translate) - 1) <= 0:
+		result_text_label.configure(text="the translation field is too short")
+
+
 # settings
 main_window = Tk()
-main_window.geometry("300x300+400+200")
+main_window.geometry("300x320+400+200")
 main_window.resizable(False, False)
 main_window.title("ᴋɪssᴍᴇᴀɴᴅɪʟʟᴋɪssᴜᴍʏʟöᴠᴇ")
 try:
@@ -103,6 +114,7 @@ add_a_new_word_button = Button(
 	text="ᴀᴅᴅ ᴀ ɴᴇᴡ ᴡᴏʀᴅ",
 	foreground="white",
 	bd=2,
+	command=add_a_new_word,
 )
 
 word_label = Label(
@@ -122,11 +134,28 @@ word_text = Text(
 	bd=0,
 )
 
+transcription_label = Label(
+	master=main_window,
+	background="black",
+	bd=0,
+	text="ᴛʀᴀɴsᴄʀɪᴘᴛɪᴏɴ:",
+	fg="white",
+)
+
+transcription_text = Text(
+	master=main_window,
+	fg="black",
+	bg="#B5B5B5",
+	wrap=WORD,
+	font="verdana 8",
+	bd=0,
+)
+
 translate_label = Label(
 	master=main_window,
 	background="black",
 	bd=0,
-	text="ᴛʀᴀɴsʟᴀᴛᴇ:",
+	text="ᴛʀᴀɴsʟᴀᴛɪᴏɴ:",
 	fg="white",
 )
 
@@ -143,7 +172,7 @@ result_of_the_operation_label = Label(
 	master=main_window,
 	background="black",
 	bd=0,
-	text="ʀᴇsᴜʟᴛ ᴏꜰ ᴛʜᴇ ᴏᴘᴇʀᴀᴛɪᴏɴ:",
+	text="ʀᴇsᴜʟᴛ:",
 	fg="white",
 )
 
@@ -151,9 +180,9 @@ result_text_label = Label(
 	master=main_window,
 	background="black",
 	bd=0,
-	text="example",
+	text="the fields are empty",
 	fg="white",
-	font="verdana 8",
+	font="verdana 7",
 )
 
 screen_label.place(x=5, y=5, width=290, height=150)
@@ -166,11 +195,13 @@ mistakes_counter_label.place(x=100, y=190, width=35, height=15)
 words_passed_count_label.place(x=140, y=190, width=110, height=15)
 words_counter_label.place(x=255, y=190, width=40, height=15)
 add_a_new_word_button.place(x=5, y=210, width=290, height=25)
-word_label.place(x=5, y=240, width=55, height=15)
-word_text.place(x=65, y=240, width=230, height=15)
-translate_label.place(x=5, y=260, width=55, height=15)
-translate_text.place(x=65, y=260, width=230, height=15)
-result_of_the_operation_label.place(x=5, y=280, width=125, height=15)
-result_text_label.place(x=135, y=280, width=160, height=15)
+word_label.place(x=5, y=240, width=75, height=15)
+word_text.place(x=85, y=240, width=210, height=15)
+transcription_label.place(x=5, y=260, width=75, height=15)
+transcription_text.place(x=85, y=260, width=210, height=15)
+translate_label.place(x=5, y=280, width=75, height=15)
+translate_text.place(x=85, y=280, width=210, height=15)
+result_of_the_operation_label.place(x=5, y=300, width=50, height=15)
+result_text_label.place(x=60, y=300, width=235, height=15)
 
 main_window.mainloop()
