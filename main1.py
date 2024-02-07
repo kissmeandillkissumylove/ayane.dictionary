@@ -22,9 +22,12 @@ def keypress(e):
 
 
 def add_a_new_word():
-	new_word = word_text.get(1.0, "END-1c")
-	new_translation = translate_text.get(1.0, "END-1c")
-	new_transcription = transcription_text.get(1.0, "END-1c")
+	new_word = word_text.get(1.0, "end")
+	new_word = new_word.strip()
+	new_transcription = transcription_text.get(1.0, "end")
+	new_transcription = new_transcription.strip()
+	new_translation = translate_text.get(1.0, "end")
+	new_translation = new_translation.strip()
 	if (len(new_word) - 1) <= 0 and (len(new_translation) - 1) <= 0:
 		result_text_label.configure(text="the word and translation fields are too short")
 	elif (len(new_word) - 1) <= 0:
@@ -32,14 +35,9 @@ def add_a_new_word():
 	elif (len(new_translation) - 1) <= 0:
 		result_text_label.configure(text="the translation field is too short")
 	else:
-		try:
-			with open("database.txt", "r+", encoding="utf-8") as database:
-				database.write("@{0}@{1}@{2}@\n".format(
-					new_word, new_transcription, new_translation))
-		except FileNotFoundError:
-			with open("database.txt", "x"):
-				pass
-
+		with open("database.txt", "a", encoding="utf-8") as database:
+			database.write("@{0}@{1}@{2}@\n".format(
+				new_word, new_transcription, new_translation))
 
 # settings
 main_window = Tk()
