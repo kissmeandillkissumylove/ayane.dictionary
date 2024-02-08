@@ -25,8 +25,10 @@ def keypress(e):
 
 def start():
 	with open("database.txt", "r", encoding="utf-8") as database:
-		while database:
+		while True:
 			line = database.readline()
+			if not line:
+				break
 			line = line.split("@")
 			ddc[line[0]] = [line[1], line[2]]
 
@@ -34,24 +36,31 @@ def start():
 def add_a_new_word():
 	new_word = word_text.get(1.0, "end")
 	new_word = new_word.strip()
-	new_transcription = transcription_text.get(1.0, "end")
-	new_transcription = new_transcription.strip()
-	new_translation = translate_text.get(1.0, "end")
-	new_translation = new_translation.strip()
-	if (len(new_word)) <= 0 and (len(new_translation)) <= 0:
-		result_text_label.configure(text="the word and translation fields are too short")
-	elif (len(new_word)) <= 0:
-		result_text_label.configure(text="the word field is too short")
-	elif (len(new_translation)) <= 0:
-		result_text_label.configure(text="the translation field is too short")
+	if new_word not in ddc.keys():
+		new_transcription = transcription_text.get(1.0, "end")
+		new_transcription = new_transcription.strip()
+		new_translation = translate_text.get(1.0, "end")
+		new_translation = new_translation.strip()
+		if (len(new_word)) <= 0 and (len(new_translation)) <= 0:
+			result_text_label.configure(text="the word and translation fields are too short.")
+		elif (len(new_word)) <= 0:
+			result_text_label.configure(text="the word field is too short.")
+		elif (len(new_translation)) <= 0:
+			result_text_label.configure(text="the translation field is too short.")
+		else:
+			with open("database.txt", "a", encoding="utf-8") as database:
+				database.write("{0}@{1}@{2}\n".format(
+					new_word, new_transcription, new_translation))
+			result_text_label.configure(text="the new word added successfully.")
+			word_text.delete(1.0, "end")
+			transcription_text.delete(1.0, "end")
+			translate_text.delete(1.0, "end")
+			start()
 	else:
-		with open("database.txt", "a", encoding="utf-8") as database:
-			database.write("{0}@{1}@{2}\n".format(
-				new_word, new_transcription, new_translation))
-		result_text_label.configure(text="the new word added successfully")
 		word_text.delete(1.0, "end")
 		transcription_text.delete(1.0, "end")
 		translate_text.delete(1.0, "end")
+		result_text_label.configure(text="this word is already in the dictionary.")
 
 
 # settings
@@ -73,15 +82,6 @@ screen_label = Label(
 	master=main_window,
 	background="#B5B5B5",
 	bd=0,
-)
-
-start_button = Button(
-	master=main_window,
-	background="green",
-	activebackground="#2D81B2",
-	text="sᴛᴀʀᴛ",
-	foreground="black",
-	bd=2,
 )
 
 next_button = Button(
@@ -218,16 +218,15 @@ result_text_label = Label(
 	master=main_window,
 	background="black",
 	bd=0,
-	text="the fields are empty",
+	text="the fields are empty.",
 	fg="white",
 	font="verdana 7",
 )
 
 screen_label.place(x=5, y=5, width=290, height=150)
-start_button.place(x=5, y=162, width=70, height=25)
-next_button.place(x=80, y=162, width=70, height=25)
-show_button.place(x=155, y=162, width=70, height=25)
-forgot_button.place(x=230, y=162, width=65, height=25)
+next_button.place(x=5, y=162, width=95, height=25)
+show_button.place(x=105, y=162, width=95, height=25)
+forgot_button.place(x=205, y=162, width=90, height=25)
 mistakes_count_label.place(x=5, y=190, width=90, height=15)
 mistakes_counter_label.place(x=100, y=190, width=35, height=15)
 words_passed_count_label.place(x=140, y=190, width=110, height=15)
@@ -243,5 +242,6 @@ result_of_the_operation_label.place(x=5, y=300, width=50, height=15)
 result_text_label.place(x=60, y=300, width=235, height=15)
 
 main_window.bind("<Control-KeyPress>", keypress)
+start()
 
 main_window.mainloop()
