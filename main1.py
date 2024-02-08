@@ -7,6 +7,8 @@ from tkinter import ttk
 import random
 
 ddc = {}
+word, word_data = "", []
+ddc_len, counter = "0", 0
 
 
 def keypress(e):
@@ -32,21 +34,37 @@ def start():
 				break
 			line = line.split("@")
 			ddc[line[0]] = [line[1], line[2]]
+			global ddc_len
+		ddc_len = str(len(ddc))
+	words_counter_label.configure(text="0/" + ddc_len)
 
 
 def nextt():
 	try:
-		screen_label1.configure(background="#B5B5B5")
+		global counter, ddc_len
+		counter += 1
+		words_counter_label.configure(text=str(counter) + "/" + ddc_len)
+		screen_label1.configure(background="#B5B5B5", foreground="#B5B5B5")
 		word = random.choice(list(ddc.keys()))
 		word_data = ddc.pop(word)
+		screen_label1.configure(text=word + "\n" + word_data[0])
 		screen_label2.configure(text=word_data[1])
 	except IndexError:
+		counter = 0
 		screen_label1.configure(text="", background="red")
 		screen_label2.configure(
 			text="all the words are over. a new list for repeating words is ready.")
 		start()
 		show_button.configure(state="disabled")
 		forgot_button.configure(state="disabled")
+
+
+def showw():
+	screen_label1.configure(foreground="black")
+
+
+def forgott():
+	pass
 
 
 def add_a_new_word():
@@ -71,7 +89,7 @@ def add_a_new_word():
 			word_text.delete(1.0, "end")
 			transcription_text.delete(1.0, "end")
 			translate_text.delete(1.0, "end")
-			screen_label1.configure(background="red")
+			screen_label1.configure(background="red", text="")
 			screen_label2.configure(text="you added a new word. the repetition will begin again.")
 			show_button.configure(state="disabled")
 			forgot_button.configure(state="disabled")
@@ -138,6 +156,7 @@ show_button = Button(
 	text="sʜᴏᴡ",
 	foreground="white",
 	bd=2,
+	command=showw,
 )
 
 forgot_button = Button(
@@ -147,6 +166,7 @@ forgot_button = Button(
 	text="ꜰᴏʀɢᴏᴛ",
 	foreground="white",
 	bd=2,
+	command=forgott,
 )
 
 mistakes_count_label = Label(
