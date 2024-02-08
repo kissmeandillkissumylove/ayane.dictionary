@@ -66,6 +66,7 @@ def nextt():
 
 def showw():
 	screen_label1.configure(foreground="black")
+	show_button.configure(state="disabled")
 
 
 def forgott():
@@ -195,7 +196,7 @@ mistakes_counter_label = Label(
 	master=main_window,
 	background="black",
 	bd=0,
-	font="verdana 8 bold",
+	font="verdana 7 bold",
 	text="0",
 	fg="red",
 )
@@ -212,7 +213,7 @@ words_counter_label = Label(
 	master=main_window,
 	background="black",
 	bd=0,
-	font="verdana 8 bold",
+	font="verdana 7 bold",
 	text="0",
 	fg="green",
 )
