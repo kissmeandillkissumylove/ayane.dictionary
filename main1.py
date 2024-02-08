@@ -169,6 +169,7 @@ show_button = Button(
 	foreground="white",
 	bd=2,
 	command=showw,
+	state="disabled"
 )
 
 forgot_button = Button(
@@ -179,6 +180,7 @@ forgot_button = Button(
 	foreground="white",
 	bd=2,
 	command=forgott,
+	state="disabled"
 )
 
 mistakes_count_label = Label(
