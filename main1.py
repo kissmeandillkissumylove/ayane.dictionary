@@ -8,7 +8,7 @@ import random
 
 ddc = {}
 word, word_data = "", []
-ddc_len, counter = "0", 0
+ddc_len, counter, mistakes = "0", 0, 0
 
 
 def keypress(e):
@@ -43,6 +43,8 @@ def nextt():
 	try:
 		global counter, ddc_len
 		counter += 1
+		show_button.configure(state="normal")
+		forgot_button.configure(state="normal")
 		words_counter_label.configure(text=str(counter) + "/" + ddc_len)
 		screen_label1.configure(background="#B5B5B5", foreground="#B5B5B5")
 		word = random.choice(list(ddc.keys()))
@@ -57,6 +59,9 @@ def nextt():
 		start()
 		show_button.configure(state="disabled")
 		forgot_button.configure(state="disabled")
+		global mistakes
+		mistakes = 0
+		mistakes_counter_label.configure(text="0")
 
 
 def showw():
@@ -64,7 +69,10 @@ def showw():
 
 
 def forgott():
-	pass
+	forgot_button.configure(state="disabled")
+	global mistakes
+	mistakes += 1
+	mistakes_counter_label.configure(text=str(mistakes))
 
 
 def add_a_new_word():
@@ -93,6 +101,10 @@ def add_a_new_word():
 			screen_label2.configure(text="you added a new word. the repetition will begin again.")
 			show_button.configure(state="disabled")
 			forgot_button.configure(state="disabled")
+			global mistakes, counter
+			mistakes, counter = 0, 0
+			mistakes_counter_label.configure(text="0")
+			words_counter_label.configure(text="0")
 			start()
 	else:
 		word_text.delete(1.0, "end")
