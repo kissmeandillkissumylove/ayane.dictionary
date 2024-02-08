@@ -39,14 +39,14 @@ def nextt():
 		screen_label1.configure(background="#B5B5B5")
 		word = random.choice(list(ddc.keys()))
 		word_data = ddc.pop(word)
-		print(word, word_data)
-		screen_label1.configure(text=word + "\n" + word_data[0])
 		screen_label2.configure(text=word_data[1])
 	except IndexError:
 		screen_label1.configure(text="", background="red")
 		screen_label2.configure(
 			text="all the words are over. a new list for repeating words is ready.")
 		start()
+		show_button.configure(state="disabled")
+		forgot_button.configure(state="disabled")
 
 
 def add_a_new_word():
@@ -71,6 +71,10 @@ def add_a_new_word():
 			word_text.delete(1.0, "end")
 			transcription_text.delete(1.0, "end")
 			translate_text.delete(1.0, "end")
+			screen_label1.configure(background="red")
+			screen_label2.configure(text="you added a new word. the repetition will begin again.")
+			show_button.configure(state="disabled")
+			forgot_button.configure(state="disabled")
 			start()
 	else:
 		word_text.delete(1.0, "end")
@@ -112,7 +116,7 @@ screen_label2 = Label(
 	anchor=NW,
 	pady=0,
 	padx=2,
-	wraplength = 286,
+	wraplength=286,
 	justify="left",
 	foreground="black"
 )
