@@ -38,16 +38,20 @@ def add_a_new_word():
 	new_transcription = new_transcription.strip()
 	new_translation = translate_text.get(1.0, "end")
 	new_translation = new_translation.strip()
-	if (len(new_word) - 1) <= 0 and (len(new_translation) - 1) <= 0:
+	if (len(new_word)) <= 0 and (len(new_translation)) <= 0:
 		result_text_label.configure(text="the word and translation fields are too short")
-	elif (len(new_word) - 1) <= 0:
+	elif (len(new_word)) <= 0:
 		result_text_label.configure(text="the word field is too short")
-	elif (len(new_translation) - 1) <= 0:
+	elif (len(new_translation)) <= 0:
 		result_text_label.configure(text="the translation field is too short")
 	else:
 		with open("database.txt", "a", encoding="utf-8") as database:
 			database.write("{0}@{1}@{2}\n".format(
 				new_word, new_transcription, new_translation))
+		result_text_label.configure(text="the new word added successfully")
+		word_text.delete(1.0, "end")
+		transcription_text.delete(1.0, "end")
+		translate_text.delete(1.0, "end")
 
 
 # settings
