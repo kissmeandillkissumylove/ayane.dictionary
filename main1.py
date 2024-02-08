@@ -4,6 +4,7 @@
 # imports
 from tkinter import *
 from tkinter import ttk
+import random
 
 ddc = {}
 
@@ -31,6 +32,21 @@ def start():
 				break
 			line = line.split("@")
 			ddc[line[0]] = [line[1], line[2]]
+
+
+def nextt():
+	try:
+		screen_label1.configure(background="#B5B5B5")
+		word = random.choice(list(ddc.keys()))
+		word_data = ddc.pop(word)
+		print(word, word_data)
+		screen_label1.configure(text=word + "\n" + word_data[0])
+		screen_label2.configure(text=word_data[1])
+	except IndexError:
+		screen_label1.configure(text="", background="red")
+		screen_label2.configure(
+			text="all the words are over. a new list for repeating words is ready.")
+		start()
 
 
 def add_a_new_word():
@@ -78,10 +94,27 @@ main_window.configure(
 	bd=0,
 )
 
-screen_label = Label(
+screen_label1 = Label(
 	master=main_window,
 	background="#B5B5B5",
 	bd=0,
+	anchor=NW,
+	pady=0,
+	padx=2,
+	wraplength=286,
+	justify="left",
+)
+
+screen_label2 = Label(
+	master=main_window,
+	background="#B5B5B5",
+	bd=0,
+	anchor=NW,
+	pady=0,
+	padx=2,
+	wraplength = 286,
+	justify="left",
+	foreground="black"
 )
 
 next_button = Button(
@@ -91,6 +124,7 @@ next_button = Button(
 	text="ɴᴇxᴛ",
 	foreground="white",
 	bd=2,
+	command=nextt,
 )
 
 show_button = Button(
@@ -223,7 +257,8 @@ result_text_label = Label(
 	font="verdana 7",
 )
 
-screen_label.place(x=5, y=5, width=290, height=150)
+screen_label1.place(x=5, y=5, width=290, height=75)
+screen_label2.place(x=5, y=85, width=290, height=70)
 next_button.place(x=5, y=162, width=95, height=25)
 show_button.place(x=105, y=162, width=95, height=25)
 forgot_button.place(x=205, y=162, width=90, height=25)
