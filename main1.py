@@ -188,7 +188,7 @@ mistakes_count_label = Label(
 	master=main_window,
 	background="black",
 	bd=0,
-	text="ᴍɪsᴛᴀᴋᴇs ᴄᴏᴜɴᴛ:",
+	text="ᴍɪsᴛᴀᴋᴇs:",
 	fg="white",
 )
 
@@ -196,16 +196,17 @@ mistakes_counter_label = Label(
 	master=main_window,
 	background="black",
 	bd=0,
-	font="verdana 7 bold",
+	font="verdana 8 bold",
 	text="0",
 	fg="red",
+	anchor=W,
 )
 
 words_passed_count_label = Label(
 	master=main_window,
 	background="black",
 	bd=0,
-	text="ᴡᴏʀᴅs ᴘᴀssᴇᴅ ᴄᴏᴜɴᴛ:",
+	text="ᴡᴏʀᴅs:",
 	fg="white",
 )
 
@@ -213,9 +214,10 @@ words_counter_label = Label(
 	master=main_window,
 	background="black",
 	bd=0,
-	font="verdana 7 bold",
+	font="verdana 8 bold",
 	text="0",
 	fg="green",
+	anchor=W,
 )
 
 add_a_new_word_button = Button(
@@ -301,10 +303,10 @@ screen_label2.place(x=5, y=85, width=290, height=70)
 next_button.place(x=5, y=162, width=95, height=25)
 show_button.place(x=105, y=162, width=95, height=25)
 forgot_button.place(x=205, y=162, width=90, height=25)
-mistakes_count_label.place(x=5, y=190, width=90, height=15)
-mistakes_counter_label.place(x=100, y=190, width=35, height=15)
-words_passed_count_label.place(x=140, y=190, width=110, height=15)
-words_counter_label.place(x=255, y=190, width=40, height=15)
+mistakes_count_label.place(x=5, y=190, width=50, height=15)
+mistakes_counter_label.place(x=60, y=190, width=40, height=15)
+words_passed_count_label.place(x=105, y=190, width=40, height=15)
+words_counter_label.place(x=150, y=190, width=145, height=15)
 add_a_new_word_button.place(x=5, y=210, width=290, height=25)
 word_label.place(x=5, y=240, width=75, height=15)
 word_text.place(x=85, y=240, width=210, height=15)
