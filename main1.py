@@ -27,16 +27,19 @@ def keypress(e):
 
 
 def start():
-	with open("database.txt", "r", encoding="utf-8") as database:
-		while True:
-			line = database.readline()
-			if not line:
-				break
-			line = line.split("@")
-			ddc[line[0]] = [line[1], line[2]]
-			global ddc_len
-		ddc_len = str(len(ddc))
-	words_counter_label.configure(text="0/" + ddc_len)
+	try:
+		with open("database.txt", "r", encoding="utf-8") as database:
+			while True:
+				line = database.readline()
+				if not line:
+					break
+				line = line.split("@")
+				ddc[line[0]] = [line[1], line[2]]
+				global ddc_len
+			ddc_len = str(len(ddc))
+		words_counter_label.configure(text="0/" + ddc_len)
+	except FileNotFoundError:
+		pass
 
 
 def nextt():
