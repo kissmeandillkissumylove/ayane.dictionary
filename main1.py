@@ -233,6 +233,15 @@ add_a_new_word_button = Button(
 	command=add_a_new_word,
 )
 
+edit_word_button = Button(
+	master=main_window,
+	background="#DF1313",
+	activebackground="#2D81B2",
+	text="ᴇᴅɪᴛ ᴡᴏʀᴅ",
+	foreground="white",
+	bd=2,
+)
+
 word_label = Label(
 	master=main_window,
 	background="black",
@@ -310,7 +319,8 @@ mistakes_count_label.place(x=5, y=190, width=50, height=15)
 mistakes_counter_label.place(x=60, y=190, width=40, height=15)
 words_passed_count_label.place(x=105, y=190, width=40, height=15)
 words_counter_label.place(x=150, y=190, width=145, height=15)
-add_a_new_word_button.place(x=5, y=210, width=290, height=25)
+add_a_new_word_button.place(x=5, y=210, width=145, height=25)
+edit_word_button.place(x=155, y=210, width=140, height=25)
 word_label.place(x=5, y=240, width=75, height=15)
 word_text.place(x=85, y=240, width=210, height=15)
 transcription_label.place(x=5, y=260, width=75, height=15)
