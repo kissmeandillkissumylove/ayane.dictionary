@@ -52,7 +52,7 @@ def nextt():
 		screen_label1.configure(background="#B5B5B5", foreground="#B5B5B5")
 		word = random.choice(list(ddc.keys()))
 		word_data = ddc.pop(word)
-		screen_label1.configure(text=word + "\n" + word_data[0])
+		screen_label1.configure(text=word + "\n\n" + word_data[0])
 		screen_label2.configure(text=word_data[1])
 	except IndexError:
 		counter = 0
@@ -77,6 +77,49 @@ def forgott():
 	global mistakes
 	mistakes += 1
 	mistakes_counter_label.configure(text=str(mistakes))
+
+
+def editt():
+	ddcc = {}
+	try:
+		with open("database.txt", "r", encoding="utf-8") as database:
+			while True:
+				line = database.readline()
+				if not line:
+					break
+				line = line.split("@")
+				ddcc[line[0]] = [line[1], line[2]]
+	except FileNotFoundError:
+		pass
+
+	new_word = word_text.get(1.0, "end")
+	new_word = new_word.strip()
+	if new_word not in ddcc.keys():
+		word_text.delete(1.0, "end")
+		transcription_text.delete(1.0, "end")
+		translate_text.delete(1.0, "end")
+		result_text_label.configure(text="the word not found in the dictionary.")
+	else:
+		new_translation = translate_text.get(1.0, "end")
+		new_translation = new_translation.strip()
+		if (len(new_word)) <= 0 and (len(new_translation)) <= 0:
+			result_text_label.configure(text="the word and translation fields are too short.")
+		elif (len(new_word)) <= 0:
+			result_text_label.configure(text="the word field is too short.")
+		elif (len(new_translation)) <= 0:
+			result_text_label.configure(text="the translation field is too short.")
+		else:
+			for key in ddcc.keys():
+				if key == new_word:
+					ddcc[new_word][1] = new_translation + "\n"
+			result_text_label.configure(text="done.")
+			word_text.delete(1.0, "end")
+			transcription_text.delete(1.0, "end")
+			translate_text.delete(1.0, "end")
+			with open("database.txt", "w", encoding="utf-8") as database:
+				for elt in ddcc:
+					database.write("{0}@{1}@{2}".format(
+						elt, ddcc[elt][0], ddcc[elt][1]))
 
 
 def add_a_new_word():
@@ -240,6 +283,7 @@ edit_word_button = Button(
 	text="ᴇᴅɪᴛ ᴡᴏʀᴅ",
 	foreground="white",
 	bd=2,
+	command=editt,
 )
 
 word_label = Label(
