@@ -408,3 +408,175 @@ confidence@[ˈkɒnfɪdəns]@noun: уверенность
 be late@@опаздывать (конструкция)
 last@[lɑːst]@verb: продолжаться, длиться
 nowadays@[ˈnaʊədeɪz]@noun: в наше время, теперь
+trainer@@noun: тренер
+fitness@@noun: фитнес, хорошее здоровье
+instructor@@noun: инструктор
+memory@@noun: память
+thought@[θɔːt]@noun: мысль, идея
+meaning@@noun: значение
+impossible@@adjective: невозможный
+website@@noun: веб-сайт
+happiness@@noun: счастье
+sweater@@noun: свитер
+toy@@noun: игрушка
+statement@@утверждение
+truth@@noun: правда
+discuss@@verb: обсуждать
+expect@@verb: ожидать
+disagree@@verb: не соглашаться
+divorced@[dɪˈvɔːst]@adjective: разведенный
+the most beautiful@@самый(ая) красивый(ая)
+satisfied@[ˈsætɪsfaɪd]@adjective: удовлетворенный, довольный
+fully@@adjective: полностью
+opinion@@noun: мнение
+address@[əˈdres]@noun: адрес
+weight@@noun: вес
+hypothesize@[haɪˈpɒθ.ə.saɪz]@(verb) to give a possible but not yet proved explanation for something
+reference book@[ˈref.ər.əns]@(noun) a book of facts, such as a dictionary or an encyclopedia, that you look at to discover particular information
+particular@[pəˈtɪk.jə.lər]@(adjective) special, or this and not any other
+especially@[ɪˈspeʃ.əl.i]@adverb: very much; more than usual or more than other people or things
+incredible@@adjective: impossible, or very difficult, to believe
+wonder@[ˈwʌn.dɚ]@verb: to ask yourself questions or express a wish to know about something
+apartment@@noun: апартамент
+considerable@@adjcetive: значительный
+weak point@@слабое место
+depend@@verb: зависеть
+it depends on him@@это зависит от него
+combine@@verb: совмещать
+studies@@noun: учёба
+full of mistakes@@полон ошибок
+what time is it now? what's the time?@@сколько времени? [2]
+loud@@adjective: громкий
+quiet@@adjective: тихий
+a long time ago@@phrase: давно
+happily@@adverb: счастливо
+pass@@verb: сдавать
+irregular@@adjective: необычный
+regular@@adjective: обычный
+it happened to me@@это произошло со мной
+at last@@наконец
+close@@verb: закрывать
+open@@verb: открывать
+decide@@verb: решать
+to wait for someone@@ждать кого-то
+grateful@@adjective: благодарный
+instead of@@adverb: вместо чего-то
+family@@noun: семья
+fail@@verb: завалить
+again and again@@снова и снова
+correct@@adjective: правильный, подходящий
+to have a good time@@phrase: хорошо проводить время
+to have a great time@@phrase: прекрасно проводить время
+without@@без
+article@@noun: статья, артикль
+some@@quantifier: несколько
+several@@quantifier: несколько
+each other@@друг друга
+immediately@@adverb: сразу
+to take an offer@@принять предложение
+floor@@(noun) пол
+i felt much better@@(phrase) я чувствовал на много лучше
+put@@(verb) положить, поместить
+give@@(verb) давать
+think@@(verb) думать
+thousand@@(noun) тысяча
+well known@@(adjective) хорошо известный
+educated@@(adjective) образованный
+secret@@(noun) секрет
+inexperienced@@(adjective) неопытный
+leader@@(noun) лидер
+shy@@(adjective) застенчивый
+task@@(noun) задача
+an hour ago@@(phrase) час назад
+conference@@(noun) конференция
+the day before yesterday@@(phrase) позавчера
+to sit down@@(phrase) присаживаться
+to sit in an armchair@@(phrase) сесть в кресло
+o sit on a chair@@(phrase) сесть на стул
+stand@@(verb) стоять
+for the first time@@(phrase) в первый раз
+lose@@(verb) терять
+concentration@@(noun) концентрация
+as you understand@@(phrase) как ты понимаешь
+service@@(noun) услуга (действие)
+delivery@@(noun) доставка
+local@@(adjective) местный
+by chance, by accident@@(phrase) случайно [2]
+almost@@(adverb) почти
+for the second time@@(phrase) во второй раз
+soft@@(adjective) мягкий
+young@@(adjective) молодой
+achievement@@(noun) достижение
+on time@@(phrase) вовремя
+voice@@(noun) голос
+comprehension@[ˌkɒmprɪˈhenʃən]@(noun) понимание
+frustrated@[frʌsˈtreɪtɪd]@(adjective) разочарованный, расстроенный
+improve@[ɪmˈpruːv]@(verb) улучшать(ся)
+fiction@[ˈfɪkʃən]@(noun) беллетристика, художественная литература
+scrambled eggs@@(noun) яичница-болтунья
+noodles@[ˈnuːdlz]@(noun) лапша
+taste@[teɪst]@(noun) вкус
+actually@[ˈæktʃuəli]@(adverb) в действительности
+pan@[pæn]@(noun) кастрюля
+tonight@[təˈnaɪt]@(noun, adverb) сегодня вечером, сегодняшний вечер
+pancake@[ˈpænkeɪk]@(noun) блин, оладья
+butter@[ˈbʌtər]@(noun) масло
+peanut@[ˈpiːnʌt]@(noun) арахис
+thin@[θɪn]@(adjective) тонкий
+weekday@[ˈwiːkdeɪ]@(noun) рабочий день
+thankful@@(adjective) благодарный
+pleasure@[ˈpleʒər]@(noun) удовольствие
+appreciate@@(verb) ценить
+a couple of@@(phrase) парочка
+sandwich@@(noun) бутерброд, сендвич
+fly away@@(phrase) улетать
+like a baby@@(phrase) как ребёнок
+lake@@(noun) озеро
+portion@@(noun) порция
+swimming pool@@(noun) бассейн
+vegetable@@(noun) овощ
+a carton of milk@@(phrase) пакет молока
+bottle@@(noun) бутылка
+wake up@@(phrase) просыпаться
+brake down@@(phrase) ломаться
+keep@@(verb) хранить, держать
+hold@@(verb) держать
+arm@@(noun) рука
+let@@(verb) позволять
+let somebody do something@@(phrase) позволять кому то делать что то
+go out@@(phrase) уходить
+midnight@@(noun) полночь
+until@@(conjuction) до (в смысле до тех пор пока)
+the following@@(phrase) следующее
+behaviour@@(noun) поведение
+anything@@(pronoun) то-нибудь (ничего в отрицании)
+competition@@(noun) соревнование
+tournament@@(noun) турнир
+wind@@(noun) ветер
+suddenly@@(adverb) вдруг
+unexpectedly@@(adverb) неожиданно
+grow up@@(phrase) вырастать
+lie@@(verb) лежать
+lie down@@(phrase) прилечь
+to lie to someone@@(phrase) солгать кому то
+fall@@(verb) падать
+sharply@@(adverb) резко
+fall down@@(phrase) падать на землю
+wear@@(verb) носить
+casual clothes@@(phrase) повседневная одежда
+glasses@@(noun) очки
+hurt@@(verb) ушибить, повредить
+finger@@(noun) палец
+throw@@(verb) бросать
+throw away@@(phrase) выбрасывать
+lend@@(verb) одалживать
+ring@@(verb) звенеть, звонить (в звонок)
+alarm clock@@(noun) будильник
+hide@@(verb) прятаться
+behind@@(preposition) за, позади
+beat@@(verb) бить
+camel@@(noun) верблюд
+to go cycling@@(phrase) кататься на велосипеде
+to go jogging@@(phrase) ходить на пробежку
+uncountable@@(noun) неисчесляемое
+revolutionary@@(adjective) революционный
