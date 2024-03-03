@@ -580,3 +580,9 @@ to go cycling@@(phrase) кататься на велосипеде
 to go jogging@@(phrase) ходить на пробежку
 uncountable@@(noun) неисчесляемое
 revolutionary@@(adjective) революционный
+performance@@(noun) представление
+solve@@(verb) решать (проблему)
+at first@@(phrase) с начала (в конце употребляется)
+event@@(noun) событие
+unavailable@@(adjective) не доступен (в одно слово)
+modern@@(adjective) современный
