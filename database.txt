@@ -586,3 +586,4 @@ at first@@(phrase) с начала (в конце употребляется)
 event@@(noun) событие
 unavailable@@(adjective) не доступен (в одно слово)
 modern@@(adjective) современный
+issue@@(noun) вопрос, проблема
