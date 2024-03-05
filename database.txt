@@ -587,3 +587,4 @@ event@@(noun) событие
 unavailable@@(adjective) не доступен (в одно слово)
 modern@@(adjective) современный
 issue@@(noun) вопрос, проблема
+during@@(preposition) в течение
