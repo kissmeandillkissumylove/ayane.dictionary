@@ -590,3 +590,4 @@ issue@@(noun) вопрос, проблема
 during@@(preposition) в течение
 submit@@(verb) подтвердить
 mess@@(noun) беспорядок
+research@@(noun) исследование
