@@ -591,3 +591,18 @@ during@@(preposition) в течение
 submit@@(verb) подтвердить
 mess@@(noun) беспорядок
 research@@(noun) исследование
+latest@@(adjective) самые последние
+follow@@(verb) следовать
+return@@(verb) возвращать(ся) (одним словом)
+to achieve your aim@@(phrase) достигать цели
+speaking@@(noun) разговорный
+vocabulary@@(noun) словарный запас
+point of view@@(phrase) точка зрения
+listening skills@@(phrase) навыки аудирования
+disappointed@@(adjcetive) разочарованный
+proud of something@@(phrase) гордиться чем то (это прилагательное)
+against@@(adjective) против
+profitable@@(adjective) прибыльный
+true@@(adjective) правдивое
+hospitable@@(adjective) гостипреимный
+alternative@@(noun) альтернатива
