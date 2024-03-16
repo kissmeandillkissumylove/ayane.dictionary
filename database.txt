@@ -613,21 +613,57 @@ manage to do@@(phrase) смочь сделать
 arrive@@(verb) прибыть (куда-то)
 invest@@(verb) инвестировать
 admire@@(verb) восхищаться
-i am so not ... (v-ing)
-i am so not going to the party@@(phrase) очень сильное отрицание что-то делать
-let me ... (verb)
-let me help you with your bags@@(phrase) позволь мне... (так же в значении что вы что-то собираетесь сейчас делать)
-i can't believe ... (noun + verb(past))
-i can't believe you ate the last piece of cake@@(phrase) в ситуациях когда кто-то сделал что-то что вам не нравится или что-то что бы вы не хотели чтобы он делал
-i have never been so ... (adjective)
-i've never been so thrilled to start a new job@@(phrase) сильная эмоция которую ещё не испытывали до
+i am so not ... (v-ing) i am so not going to the party@@(phrase) очень сильное отрицание что-то делать
+let me ... (verb) let me help you with your bags@@(phrase) позволь мне... (так же в значении что вы что-то собираетесь сейчас делать)
+i can't believe ... (noun + verb(past)) i can't believe you ate the last piece of cake@@(phrase) в ситуациях когда кто-то сделал что-то что вам не нравится или что-то что бы вы не хотели чтобы он делал
+i have never been so ... (adjective) i've never been so thrilled to start a new job@@(phrase) сильная эмоция которую ещё не испытывали до
 thrilled@@(adjective) взволнованный
-why don't you ... (verb)
-why don't you try it?@@(phrase) почему бы тебе не ... (и тут глагол)
+why don't you ... (verb) why don't you try it?@@(phrase) почему бы тебе не ... (и тут глагол)
 why don't you give it a try and see how it goes?@@(phrase) почему бы тебе не попробовать это и не посмотреть как получится?
-it's not that ... (adjective)
-it's not that hard to learn english@@(phrase) это не так ... (и тут приглательное). пример: это не так сложно (это сложно, но не на столько)
-i can't wait to ... (verb)
-i can't wait to see you@@(phrase) я не могу дождаться что-бы что то сделать
-if i were you, i would ... (verb)
-if i were you, i would take the job@@(phrase) если бы я был на твоём месте я бы сделал так ...
+it's not that ... (adjective) it's not that hard to learn english@@(phrase) это не так ... (и тут приглательное). пример: это не так сложно (это сложно, но не на столько)
+i can't wait to ... (verb) i can't wait to see you@@(phrase) я не могу дождаться что-бы что то сделать
+trip@@(noun) поездка
+intensively@@(adverb) интенсивно
+increadibly@@(adverb) невероятно
+museum@@(noun) музей
+cope@@(verb) справляться
+concluiton@@(noun) вывод
+championship@@(noun) чемпионат
+with great pleasure@@(phrase) с большим удовольствием
+reach@@(verb) достигать
+soon@@(adverb) скоро, вскоре
+inform@@(verb) информировать
+anyway@@(adverb) в любом случае, всё равно
+introduce@@(verb) представить (что-то кому то)
+cancel@@(verb) отменять
+sooner or later@@(phrase) рано или поздно
+absolutely@@(adverb) абсолютно
+consume@@(verb) потреблять, поглощать
+parcel@@(noun) посылка
+deserve@@(verb) заслуживать
+repeat@@(verb) повторять
+sign@@(verb) подписывать
+deny@@(verb) отрицать
+waste@@(verb) излишне тратить
+first of all@@(phrase) прежде всего (в конце ставится)
+guts@@(noun) кишки
+kinda@@(adverb) вроде
+chick@@цыпленок, птенец
+flick@@фильм, резкое движение
+clothed@@одет
+to ask her out@@пригласить ее на свидание
+hold-up@@задержка
+plaque@@бляшка, почетный значок
+day off@@выходной
+nest@@гнездо
+hang@@висеть
+recognition@@признание
+according@@согласно, соответственно
+mess up@@испортить
+slack off@@отлынивать
+founding@@основание (чего то)
+I bet@@Бьюсь об заклад
+coast@@берег
+illusion@@иллюзия
+advantage@@преимущество
+subtract@@(verb) вычитатть
