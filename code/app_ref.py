@@ -1,6 +1,7 @@
 """it's an implementation of dictionary on cards by ayane miuro
 02/07/2024 https://github.com/kissmeandillkissumylove"""
 import tkinter
+from dataclasses import dataclass
 from tkinter import NW, W, WORD
 
 from constants import *
@@ -21,11 +22,25 @@ class Singleton(object):
 		Singleton._instance = None
 
 
+@dataclass
+class Dictionary(Singleton):
+	"""a dataclass used to store all the words."""
+	word: str
+	translation: str
+	date_showed: str
+	date_next_showed: str
+	transcription: str = ""
+
+
 class App(Singleton, tkinter.Tk):
 	"""main application class."""
 
+	def __new__(cls, *args, **kwargs):
+		"""method __new__ of class App."""
+		return super().__new__(cls, *args, **kwargs)
+
 	def __init__(self, master=None):
-		"""method __init__ of class Singleton."""
+		"""method __init__ of class App."""
 		super().__init__(master)
 		self._setup_while_startup()
 
@@ -165,7 +180,7 @@ class App(Singleton, tkinter.Tk):
 			background=ALMOST_BLACK,
 			bd=0,
 			foreground=RED,
-			text=999999,
+			text=0,
 			font=FONT + BOLD,
 		)
 
@@ -187,7 +202,7 @@ class App(Singleton, tkinter.Tk):
 			background=ALMOST_BLACK,
 			bd=0,
 			foreground=GREEN,
-			text="999998/999999",
+			text=0,
 			font=FONT + BOLD,
 		)
 
