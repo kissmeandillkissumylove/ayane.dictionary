@@ -3,6 +3,7 @@ TITLE = "ᴋɪssᴍᴇᴀɴᴅɪʟʟᴋɪssᴜᴍʏʟöᴠᴇ"
 GEOMETRY = "500x265"
 ICON_PATH = r"..\data\icon.ico"
 BACKUP_ICON_PATH = "icon.ico"
+KEY_KODE = "<Control-KeyPress>"
 
 # database settings
 DATABASE_PATH = r"..\data\database.txt"

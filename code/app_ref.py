@@ -3,7 +3,7 @@
 from constants import *
 from dataclasses import dataclass, field
 import tkinter
-from tkinter import NW, W, WORD
+from tkinter import NW, W, WORD, ttk
 
 
 class Singleton(object):
@@ -107,6 +107,25 @@ class App(Singleton, tkinter.Tk):
 
 		self._display_interface()
 
+	def _set_keyboard_settings(self, key) -> None:
+		"""settings for hot keys."""
+		if key.keycode == 86 and key.keysym != 'v':
+			widget = self.focus_get()
+			if isinstance(widget, ttk.Entry) or isinstance(widget, tkinter.Text):
+				widget.event_generate("<<Paste>>")
+		elif key.keycode == 67 and key.keysym != 'c':
+			widget = self.focus_get()
+			if isinstance(widget, ttk.Entry) or isinstance(widget, tkinter.Text):
+				widget.event_generate("<<Copy>>")
+		elif key.keycode == 88 and key.keysym != 'x':
+			widget = self.focus_get()
+			if isinstance(widget, ttk.Entry) or isinstance(widget, tkinter.Text):
+				widget.event_generate("<<Cut>>")
+		elif key.keycode == 65 and key.keysym != 'a':
+			widget = self.focus_get()
+			if isinstance(widget, ttk.Entry) or isinstance(widget, tkinter.Text):
+				widget.event_generate("<<SelectAll>>")
+
 	def _main_window_setup(self) -> None:
 		"""sets main window settings."""
 		self.title(TITLE)
@@ -123,6 +142,7 @@ class App(Singleton, tkinter.Tk):
 				self.iconbitmap(BACKUP_ICON_PATH)
 			except tkinter.TclError:
 				pass  # icon didn't load.
+		self.bind(KEY_KODE, self._set_keyboard_settings)
 
 	def _create_word_label(self) -> tkinter.Label:
 		"""creates a label that will act as a screen for displaying the word."""
