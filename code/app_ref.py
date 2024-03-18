@@ -1,10 +1,9 @@
-"""it's an implementation of dictionary on cards by ayane miuro
-02/07/2024 https://github.com/kissmeandillkissumylove"""
-import tkinter
-from dataclasses import dataclass
-from tkinter import NW, W, WORD
-
+"""it's an implementation of dictionary on cards by ayane miuro.
+02/07/2024 - 03/18/2024 https://github.com/kissmeandillkissumylove"""
 from constants import *
+from dataclasses import dataclass, field
+import tkinter
+from tkinter import NW, W, WORD
 
 
 class Singleton(object):
@@ -25,11 +24,29 @@ class Singleton(object):
 @dataclass
 class Dictionary(Singleton):
 	"""a dataclass used to store all the words."""
-	word: str
-	translation: str
-	date_showed: str
-	date_next_showed: str
-	transcription: str = ""
+	_dictionary: dict = field(default_factory=dict)
+
+	def _preload_dictionary(self, path=DATABASE_PATH) -> None:
+		"""load all the words."""
+		try:  # try to open file.
+			with open(path, encoding="utf-8") as database:
+				while not False:
+					line = database.readline()
+					if not line:
+						break
+					line = line.rstrip().split(SEPARATOR)
+					self._dictionary[line[0]] = line[1:]
+				for elt in self._dictionary.items():
+					print(elt)
+		except FileNotFoundError:  # no file in /database/database.txt.
+			try:  # try to open file with backup link.
+				self._preload_dictionary(path=BACKUP_DATABASE_PATH)
+			except FileNotFoundError:
+				pass  # no database yet.
+
+	def run(self):
+		"""load all the words BEFORE starting the application."""
+		self._preload_dictionary()
 
 
 class App(Singleton, tkinter.Tk):
@@ -42,10 +59,12 @@ class App(Singleton, tkinter.Tk):
 	def __init__(self, master=None):
 		"""method __init__ of class App."""
 		super().__init__(master)
+		self._dictionary = Dictionary()
 		self._setup_while_startup()
 
 	def _setup_while_startup(self):
 		"""setting settings when starting the application."""
+		self._dictionary.run()
 		self._main_window_setup()
 
 		self._word_label = self._create_word_label()
@@ -90,7 +109,10 @@ class App(Singleton, tkinter.Tk):
 		try:
 			self.iconbitmap(ICON_PATH)
 		except tkinter.TclError:
-			pass  # icon didn't load
+			try:
+				self.iconbitmap(BACKUP_ICON_PATH)
+			except tkinter.TclError:
+				pass  # icon didn't load.
 
 	def _create_word_label(self) -> tkinter.Label:
 		"""creates a label that will act as a screen for displaying the word."""

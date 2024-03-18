@@ -2,6 +2,12 @@
 TITLE = "ᴋɪssᴍᴇᴀɴᴅɪʟʟᴋɪssᴜᴍʏʟöᴠᴇ"
 GEOMETRY = "500x400"
 ICON_PATH = r"..\data\icon.ico"
+BACKUP_ICON_PATH = "icon.ico"
+
+# database settings
+DATABASE_PATH = r"..\data\database.txt"
+BACKUP_DATABASE_PATH = "database.txt"
+SEPARATOR = "@"
 
 # buttons settings
 TEXT_NEXT_BUTTON = "ɴᴇxᴛ"
