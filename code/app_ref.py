@@ -42,6 +42,8 @@ class App(Singleton, tkinter.Tk):
 		self._mistakes_counter_label = self._create_mistakes_counter_label()
 		self._words_text_label = self._create_words_text_label()
 		self._words_counter_label = self._create_words_counter_label()
+		self._result_text_label = self._create_result_text_label()
+		self._result_command_label = self._create_result_command_label()
 
 		self._display_interface()
 
@@ -133,7 +135,7 @@ class App(Singleton, tkinter.Tk):
 		"""creates a "mistakes" label just for text."""
 		return tkinter.Label(
 			master=self.master,
-			background=BLUE,
+			background=ALMOST_BLACK,
 			bd=0,
 			anchor=W,
 			foreground=WHITE,
@@ -144,10 +146,9 @@ class App(Singleton, tkinter.Tk):
 		"""creates a label which will count the number of incorrect answers."""
 		return tkinter.Label(
 			master=self.master,
-			background=GREY,
+			background=ALMOST_BLACK,
 			bd=0,
-			anchor=W,
-			foreground=WHITE,
+			foreground=RED,
 			text=999999,
 			font=FONT + BOLD,
 		)
@@ -156,7 +157,7 @@ class App(Singleton, tkinter.Tk):
 		"""creates a "words" label just for text."""
 		return tkinter.Label(
 			master=self.master,
-			background=BLUE,
+			background=ALMOST_BLACK,
 			bd=0,
 			anchor=W,
 			foreground=WHITE,
@@ -167,15 +168,34 @@ class App(Singleton, tkinter.Tk):
 		"""creates a label which will count the number of words in a dictionary."""
 		return tkinter.Label(
 			master=self.master,
-			background=GREY,
+			background=ALMOST_BLACK,
 			bd=0,
-			anchor=W,
-			foreground=WHITE,
+			foreground=GREEN,
 			text="999998/999999",
 			font=FONT + BOLD,
 		)
 
 	def _create_result_text_label(self) -> tkinter.Label:
+		"""creates a "result" label just for text."""
+		return tkinter.Label(
+			master=self.master,
+			background=ALMOST_BLACK,
+			bd=0,
+			anchor=W,
+			foreground=WHITE,
+			text=TEXT_RESULT_LABEL,
+		)
+
+	def _create_result_command_label(self) -> tkinter.Label:
+		"""creates a "result" label which displays a command result."""
+		return tkinter.Label(
+			master=self.master,
+			background=ALMOST_BLACK,
+			bd=0,
+			anchor=W,
+			foreground=WHITE,
+			text=TEXT_RESULT_COMMAND_LABEL,
+		)
 
 	def _next_button_command(self) -> None:
 		"""."""
@@ -193,13 +213,15 @@ class App(Singleton, tkinter.Tk):
 		"""shows all interface elements."""
 		self._word_label.place(x=5, y=5, width=490, height=50)
 		self._translation_label.place(x=5, y=60, width=490, height=50)
-		self._next_button.place(x=5, y=115, width=50, height=25)
-		self._show_button.place(x=60, y=115, width=50, height=25)
-		self._forgot_button.place(x=115, y=115, width=50, height=25)
-		self._mistakes_text_label.place(x=170, y=115, width=50, height=25)
-		self._mistakes_counter_label.place(x=220, y=115, width=60, height=25)
-		self._words_text_label.place(x=285, y=115, width=40, height=25)
-		self._words_counter_label.place(x=325, y=115, width=170, height=25)
+		self._next_button.place(x=5, y=115, width=50, height=20)
+		self._show_button.place(x=60, y=115, width=50, height=20)
+		self._forgot_button.place(x=115, y=115, width=50, height=20)
+		self._mistakes_text_label.place(x=170, y=115, width=50, height=20)
+		self._mistakes_counter_label.place(x=220, y=115, width=60, height=20)
+		self._words_text_label.place(x=285, y=115, width=40, height=20)
+		self._words_counter_label.place(x=325, y=115, width=170, height=20)
+		self._result_text_label.place(x=5, y=375, width=50, height=20)
+		self._result_command_label.place(x=60, y=375, width=435, height=20)
 
 
 def main():
