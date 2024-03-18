@@ -25,6 +25,7 @@ class Singleton(object):
 class Dictionary(Singleton):
 	"""a dataclass used to store all the words."""
 	_dictionary: dict = field(default_factory=dict)
+	_len: int = 0
 
 	def _preload_dictionary(self, path=DATABASE_PATH) -> None:
 		"""load all the words."""
@@ -36,6 +37,7 @@ class Dictionary(Singleton):
 						break
 					line = line.rstrip().split(SEPARATOR)
 					self._dictionary[line[0]] = line[1:]
+				self._len = len(self._dictionary)
 				for elt in self._dictionary.items():
 					print(elt)
 		except FileNotFoundError:  # no file in /database/database.txt.
@@ -44,9 +46,17 @@ class Dictionary(Singleton):
 			except FileNotFoundError:
 				pass  # no database yet.
 
-	def run(self):
+	def run(self) -> None:
 		"""load all the words BEFORE starting the application."""
 		self._preload_dictionary()
+
+	def get_len(self) -> int:
+		"""returns _len."""
+		return self._len
+
+	def get_dictionary(self) -> dict:
+		"""returns _dictionary."""
+		return self._dictionary
 
 
 class App(Singleton, tkinter.Tk):
@@ -62,7 +72,7 @@ class App(Singleton, tkinter.Tk):
 		self._dictionary = Dictionary()
 		self._setup_while_startup()
 
-	def _setup_while_startup(self):
+	def _setup_while_startup(self) -> None:
 		"""setting settings when starting the application."""
 		self._dictionary.run()
 		self._main_window_setup()
@@ -224,7 +234,7 @@ class App(Singleton, tkinter.Tk):
 			background=ALMOST_BLACK,
 			bd=0,
 			foreground=GREEN,
-			text=0,
+			text="0" + f"\\{str(self._dictionary.get_len())}",
 			font=FONT + BOLD,
 		)
 
@@ -377,20 +387,20 @@ class App(Singleton, tkinter.Tk):
 		self._words_text_label.place(x=285, y=115, width=40, height=20)
 		self._words_counter_label.place(x=330, y=115, width=165, height=20)
 
-		self._word_text_label.place(x=5, y=300, width=75, height=20)
-		self._word_text.place(x=85, y=300, width=410, height=20)
+		self._find_button.place(x=60, y=140, width=50, height=20)
+		self._add_button.place(x=5, y=140, width=50, height=20)
 
-		self._find_button.place(x=60, y=275, width=50, height=20)
-		self._add_button.place(x=5, y=275, width=50, height=20)
+		self._word_text_label.place(x=5, y=165, width=75, height=20)
+		self._word_text.place(x=85, y=165, width=410, height=20)
 
-		self._transcription_text_label.place(x=5, y=325, width=75, height=20)
-		self._transcription_text.place(x=85, y=325, width=410, height=20)
+		self._transcription_text_label.place(x=5, y=190, width=75, height=20)
+		self._transcription_text.place(x=85, y=190, width=410, height=20)
 
-		self._translation_text_label.place(x=5, y=350, width=75, height=20)
-		self._translation_text.place(x=85, y=350, width=410, height=20)
+		self._translation_text_label.place(x=5, y=215, width=75, height=20)
+		self._translation_text.place(x=85, y=215, width=410, height=20)
 
-		self._result_text_label.place(x=5, y=375, width=75, height=20)
-		self._result_command_label.place(x=85, y=375, width=410, height=20)
+		self._result_text_label.place(x=5, y=240, width=75, height=20)
+		self._result_command_label.place(x=85, y=240, width=410, height=20)
 
 
 def main():
