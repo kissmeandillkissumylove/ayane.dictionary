@@ -95,6 +95,7 @@ class App(Singleton, tkinter.Tk):
 
 		self._find_button = self._create_find_button()
 		self._add_button = self._create_add_button()
+		self._edit_button = self._create_edit_button()
 
 		self._transcription_text_label = self._create_transcription_text_label()
 		self._transcription_text = self._create_transcription_text()
@@ -184,6 +185,7 @@ class App(Singleton, tkinter.Tk):
 			text=TEXT_NEXT_BUTTON,
 			command=self._next_button_command,
 			state="normal",
+			disabledforeground=ALMOST_BLACK,
 		)
 
 	def _create_show_button(self) -> tkinter.Button:
@@ -198,6 +200,7 @@ class App(Singleton, tkinter.Tk):
 			text=TEXT_SHOW_BUTTON,
 			command=self._show_button_command,
 			state="disabled",
+			disabledforeground=ALMOST_BLACK,
 		)
 
 	def _create_forgot_button(self) -> tkinter.Button:
@@ -212,6 +215,7 @@ class App(Singleton, tkinter.Tk):
 			text=TEXT_FORGOT_BUTTON,
 			command=self._forgot_button_command,
 			state="disabled",
+			disabledforeground=ALMOST_BLACK,
 		)
 
 	def _create_mistakes_text_label(self) -> tkinter.Label:
@@ -269,6 +273,7 @@ class App(Singleton, tkinter.Tk):
 			text=TEXT_FIND_BUTTON,
 			command=self._find_button_command,
 			state="normal",
+			disabledforeground=ALMOST_BLACK,
 		)
 
 	def _create_add_button(self) -> tkinter.Button:
@@ -282,6 +287,21 @@ class App(Singleton, tkinter.Tk):
 			text=TEXT_ADD_BUTTON,
 			command=self._add_button_command,
 			state="normal",
+			disabledforeground=ALMOST_BLACK,
+		)
+
+	def _create_edit_button(self) -> tkinter.Button:
+		"""creates a button which adds a new word to a database."""
+		return tkinter.Button(
+			master=self.master,
+			background=DARK_GREEN,
+			bd=2,
+			foreground=WHITE,
+			activebackground=BLUE,
+			text=TEXT_ADD_BUTTON,
+			command=self._edit_button_command,
+			state="disabled",
+			disabledforeground=ALMOST_BLACK,
 		)
 
 	def _create_word_text_label(self) -> tkinter.Label:
@@ -392,6 +412,10 @@ class App(Singleton, tkinter.Tk):
 		"""."""
 		pass
 
+	def _edit_button_command(self) -> None:
+		"""."""
+		pass
+
 	def _display_interface(self) -> None:
 		"""shows all interface elements."""
 		self._word_label.place(x=5, y=5, width=490, height=50)
@@ -407,8 +431,9 @@ class App(Singleton, tkinter.Tk):
 		self._words_text_label.place(x=285, y=115, width=40, height=20)
 		self._words_counter_label.place(x=330, y=115, width=165, height=20)
 
-		self._find_button.place(x=60, y=140, width=50, height=20)
 		self._add_button.place(x=5, y=140, width=50, height=20)
+		self._find_button.place(x=60, y=140, width=50, height=20)
+		self._edit_button.place(x=115, y=140, width=50, height=20)
 
 		self._word_text_label.place(x=5, y=165, width=75, height=20)
 		self._word_text.place(x=85, y=165, width=410, height=20)
