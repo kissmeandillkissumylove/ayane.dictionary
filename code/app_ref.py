@@ -60,8 +60,7 @@ class App(Singleton, tkinter.Tk):
 			pass  # icon didn't load
 
 	def _create_word_label(self) -> tkinter.Label:
-		"""creates and displays a label that will act as a screen for displaying the
-			word."""
+		"""creates a label that will act as a screen for displaying the word."""
 		return tkinter.Label(
 			master=self.master,
 			background=GREY,
@@ -75,8 +74,7 @@ class App(Singleton, tkinter.Tk):
 		)
 
 	def _create_translation_label(self) -> tkinter.Label:
-		"""creates and displays a label that will act as a screen for displaying the
-			word."""
+		"""creates a label that will act as a screen for displaying the word."""
 		return tkinter.Label(
 			master=self.master,
 			background=GREY,
@@ -90,8 +88,8 @@ class App(Singleton, tkinter.Tk):
 		)
 
 	def _create_next_button(self) -> tkinter.Button:
-		"""creates and displays a "NEXT" button which will display a next word from
-			a dictionary."""
+		"""creates a "NEXT" button which will display a next word from a
+			dictionary."""
 		return tkinter.Button(
 			master=self.master,
 			background=RED,
@@ -104,8 +102,8 @@ class App(Singleton, tkinter.Tk):
 		)
 
 	def _create_show_button(self) -> tkinter.Button:
-		"""creates and displays a 'NEXT' button that will display the translation of
-			the current word."""
+		"""creates a 'SHOW' button that will display the translation of the current
+			word."""
 		return tkinter.Button(
 			master=self.master,
 			background=RED,
@@ -118,8 +116,8 @@ class App(Singleton, tkinter.Tk):
 		)
 
 	def _create_forgot_button(self) -> tkinter.Button:
-		"""creates and displays a "FORGOT" button which adds a mistake to the
-			mistakes counter."""
+		"""creates a "FORGOT" button which adds a mistake to the mistakes
+			counter."""
 		return tkinter.Button(
 			master=self.master,
 			background=RED,
@@ -132,7 +130,7 @@ class App(Singleton, tkinter.Tk):
 		)
 
 	def _create_mistakes_text_label(self) -> tkinter.Label:
-		"""creates and displays a "mistakes" label just for text."""
+		"""creates a "mistakes" label just for text."""
 		return tkinter.Label(
 			master=self.master,
 			background=BLUE,
@@ -143,8 +141,7 @@ class App(Singleton, tkinter.Tk):
 		)
 
 	def _create_mistakes_counter_label(self) -> tkinter.Label:
-		"""creates and displays a label which will count the number of incorrect
-			answers."""
+		"""creates a label which will count the number of incorrect answers."""
 		return tkinter.Label(
 			master=self.master,
 			background=GREY,
@@ -156,7 +153,7 @@ class App(Singleton, tkinter.Tk):
 		)
 
 	def _create_words_text_label(self) -> tkinter.Label:
-		"""creates and displays a "words" label just for text."""
+		"""creates a "words" label just for text."""
 		return tkinter.Label(
 			master=self.master,
 			background=BLUE,
@@ -167,8 +164,7 @@ class App(Singleton, tkinter.Tk):
 		)
 
 	def _create_words_counter_label(self) -> tkinter.Label:
-		"""creates and displays a label which will count the number of words in a
-			dictionary."""
+		"""creates a label which will count the number of words in a dictionary."""
 		return tkinter.Label(
 			master=self.master,
 			background=GREY,
@@ -178,6 +174,8 @@ class App(Singleton, tkinter.Tk):
 			text="999998/999999",
 			font=FONT + BOLD,
 		)
+
+	def _create_result_text_label(self) -> tkinter.Label:
 
 	def _next_button_command(self) -> None:
 		"""."""
