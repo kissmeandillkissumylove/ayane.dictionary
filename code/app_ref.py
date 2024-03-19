@@ -30,7 +30,7 @@ class Dictionary(Singleton):
 	def _preload_dictionary(self, path=DATABASE_PATH) -> None:
 		"""load all the words."""
 		try:  # try to open file.
-			with open(path, encoding="utf-8") as database:
+			with open(path, "r", encoding="utf-8") as database:
 				while not False:
 					line = database.readline()
 					if not line:
