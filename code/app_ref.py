@@ -42,10 +42,9 @@ class Dictionary(Singleton):
 				for elt in self._dictionary.items():
 					print(elt)
 		except FileNotFoundError:  # no file in /database/database.txt.
-			try:  # try to open file with backup link.
+			if path != BACKUP_DATABASE_PATH:
+				# try to open file with backup link.
 				self._preload_dictionary(path=BACKUP_DATABASE_PATH)
-			except FileNotFoundError:
-				pass  # no database yet.
 
 	def run(self) -> None:
 		"""load all the words BEFORE starting the application."""
