@@ -16,6 +16,7 @@ TEXT_SHOW_BUTTON = "sʜᴏᴡ"
 TEXT_FORGOT_BUTTON = "ꜰᴏʀɢᴏᴛ"
 TEXT_ADD_BUTTON = "ᴀᴅᴅ"
 TEXT_FIND_BUTTON = "ꜰɪɴᴅ"
+TEXT_EDIT_BUTTON = "ᴇᴅɪᴛ"
 
 # label settings
 TEXT_MISTAKES_COUNTER_LABEL = "ᴍɪsᴛᴀᴋᴇs:"

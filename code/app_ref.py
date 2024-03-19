@@ -299,9 +299,9 @@ class App(Singleton, tkinter.Tk):
 			bd=2,
 			foreground=WHITE,
 			activebackground=BLUE,
-			text=TEXT_ADD_BUTTON,
+			text=TEXT_EDIT_BUTTON,
 			command=self._edit_button_command,
-			state="disabled",
+			state="normal",
 			disabledforeground=ALMOST_BLACK,
 		)
 
