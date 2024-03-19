@@ -74,8 +74,7 @@ class App(Singleton, tkinter.Tk):
 
 	def _setup_while_startup(self) -> None:
 		"""setting settings when starting the application."""
-		self._dictionary.run()
-		self._copy_dictionary = self._dictionary.get_dictionary().copy()
+		self._prepare_dictionary()
 		self._main_window_setup()
 
 		self._word_label = self._create_word_label()
@@ -127,6 +126,11 @@ class App(Singleton, tkinter.Tk):
 			widget = self.focus_get()
 			if isinstance(widget, ttk.Entry) or isinstance(widget, tkinter.Text):
 				widget.event_generate("<<SelectAll>>")
+
+	def _prepare_dictionary(self) -> None:
+		"""load all the words BEFORE starting the application."""
+		self._dictionary.run()
+		self._copy_dictionary = self._dictionary.get_dictionary().copy()
 
 	def _main_window_setup(self) -> None:
 		"""sets main window settings."""
