@@ -2,6 +2,7 @@
 02/07/2024 - 03/18/2024 https://github.com/kissmeandillkissumylove"""
 from constants import *
 from dataclasses import dataclass, field
+import random
 import tkinter
 from tkinter import NW, W, WORD, ttk
 
@@ -75,6 +76,7 @@ class App(Singleton, tkinter.Tk):
 	def _setup_while_startup(self) -> None:
 		"""setting settings when starting the application."""
 		self._dictionary.run()
+		self._copy_dictionary = self._dictionary.get_dictionary().copy()
 		self._main_window_setup()
 
 		self._word_label = self._create_word_label()
@@ -393,7 +395,7 @@ class App(Singleton, tkinter.Tk):
 		)
 
 	def _next_button_command(self) -> None:
-		"""."""
+		"""the "next" button will randomly show the next word from the dictionary."""
 		pass
 
 	def _show_button_command(self) -> None:
