@@ -83,6 +83,9 @@ class App(Singleton, tkinter.Tk):
 		self._next_button = self._create_next_button()
 		self._show_button = self._create_show_button()
 		self._forgot_button = self._create_forgot_button()
+		self._right_button = self._create_right_button()
+		self._wrong_button = self._create_wrong_button()
+		self._again_button = self._create_again_button()
 
 		self._mistakes_text_label = self._create_mistakes_text_label()
 		self._mistakes_counter_label = self._create_mistakes_counter_label()
@@ -236,6 +239,48 @@ class App(Singleton, tkinter.Tk):
 			text=TEXT_FORGOT_BUTTON,
 			command=self._forgot_button_command,
 			state="disabled",
+			disabledforeground=ALMOST_BLACK,
+		)
+
+	def _create_right_button(self) -> tkinter.Button:
+		"""creates a "RIGHT" button which performs actions if the answer is correct"""
+		return tkinter.Button(
+			master=self.master,
+			background=LIME,
+			bd=2,
+			foreground=WHITE,
+			activebackground=BLUE,
+			text=TEXT_RIGHT_BUTTON,
+			command=self._right_button_command,
+			state="disabled",
+			disabledforeground=ALMOST_BLACK,
+		)
+
+	def _create_wrong_button(self) -> tkinter.Button:
+		"""creates a "RIGHT" button which performs actions if the answer is correct"""
+		return tkinter.Button(
+			master=self.master,
+			background=LIME,
+			bd=2,
+			foreground=WHITE,
+			activebackground=BLUE,
+			text=TEXT_WRONG_BUTTON,
+			command=self._wrong_button_command,
+			state="disabled",
+			disabledforeground=ALMOST_BLACK,
+		)
+
+	def _create_again_button(self) -> tkinter.Button:
+		"""creates a "RIGHT" button which performs actions if the answer is correct"""
+		return tkinter.Button(
+			master=self.master,
+			background=RED,
+			bd=2,
+			foreground=WHITE,
+			activebackground=BLUE,
+			text=TEXT_AGAIN_BUTTON,
+			command=self._again_button_command,
+			state="normal",
 			disabledforeground=ALMOST_BLACK,
 		)
 
@@ -420,6 +465,8 @@ class App(Singleton, tkinter.Tk):
 
 			self._show_button.configure(state="normal")
 			self._forgot_button.configure(state="normal")
+			self._right_button.configure(state="normal")
+			self._wrong_button.configure(state="normal")
 
 			self._words_counter_label.configure(
 				text=self._get_words_counter_label_text(self._counter))
@@ -447,6 +494,18 @@ class App(Singleton, tkinter.Tk):
 		"""."""
 		pass
 
+	def _right_button_command(self) -> None:
+		"""."""
+		pass
+
+	def _wrong_button_command(self) -> None:
+		"""."""
+		pass
+
+	def _again_button_command(self) -> None:
+		"""."""
+		pass
+
 	def _add_button_command(self) -> None:
 		"""."""
 		pass
@@ -467,12 +526,14 @@ class App(Singleton, tkinter.Tk):
 		self._next_button.place(x=5, y=115, width=50, height=20)
 		self._show_button.place(x=60, y=115, width=50, height=20)
 		self._forgot_button.place(x=115, y=115, width=50, height=20)
+		self._right_button.place(x=170, y=115, width=50, height=20)
+		self._wrong_button.place(x=225, y=115, width=50, height=20)
+		self._again_button.place(x=280, y=115, width=50, height=20)
 
-		self._mistakes_text_label.place(x=170, y=115, width=50, height=20)
-		self._mistakes_counter_label.place(x=225, y=115, width=55, height=20)
-
-		self._words_text_label.place(x=285, y=115, width=40, height=20)
-		self._words_counter_label.place(x=330, y=115, width=165, height=20)
+		self._mistakes_text_label.place(x=170, y=140, width=50, height=20)
+		self._mistakes_counter_label.place(x=225, y=140, width=55, height=20)
+		self._words_text_label.place(x=285, y=140, width=40, height=20)
+		self._words_counter_label.place(x=330, y=140, width=165, height=20)
 
 		self._add_button.place(x=5, y=140, width=50, height=20)
 		self._find_button.place(x=60, y=140, width=50, height=20)

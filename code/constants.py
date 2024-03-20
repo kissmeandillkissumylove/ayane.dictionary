@@ -19,6 +19,9 @@ TEXT_FIND_BUTTON = "ꜰɪɴᴅ"
 TEXT_EDIT_BUTTON = "ᴇᴅɪᴛ"
 TEXT_OUT_OF_WORDS = """	there are no words to repeat.
 	a new list of words has been prepared."""
+TEXT_RIGHT_BUTTON = "ʀɪɢʜᴛ"
+TEXT_WRONG_BUTTON = "ᴡʀᴏɴɢ"
+TEXT_AGAIN_BUTTON = "ᴀɢᴀɪɴ"
 
 # label settings
 TEXT_MISTAKES_COUNTER_LABEL = "ᴍɪsᴛᴀᴋᴇs:"
@@ -41,3 +44,4 @@ WHITE = "#FFFFFF"
 BLUE = "#2D81B2"
 GREEN = "#58BD66"
 DARK_GREEN = "#19732E"
+LIME = "#32CD32"
