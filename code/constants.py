@@ -17,6 +17,8 @@ TEXT_FORGOT_BUTTON = "ꜰᴏʀɢᴏᴛ"
 TEXT_ADD_BUTTON = "ᴀᴅᴅ"
 TEXT_FIND_BUTTON = "ꜰɪɴᴅ"
 TEXT_EDIT_BUTTON = "ᴇᴅɪᴛ"
+TEXT_OUT_OF_WORDS = """	there are no words to repeat.
+	a new list of words has been prepared."""
 
 # label settings
 TEXT_MISTAKES_COUNTER_LABEL = "ᴍɪsᴛᴀᴋᴇs:"

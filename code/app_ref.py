@@ -130,13 +130,19 @@ class App(Singleton, tkinter.Tk):
 	def _prepare_dictionary(self) -> None:
 		"""load all the words BEFORE starting the application."""
 		self._dictionary.run()
+		self._prepare_copy_dictionary()
+
+	def _prepare_copy_dictionary(self):
+		"""prepares the dictionary to refresh today's words."""
 		self._prepared_dictionary = {}
+
 		for _ in self._dictionary.get_dictionary().items():
 			if _[1][2] <= str(datetime.date.today()):
 				self._prepared_dictionary[_[0]] = _[1]
 
 		self._keys_prepared_dictionary = list(self._prepared_dictionary.keys())
 		self._text_word_counter = f"\\{len(self._prepared_dictionary)}\\{self._dictionary.get_len()}"
+		self._counter = 0
 
 	def _main_window_setup(self) -> None:
 		"""sets main window settings."""
@@ -409,7 +415,29 @@ class App(Singleton, tkinter.Tk):
 
 	def _next_button_command(self) -> None:
 		"""the "next" button will randomly show the next word from the dictionary."""
-		pass
+		if self._keys_prepared_dictionary:
+			self._counter += 1
+
+			self._show_button.configure(state="normal")
+			self._forgot_button.configure(state="normal")
+
+			self._words_counter_label.configure(
+				text=self._get_words_counter_label_text(self._counter))
+
+			self._current_key = random.choice(self._keys_prepared_dictionary)
+			self._keys_prepared_dictionary.remove(self._current_key)
+			self._current_item = self._prepared_dictionary.pop(self._current_key)
+
+			self._translation_label.configure(text=self._current_item[1])
+		else:
+			self._show_button.configure(state="disabled")
+			self._forgot_button.configure(state="disabled")
+			self._next_button.configure(state="disabled")
+
+			self._word_label.configure(background=RED)
+			self._translation_label.configure(text=TEXT_OUT_OF_WORDS)
+
+			self._prepare_copy_dictionary()
 
 	def _show_button_command(self) -> None:
 		"""."""
