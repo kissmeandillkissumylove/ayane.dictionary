@@ -2,6 +2,7 @@
 02/07/2024 - 03/18/2024 https://github.com/kissmeandillkissumylove"""
 from constants import *
 from dataclasses import dataclass, field
+import datetime
 import random
 import tkinter
 from tkinter import NW, W, WORD, ttk
@@ -39,8 +40,7 @@ class Dictionary(Singleton):
 					line = line.rstrip().split(SEPARATOR)
 					self._dictionary[line[0]] = line[1:]
 				self._len = len(self._dictionary)
-				for elt in self._dictionary.items():
-					print(elt)
+
 		except FileNotFoundError:  # no file in /database/database.txt.
 			if path != BACKUP_DATABASE_PATH:
 				# try to open file with backup link.
@@ -130,7 +130,13 @@ class App(Singleton, tkinter.Tk):
 	def _prepare_dictionary(self) -> None:
 		"""load all the words BEFORE starting the application."""
 		self._dictionary.run()
-		self._copy_dictionary = self._dictionary.get_dictionary().copy()
+		self._prepared_dictionary = {}
+		for _ in self._dictionary.get_dictionary().items():
+			if _[1][2] <= str(datetime.date.today()):
+				self._prepared_dictionary[_[0]] = _[1]
+
+		self._keys_prepared_dictionary = list(self._prepared_dictionary.keys())
+		self._text_word_counter = f"\\{len(self._prepared_dictionary)}\\{self._dictionary.get_len()}"
 
 	def _main_window_setup(self) -> None:
 		"""sets main window settings."""
@@ -149,6 +155,10 @@ class App(Singleton, tkinter.Tk):
 			except tkinter.TclError:
 				pass  # icon didn't load.
 		self.bind(KEY_KODE, self._set_keyboard_settings)
+
+	def _get_words_counter_label_text(self, text: int = 0) -> str:
+		"""returns text for "words counter" label"""
+		return str(text) + self._text_word_counter
 
 	def _create_word_label(self) -> tkinter.Label:
 		"""creates a label that will act as a screen for displaying the word."""
@@ -263,7 +273,7 @@ class App(Singleton, tkinter.Tk):
 			background=ALMOST_BLACK,
 			bd=0,
 			foreground=GREEN,
-			text="0" + f"\\{str(self._dictionary.get_len())}",
+			text=self._get_words_counter_label_text(),
 			font=FONT + BOLD,
 		)
 
