@@ -503,8 +503,11 @@ class App(Singleton, tkinter.Tk):
 		pass
 
 	def _again_button_command(self) -> None:
-		"""."""
-		pass
+		"""starts a new cycle of repeating words."""
+		self._next_button.configure(state="normal")
+		self._word_label.configure(background=GREY)
+		self._words_counter_label.configure(
+			text=self._get_words_counter_label_text())
 
 	def _add_button_command(self) -> None:
 		"""."""
