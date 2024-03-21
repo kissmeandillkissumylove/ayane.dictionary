@@ -135,6 +135,7 @@ class App(Singleton, tkinter.Tk):
 		self._right_button = self._create_right_button()
 		self._wrong_button = self._create_wrong_button()
 		self._again_button = self._create_again_button()
+		self._save_button = self._create_save_button()
 
 		self._mistakes_text_label = self._create_mistakes_text_label()
 		self._mistakes_counter_label = self._create_mistakes_counter_label()
@@ -307,7 +308,8 @@ class App(Singleton, tkinter.Tk):
 		)
 
 	def _create_wrong_button(self) -> tkinter.Button:
-		"""creates a "RIGHT" button which performs actions if the answer is correct"""
+		"""creates a "WRONG" button which performs actions if the answer is
+			incorrect."""
 		return tkinter.Button(
 			master=self.master,
 			background=LIME,
@@ -321,7 +323,7 @@ class App(Singleton, tkinter.Tk):
 		)
 
 	def _create_again_button(self) -> tkinter.Button:
-		"""creates a "RIGHT" button which performs actions if the answer is correct"""
+		"""creates an "AGAIN" button which restarts a revision cycle."""
 		return tkinter.Button(
 			master=self.master,
 			background=RED,
@@ -330,6 +332,20 @@ class App(Singleton, tkinter.Tk):
 			activebackground=BLUE,
 			text=TEXT_AGAIN_BUTTON,
 			command=self._again_button_command,
+			state="normal",
+			disabledforeground=ALMOST_BLACK,
+		)
+
+	def _create_save_button(self) -> tkinter.Button:
+		"""creates a "SAVE" button which saves all the changes to database."""
+		return tkinter.Button(
+			master=self.master,
+			background=DARK_BLUE,
+			bd=2,
+			foreground=WHITE,
+			activebackground=BLUE,
+			text=TEXT_SAVE_BUTTON,
+			command=self._save_button_command,
 			state="normal",
 			disabledforeground=ALMOST_BLACK,
 		)
@@ -568,6 +584,8 @@ class App(Singleton, tkinter.Tk):
 
 	def _again_button_command(self) -> None:
 		"""starts a new cycle of repeating words."""
+		self._again_button.configure(state="disabled")
+
 		if not self._keys_prepared_dictionary:
 			self._prepare_copy_dictionary()
 			self._translation_label.configure(text=TEXT_OUT_OF_WORDS)
@@ -590,6 +608,12 @@ class App(Singleton, tkinter.Tk):
 				text=self._get_words_counter_label_text())
 			self._mistakes_counter_label.configure(text=0)
 			self._prepare_copy_dictionary()
+
+		self._again_button.configure(state="normal")
+
+	def _save_button_command(self) -> None:
+		"""."""
+		pass
 
 	def _add_button_command(self) -> None:
 		"""."""
@@ -614,6 +638,7 @@ class App(Singleton, tkinter.Tk):
 		self._right_button.place(x=170, y=115, width=50, height=20)
 		self._wrong_button.place(x=225, y=115, width=50, height=20)
 		self._again_button.place(x=280, y=115, width=50, height=20)
+		self._save_button.place(x=335, y=115, width=50, height=20)
 
 		self._mistakes_text_label.place(x=170, y=140, width=50, height=20)
 		self._mistakes_counter_label.place(x=225, y=140, width=55, height=20)

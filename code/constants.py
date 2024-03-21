@@ -23,6 +23,7 @@ TEXT_RIGHT_BUTTON = "ʀɪɢʜᴛ"
 TEXT_WRONG_BUTTON = "ᴡʀᴏɴɢ"
 TEXT_AGAIN_BUTTON = "ᴀɢᴀɪɴ"
 TEXT_PREPARE_NEW_DICTIONARY = "\ta new list of words has been prepared."
+TEXT_SAVE_BUTTON = "sᴀᴠᴇ"
 
 # label settings
 TEXT_MISTAKES_COUNTER_LABEL = "ᴍɪsᴛᴀᴋᴇs:"
@@ -46,3 +47,4 @@ BLUE = "#2D81B2"
 GREEN = "#58BD66"
 DARK_GREEN = "#19732E"
 LIME = "#32CD32"
+DARK_BLUE = "#2200AC"
