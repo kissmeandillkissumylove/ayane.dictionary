@@ -564,7 +564,18 @@ class App(Singleton, tkinter.Tk):
 		"""press the button if the answer is not correct. the button increases the
 			priority of displaying the current word next time, because the user knows
 			this word poorly."""
-		pass
+		self._right_button.configure(state="disabled")
+		self._wrong_button.configure(state="disabled")
+		print(
+			self._current_key,
+			self._dictionary.get_dictionary()[self._current_key]
+		)
+		self._dictionary.set_new_values(key=self._current_key, counter="-1")
+		print(
+			self._current_key,
+			self._dictionary.get_dictionary()[self._current_key]
+		)
+		print()
 
 	def _again_button_command(self) -> None:
 		"""starts a new cycle of repeating words."""
