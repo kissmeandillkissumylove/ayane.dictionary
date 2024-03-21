@@ -100,6 +100,13 @@ class Dictionary(Singleton):
 
 			self._dictionary[key] = temp
 
+	def print_dictionary(self) -> None:
+		"""prints all the words with keys and values."""
+		print("-" * 80)
+		for item in self._dictionary.items():
+			print(f"{item[0]} : {item[1]}")
+		print("-" * 80)
+
 
 class App(Singleton, tkinter.Tk):
 	"""main application class."""
@@ -549,16 +556,7 @@ class App(Singleton, tkinter.Tk):
 			well."""
 		self._right_button.configure(state="disabled")
 		self._wrong_button.configure(state="disabled")
-		print(
-			self._current_key,
-			self._dictionary.get_dictionary()[self._current_key]
-		)
 		self._dictionary.set_new_values(key=self._current_key, counter="1")
-		print(
-			self._current_key,
-			self._dictionary.get_dictionary()[self._current_key]
-		)
-		print()
 
 	def _wrong_button_command(self) -> None:
 		"""press the button if the answer is not correct. the button increases the
@@ -566,16 +564,7 @@ class App(Singleton, tkinter.Tk):
 			this word poorly."""
 		self._right_button.configure(state="disabled")
 		self._wrong_button.configure(state="disabled")
-		print(
-			self._current_key,
-			self._dictionary.get_dictionary()[self._current_key]
-		)
 		self._dictionary.set_new_values(key=self._current_key, counter="-1")
-		print(
-			self._current_key,
-			self._dictionary.get_dictionary()[self._current_key]
-		)
-		print()
 
 	def _again_button_command(self) -> None:
 		"""starts a new cycle of repeating words."""
