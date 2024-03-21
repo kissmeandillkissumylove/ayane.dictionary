@@ -6,7 +6,6 @@ import datetime
 import random
 import tkinter
 from tkinter import NW, W, WORD, ttk
-from typing import List
 
 
 class Singleton(object):
@@ -59,9 +58,47 @@ class Dictionary(Singleton):
 		"""returns _dictionary."""
 		return self._dictionary
 
-	def set_new_values(self, key: str, value: List[str]) -> None:
+	def set_new_values(
+			self,
+			key: str,
+			transcription: str = "",
+			translation: str = "",
+			counter: str = ""
+	) -> None:
 		"""sets a new value for the key."""
-		self._dictionary[key] = value
+		if counter == "":
+			self._dictionary[key] = [
+				self._dictionary[key][0] if transcription == "" else transcription,
+				self._dictionary[key][1] if translation == "" else translation,
+				self._dictionary[key][2],
+				self._dictionary[key][3],
+				self._dictionary[key][4],
+			]
+		else:
+			temp = [
+				self._dictionary[key][0],
+				self._dictionary[key][1],
+				self._dictionary[key][2],
+				self._dictionary[key][3],
+				self._dictionary[key][4]
+			]
+
+			temp[4] = str(int(temp[4]) + int(counter))
+			if temp[4] == "3":
+				temp[4] = "0"
+				temp[3] = str(int(temp[3]) + 1)
+			elif temp[4] == "-3":
+				temp[4] = "0"
+				temp[3] = str(int(temp[3]) - 1)
+
+			if temp[3] == "0":
+				pass
+			elif int(temp[3]) > 0:
+				temp[2] = str(datetime.date.today() + datetime.timedelta(days=int(temp[3])))
+			elif int(temp[3]) < 0:
+				temp[2] = str(datetime.date.today())
+
+			self._dictionary[key] = temp
 
 
 class App(Singleton, tkinter.Tk):
@@ -510,7 +547,18 @@ class App(Singleton, tkinter.Tk):
 		"""press the button if the answer is correct. the button lowers the priority of
 			displaying the current word next time, because the user knows this word
 			well."""
-		pass
+		self._right_button.configure(state="disabled")
+		self._wrong_button.configure(state="disabled")
+		print(
+			self._current_key,
+			self._dictionary.get_dictionary()[self._current_key]
+		)
+		self._dictionary.set_new_values(key=self._current_key, counter="1")
+		print(
+			self._current_key,
+			self._dictionary.get_dictionary()[self._current_key]
+		)
+		print()
 
 	def _wrong_button_command(self) -> None:
 		"""press the button if the answer is not correct. the button increases the
