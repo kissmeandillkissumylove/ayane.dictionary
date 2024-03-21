@@ -146,6 +146,7 @@ class App(Singleton, tkinter.Tk):
 		self._keys_prepared_dictionary = list(self._prepared_dictionary.keys())
 		self._text_word_counter = f"\\{len(self._prepared_dictionary)}\\{self._dictionary.get_len()}"
 		self._counter = 0
+		self._mistakes_counter = 0
 
 	def _main_window_setup(self) -> None:
 		"""sets main window settings."""
@@ -484,11 +485,9 @@ class App(Singleton, tkinter.Tk):
 			self._right_button.configure(state="disabled")
 			self._wrong_button.configure(state="disabled")
 			self._word_label.configure(text="")
+			self._translation_label.configure(text="")
 
 			self._word_label.configure(background=RED)
-			self._translation_label.configure(text=TEXT_OUT_OF_WORDS)
-
-			self._prepare_copy_dictionary()
 
 	def _show_button_command(self) -> None:
 		"""displays the word and transcription (if available)."""
@@ -498,7 +497,9 @@ class App(Singleton, tkinter.Tk):
 
 	def _forgot_button_command(self) -> None:
 		"""."""
-		pass
+		self._forgot_button.configure(state="disabled")
+		self._mistakes_counter += 1
+		self._mistakes_counter_label.configure(text=self._mistakes_counter)
 
 	def _right_button_command(self) -> None:
 		"""."""
@@ -510,10 +511,16 @@ class App(Singleton, tkinter.Tk):
 
 	def _again_button_command(self) -> None:
 		"""starts a new cycle of repeating words."""
-		self._next_button.configure(state="normal")
-		self._word_label.configure(background=GREY)
-		self._words_counter_label.configure(
-			text=self._get_words_counter_label_text())
+		if not self._keys_prepared_dictionary:
+			self._prepare_copy_dictionary()
+			self._translation_label.configure(text=TEXT_OUT_OF_WORDS)
+
+			self._next_button.configure(state="normal")
+
+			self._word_label.configure(background=GREY)
+			self._words_counter_label.configure(
+				text=self._get_words_counter_label_text())
+			self._mistakes_counter_label.configure(text=0)
 
 	def _add_button_command(self) -> None:
 		"""."""
