@@ -467,6 +467,7 @@ class App(Singleton, tkinter.Tk):
 			self._forgot_button.configure(state="normal")
 			self._right_button.configure(state="normal")
 			self._wrong_button.configure(state="normal")
+			self._word_label.configure(text="")
 
 			self._words_counter_label.configure(
 				text=self._get_words_counter_label_text(self._counter))
@@ -480,6 +481,9 @@ class App(Singleton, tkinter.Tk):
 			self._show_button.configure(state="disabled")
 			self._forgot_button.configure(state="disabled")
 			self._next_button.configure(state="disabled")
+			self._right_button.configure(state="disabled")
+			self._wrong_button.configure(state="disabled")
+			self._word_label.configure(text="")
 
 			self._word_label.configure(background=RED)
 			self._translation_label.configure(text=TEXT_OUT_OF_WORDS)
@@ -487,8 +491,10 @@ class App(Singleton, tkinter.Tk):
 			self._prepare_copy_dictionary()
 
 	def _show_button_command(self) -> None:
-		"""."""
-		pass
+		"""displays the word and transcription (if available)."""
+		text = self._current_key + "\n" + self._current_item[0]
+		self._word_label.configure(text=text)
+		self._show_button.configure(state="disabled")
 
 	def _forgot_button_command(self) -> None:
 		"""."""
