@@ -496,7 +496,7 @@ class App(Singleton, tkinter.Tk):
 		self._show_button.configure(state="disabled")
 
 	def _forgot_button_command(self) -> None:
-		"""."""
+		"""adds one to the number of errors (self._mistakes_counter)."""
 		self._forgot_button.configure(state="disabled")
 		self._mistakes_counter += 1
 		self._mistakes_counter_label.configure(text=self._mistakes_counter)
@@ -521,6 +521,18 @@ class App(Singleton, tkinter.Tk):
 			self._words_counter_label.configure(
 				text=self._get_words_counter_label_text())
 			self._mistakes_counter_label.configure(text=0)
+
+		else:
+			self._show_button.configure(state="disabled")
+			self._forgot_button.configure(state="disabled")
+			self._right_button.configure(state="disabled")
+			self._wrong_button.configure(state="disabled")
+			self._translation_label.configure(text=TEXT_PREPARE_NEW_DICTIONARY)
+			self._word_label.configure(background=GREY, text="")
+			self._words_counter_label.configure(
+				text=self._get_words_counter_label_text())
+			self._mistakes_counter_label.configure(text=0)
+			self._prepare_copy_dictionary()
 
 	def _add_button_command(self) -> None:
 		"""."""
