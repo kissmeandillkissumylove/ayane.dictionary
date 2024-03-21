@@ -6,6 +6,7 @@ import datetime
 import random
 import tkinter
 from tkinter import NW, W, WORD, ttk
+from typing import List
 
 
 class Singleton(object):
@@ -57,6 +58,10 @@ class Dictionary(Singleton):
 	def get_dictionary(self) -> dict:
 		"""returns _dictionary."""
 		return self._dictionary
+
+	def set_new_values(self, key: str, value: List[str]) -> None:
+		"""sets a new value for the key."""
+		self._dictionary[key] = value
 
 
 class App(Singleton, tkinter.Tk):
@@ -502,11 +507,15 @@ class App(Singleton, tkinter.Tk):
 		self._mistakes_counter_label.configure(text=self._mistakes_counter)
 
 	def _right_button_command(self) -> None:
-		"""."""
+		"""press the button if the answer is correct. the button lowers the priority of
+			displaying the current word next time, because the user knows this word
+			well."""
 		pass
 
 	def _wrong_button_command(self) -> None:
-		"""."""
+		"""press the button if the answer is not correct. the button increases the
+			priority of displaying the current word next time, because the user knows
+			this word poorly."""
 		pass
 
 	def _again_button_command(self) -> None:

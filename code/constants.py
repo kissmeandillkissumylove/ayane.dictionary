@@ -22,7 +22,7 @@ TEXT_OUT_OF_WORDS = """	there are no words to repeat.
 TEXT_RIGHT_BUTTON = "ʀɪɢʜᴛ"
 TEXT_WRONG_BUTTON = "ᴡʀᴏɴɢ"
 TEXT_AGAIN_BUTTON = "ᴀɢᴀɪɴ"
-TEXT_PREPARE_NEW_DICTIONARY = "a new list of words has been prepared."
+TEXT_PREPARE_NEW_DICTIONARY = "\ta new list of words has been prepared."
 
 # label settings
 TEXT_MISTAKES_COUNTER_LABEL = "ᴍɪsᴛᴀᴋᴇs:"
