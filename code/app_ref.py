@@ -67,13 +67,24 @@ class Dictionary(Singleton):
 	) -> None:
 		"""sets a new value for the key."""
 		if counter == "":
-			self._dictionary[key] = [
-				self._dictionary[key][0] if transcription == "" else transcription,
-				self._dictionary[key][1] if translation == "" else translation,
-				self._dictionary[key][2],
-				self._dictionary[key][3],
-				self._dictionary[key][4],
-			]
+			if key in self._dictionary:
+				self._dictionary[key] = [
+					self._dictionary[key][0] if transcription == "" else transcription,
+					self._dictionary[key][1] if translation == "" else translation,
+					self._dictionary[key][2],
+					self._dictionary[key][3],
+					self._dictionary[key][4],
+				]
+
+			else:
+				self._dictionary[key] = [
+					transcription,
+					translation,
+					str(datetime.date.today()),
+					"0",
+					"0",
+				]
+
 		else:
 			temp = [
 				self._dictionary[key][0],
@@ -618,8 +629,38 @@ class App(Singleton, tkinter.Tk):
 		self._save_button.configure(state="normal")
 
 	def _add_button_command(self) -> None:
-		"""."""
-		pass
+		"""adds a new word to the dictionary."""
+		new_word = self._word_text.get(1.0, "end").strip()
+
+		if new_word not in self._dictionary.get_dictionary():
+			new_transcription = self._transcription_text.get(1.0, "end").strip()
+			new_translation = self._translation_text.get(1.0, "end").strip()
+
+			if len(new_word) <= 0 and len(new_translation) <= 0:
+				self._result_command_label.configure(text=BOTH_FIELDS_EMPTY)
+
+			elif (len(new_word)) <= 0:
+				self._result_command_label.configure(text=WORD_FiELD_EMPTY)
+
+			elif len(new_translation) <= 0:
+				self._result_command_label.configure(text=TRANSL_FiELD_EMPTY)
+
+			else:
+				self._dictionary.set_new_values(
+					key=new_word,
+					transcription=new_transcription,
+					translation=new_translation
+				)
+				self._result_command_label.configure(text=WORD_ADDED)
+				self._word_text.delete(1.0, "end")
+				self._transcription_text.delete(1.0, "end")
+				self._translation_text.delete(1.0, "end")
+
+		else:
+			self._word_text.delete(1.0, "end")
+			self._transcription_text.delete(1.0, "end")
+			self._translation_text.delete(1.0, "end")
+			self._result_command_label.configure(text=WORD_EXISTS)
 
 	def _find_button_command(self) -> None:
 		"""."""

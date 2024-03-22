@@ -31,6 +31,11 @@ TEXT_RESULT_LABEL = "ʀᴇsᴜʟᴛ:"
 TEXT_TRANSCRIPTION_LABEL = "ᴛʀᴀɴsᴄʀɪᴘᴛɪᴏɴ:"
 TEXT_TRANSLATION_LABEL = "ᴛʀᴀɴsʟᴀᴛɪᴏɴ:"
 TEXT_RESULT_COMMAND_LABEL = "the fields are empty."
+BOTH_FIELDS_EMPTY = "the word and translation fields are too short."
+WORD_FiELD_EMPTY = "the word field is too short."
+TRANSL_FiELD_EMPTY = "the translation field is too short."
+WORD_ADDED = "the new word added successfully."
+WORD_EXISTS = "this word is already in the dictionary."
 
 # font
 FONT = "verdana 8"
