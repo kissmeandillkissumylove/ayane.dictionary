@@ -663,8 +663,25 @@ class App(Singleton, tkinter.Tk):
 			self._result_command_label.configure(text=WORD_EXISTS)
 
 	def _find_button_command(self) -> None:
-		"""."""
-		pass
+		"""finds the word and shows it in the fields."""
+		word = self._word_text.get(1.0, "end").strip()
+
+		if word in self._dictionary.get_dictionary():
+			self._transcription_text.delete(1.0, "end")
+			self._translation_text.delete(1.0, "end")
+			self._transcription_text.insert(
+				1.0, self._dictionary.get_dictionary()[word][0]
+			)
+			self._translation_text.insert(
+				1.0, self._dictionary.get_dictionary()[word][1]
+			)
+			self._result_command_label.configure(text="")
+
+		else:
+			self._word_text.delete(1.0, "end")
+			self._transcription_text.delete(1.0, "end")
+			self._translation_text.delete(1.0, "end")
+			self._result_command_label.configure(text=NO_WORD)
 
 	def _edit_button_command(self) -> None:
 		"""."""
