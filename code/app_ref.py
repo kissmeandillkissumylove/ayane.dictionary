@@ -37,7 +37,7 @@ class Dictionary(Singleton):
 					line = database.readline()
 					if not line:
 						break
-					line = line.rstrip().split(SEPARATOR)
+					line = line.rstrip().split(SEP)
 					self._dictionary[line[0]] = line[1:]
 				self._len = len(self._dictionary)
 
@@ -94,7 +94,8 @@ class Dictionary(Singleton):
 			if temp[3] == "0":
 				pass
 			elif int(temp[3]) > 0:
-				temp[2] = str(datetime.date.today() + datetime.timedelta(days=int(temp[3])))
+				temp[2] = str(datetime.date.today() + datetime.timedelta(
+					days=int(temp[3])))
 			elif int(temp[3]) < 0:
 				temp[2] = str(datetime.date.today())
 
@@ -106,6 +107,25 @@ class Dictionary(Singleton):
 		for item in self._dictionary.items():
 			print(f"{item[0]} : {item[1]}")
 		print("-" * 80)
+
+	def save_changes(self, path=DATABASE_PATH) -> None:
+		"""saves all the changes in a dictionary to the file."""
+		try:  # try to open file.
+			with open(path, "w", encoding="utf-8") as database:
+				for _ in self._dictionary.items():
+					database.write(
+						_[0] + SEP
+						+ _[1][0] + SEP
+						+ _[1][1] + SEP
+						+ _[1][2] + SEP
+						+ _[1][3] + SEP
+						+ _[1][4] + "\n"
+					)
+
+		except FileNotFoundError:  # no file in /database/database.txt.
+			if path != BACKUP_DATABASE_PATH:
+				# try to open file with backup link.
+				self.save_changes(path=BACKUP_DATABASE_PATH)
 
 
 class App(Singleton, tkinter.Tk):
@@ -194,7 +214,8 @@ class App(Singleton, tkinter.Tk):
 				self._prepared_dictionary[_[0]] = _[1]
 
 		self._keys_prepared_dictionary = list(self._prepared_dictionary.keys())
-		self._text_word_counter = f"\\{len(self._prepared_dictionary)}\\{self._dictionary.get_len()}"
+		self._text_word_counter = f"\\{len(
+			self._prepared_dictionary)}\\{self._dictionary.get_len()}"
 		self._counter = 0
 		self._mistakes_counter = 0
 
@@ -612,8 +633,10 @@ class App(Singleton, tkinter.Tk):
 		self._again_button.configure(state="normal")
 
 	def _save_button_command(self) -> None:
-		"""."""
-		pass
+		"""saves all the changes in a dictionary to the file."""
+		self._save_button.configure(state="disabled")
+		self._dictionary.save_changes()
+		self._save_button.configure(state="normal")
 
 	def _add_button_command(self) -> None:
 		"""."""

@@ -8,7 +8,7 @@ KEY_KODE = "<Control-KeyPress>"
 # database settings
 DATABASE_PATH = r"..\data\database.txt"
 BACKUP_DATABASE_PATH = "database.txt"
-SEPARATOR = "@"
+SEP = "@"
 
 # buttons settings
 TEXT_NEXT_BUTTON = "ɴᴇxᴛ"
