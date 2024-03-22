@@ -151,7 +151,6 @@ class App(Singleton, tkinter.Tk):
 
 		self._next_button = self._create_next_button()
 		self._show_button = self._create_show_button()
-		self._forgot_button = self._create_forgot_button()
 		self._right_button = self._create_right_button()
 		self._wrong_button = self._create_wrong_button()
 		self._again_button = self._create_again_button()
@@ -295,21 +294,6 @@ class App(Singleton, tkinter.Tk):
 			activebackground=BLUE,
 			text=TEXT_SHOW_BUTTON,
 			command=self._show_button_command,
-			state="disabled",
-			disabledforeground=ALMOST_BLACK,
-		)
-
-	def _create_forgot_button(self) -> tkinter.Button:
-		"""creates a "FORGOT" button which adds a mistake to the mistakes
-			counter."""
-		return tkinter.Button(
-			master=self.master,
-			background=RED,
-			bd=2,
-			foreground=WHITE,
-			activebackground=BLUE,
-			text=TEXT_FORGOT_BUTTON,
-			command=self._forgot_button_command,
 			state="disabled",
 			disabledforeground=ALMOST_BLACK,
 		)
@@ -551,7 +535,6 @@ class App(Singleton, tkinter.Tk):
 			self._counter += 1
 
 			self._show_button.configure(state="normal")
-			self._forgot_button.configure(state="normal")
 			self._right_button.configure(state="normal")
 			self._wrong_button.configure(state="normal")
 			self._word_label.configure(text="")
@@ -566,7 +549,6 @@ class App(Singleton, tkinter.Tk):
 			self._translation_label.configure(text=self._current_item[1])
 		else:
 			self._show_button.configure(state="disabled")
-			self._forgot_button.configure(state="disabled")
 			self._next_button.configure(state="disabled")
 			self._right_button.configure(state="disabled")
 			self._wrong_button.configure(state="disabled")
@@ -580,12 +562,6 @@ class App(Singleton, tkinter.Tk):
 		text = self._current_key + "\n" + self._current_item[0]
 		self._word_label.configure(text=text)
 		self._show_button.configure(state="disabled")
-
-	def _forgot_button_command(self) -> None:
-		"""adds one to the number of errors (self._mistakes_counter)."""
-		self._forgot_button.configure(state="disabled")
-		self._mistakes_counter += 1
-		self._mistakes_counter_label.configure(text=self._mistakes_counter)
 
 	def _right_button_command(self) -> None:
 		"""press the button if the answer is correct. the button lowers the priority of
@@ -601,6 +577,10 @@ class App(Singleton, tkinter.Tk):
 			this word poorly."""
 		self._right_button.configure(state="disabled")
 		self._wrong_button.configure(state="disabled")
+
+		self._mistakes_counter += 1
+		self._mistakes_counter_label.configure(text=self._mistakes_counter)
+
 		self._dictionary.set_new_values(key=self._current_key, counter="-1")
 
 	def _again_button_command(self) -> None:
@@ -620,7 +600,6 @@ class App(Singleton, tkinter.Tk):
 
 		else:
 			self._show_button.configure(state="disabled")
-			self._forgot_button.configure(state="disabled")
 			self._right_button.configure(state="disabled")
 			self._wrong_button.configure(state="disabled")
 			self._translation_label.configure(text=TEXT_PREPARE_NEW_DICTIONARY)
@@ -657,11 +636,10 @@ class App(Singleton, tkinter.Tk):
 
 		self._next_button.place(x=5, y=115, width=50, height=20)
 		self._show_button.place(x=60, y=115, width=50, height=20)
-		self._forgot_button.place(x=115, y=115, width=50, height=20)
-		self._right_button.place(x=170, y=115, width=50, height=20)
-		self._wrong_button.place(x=225, y=115, width=50, height=20)
-		self._again_button.place(x=280, y=115, width=50, height=20)
-		self._save_button.place(x=335, y=115, width=50, height=20)
+		self._right_button.place(x=115, y=115, width=50, height=20)
+		self._wrong_button.place(x=170, y=115, width=50, height=20)
+		self._again_button.place(x=225, y=115, width=50, height=20)
+		self._save_button.place(x=280, y=115, width=50, height=20)
 
 		self._mistakes_text_label.place(x=170, y=140, width=50, height=20)
 		self._mistakes_counter_label.place(x=225, y=140, width=55, height=20)
