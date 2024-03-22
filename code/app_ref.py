@@ -627,6 +627,7 @@ class App(Singleton, tkinter.Tk):
 		self._save_button.configure(state="disabled")
 		self._dictionary.save_changes()
 		self._save_button.configure(state="normal")
+		self._result_command_label.configure(text=SAVED)
 
 	def _add_button_command(self) -> None:
 		"""adds a new word to the dictionary."""
