@@ -37,6 +37,7 @@ TRANSL_FiELD_EMPTY = "the translation field is too short."
 WORD_ADDED = "the new word added successfully."
 WORD_EXISTS = "this word is already in the dictionary."
 NO_WORD = "there is no such word in the dictionary."
+EDITED = "word parameters have been edited."
 
 # font
 FONT = "verdana 8"

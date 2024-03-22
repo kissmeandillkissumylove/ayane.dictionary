@@ -684,8 +684,28 @@ class App(Singleton, tkinter.Tk):
 			self._result_command_label.configure(text=NO_WORD)
 
 	def _edit_button_command(self) -> None:
-		"""."""
-		pass
+		"""edits word's parameters."""
+		word = self._word_text.get(1.0, "end").strip()
+
+		if word in self._dictionary.get_dictionary():
+			self._dictionary.set_new_values(
+				key=word,
+				transcription=self._transcription_text.get(1.0, "end").strip(),
+				translation=self._translation_text.get(1.0, "end").strip()
+			)
+			self._word_text.delete(1.0, "end")
+			self._transcription_text.delete(1.0, "end")
+			self._translation_text.delete(1.0, "end")
+			self._result_command_label.configure(text=EDITED)
+
+		else:
+			self._word_text.delete(1.0, "end")
+			self._transcription_text.delete(1.0, "end")
+			self._translation_text.delete(1.0, "end")
+			if word == "":
+				self._result_command_label.configure(text=WORD_FiELD_EMPTY)
+			else:
+				self._result_command_label.configure(text=NO_WORD)
 
 	def _display_interface(self) -> None:
 		"""shows all interface elements."""
