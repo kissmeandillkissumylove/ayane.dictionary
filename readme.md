@@ -2,8 +2,6 @@
 
 ![release](https://img.shields.io/badge/release-v2.0--beta-DF1313)
 
-___
-
 A smart dictionary that can **memorize**, **edit**, and **find** words. The
 main function of the dictionary is **efficient revision** of words. the dictionary will
 remember which words the user knows worse than others, and then you will be
@@ -15,15 +13,11 @@ less often than others.
 dictionary/master/.github/images/img0.png" width="80%">
 </p>
 
-___
-
 # how to install
 
 - you could download all the files from `code/code` and compile the executable
   **yourself**.
 - or you could use the `.exe` I compiled from the `.github/download` directory.
-
-___
 
 # how to use
 
