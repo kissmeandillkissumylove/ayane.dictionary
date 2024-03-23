@@ -1,9 +1,3 @@
-<style>
-body {
-  font-family: verdana;
-}
-</style>
-
 # ayane.dictionary
 
 ![release](https://img.shields.io/badge/release-v2.0--beta-DF1313)
