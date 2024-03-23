@@ -14,7 +14,7 @@ less often than others.
 
 # how to install
 
-- you could download all the files from `code/code` and compile the executable
+- you could download all the files from `code/` and compile the executable
   **yourself**.
 - or you could use the `.exe` I compiled from the `.github/download` directory.
 
