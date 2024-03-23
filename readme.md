@@ -9,8 +9,7 @@ asked to repeat them. if the user knows the word perfectly, it will be displayed
 less often than others.
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/kissmeandillkissumylove/ayane.
-dictionary/master/.github/images/img0.png" width="80%">
+    <img src="https://raw.githubusercontent.com/kissmeandillkissumylove/ayane.dictionary/master/.github/images/img0.png" width="80%">
 </p>
 
 # how to install
