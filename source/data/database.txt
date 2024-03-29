@@ -1,0 +1,788 @@
+pronunciation@[prəˌnʌnsiˈeɪʃn]@произношение, произнесение@2024-03-22@0@2
+transcription@[trænˈskrɪpʃən]@транскрипция, расшифровка@2024-03-22@0@1
+house@[haʊs]@дом@2024-03-22@0@1
+translation@[trænzˈleɪʃən]@перевод@2024-03-22@0@1
+a@@неопределённый артикль@2024-03-29@1@0
+result@[rɪˈzʌlt]@результат, следствие, исход@2024-03-22@0@0
+again@@опять, снова@2024-03-22@0@1
+relative@[ˈrelətɪv]@родственник@2024-03-22@0@0
+to@@частица направления, разделяет два глагола, чтобы, для@2024-03-22@0@1
+verb@[vɜːb]@глагол@2024-03-22@0@2
+noun@[naʊn]@существительное@2024-03-22@0@2
+necessary@[ˈnesəsəri]@необходимый@2024-03-22@0@2
+Czech@[tʃek]@чешский@2024-03-22@0@1
+horror@[ˈhɒrər]@ужас, фильм ужасов@2024-03-22@0@0
+Boston@[ˈbɑː.stən]@Бостон@2024-03-22@0@2
+chair@[tʃeər]@стул@2024-03-22@0@1
+fluently@[ˈfluːənt]@adverb: свободно@2024-03-22@0@0
+fluent@[ˈfluːənt]@adjective: свободный@2024-03-22@0@1
+happen@[ˈhæpən]@verb: случаться, происходить@2024-03-22@0@2
+different@[ˈdɪfərənt]@adjective: непохожий, разный, отличающийся;@2024-03-22@0@1
+early@[ˈɜːli]@adverb: рано@2024-03-22@0@1
+late@[leɪt]@adverb: поздно@2024-03-22@0@1
+seem@[siːm]@verb: казаться@2024-03-22@0@2
+adjective@[ˈædʒɪktɪv]@noun: прилагательное@2024-03-22@0@1
+manhwa@@noun: манхва@2024-03-22@0@2
+Danish@[ˈdeɪ.nɪʃ]@adjective: датский@2024-03-22@0@2
+fish@[fɪʃ]@noun: рыба@2024-03-22@0@0
+Spanish@@adjective: испанский@2024-03-22@0@0
+adverb@[ˈædvɜːb]@noun: наречие@2024-03-22@0@0
+tennis@[ˈtenɪs]@noun: теннис@2024-03-22@0@2
+guitar@[ɡɪˈtɑːr]@noun: гитара@2024-03-22@0@1
+get up@@phrasal verb: вставать@2024-03-22@0@2
+see@[siː]@verb: видеть, понимать@2024-03-22@0@1
+often@[ˈɒfən]@adverb: часто@2024-03-29@1@0
+Moscow@[ˈmɑː.skoʊ]@noun: Москва@2024-03-22@0@1
+meat@[miːt]@noun: мясо@2024-03-22@0@1
+too much@@слишком много@2024-03-22@0@0
+Canada@[ˈkæn.ə.də]@noun: Канада@2024-03-22@0@2
+vowel@[vaʊəl]@noun: гласный@2024-03-22@0@0
+consistent@[kənˈsɪs.tənt]@adjective: согласный@2024-03-22@0@-1
+housework@[ˈhaʊswɜːk]@noun: работа по дому@2024-03-22@0@1
+school@[skuːl]@noun: школа@2024-03-22@0@1
+go to the cinema@@ходить в кино@2024-03-22@0@1
+there@[ðər]@там@2024-03-22@0@2
+teach@[tiːtʃ]@verb: преподавать, учить@2024-03-29@1@0
+usually@[ˈjuːʒəli]@adverb: обычно@2024-03-22@0@1
+relax@[rɪˈlæks]@verb: отдыхать, расслаблять(ся)@2024-03-22@0@1
+in the evening@@вечером@2024-03-22@0@1
+cry@[kraɪ]@verb: плакать, восклицать@2024-03-22@0@0
+try@[traɪ]@verb: пытаться, стараться, пробовать@2024-03-22@0@2
+flat@[flæt]@noun: квартира@2024-03-22@0@2
+job@[dʒɒb]@noun: работа@2024-03-22@0@0
+television@[ˈtelɪvɪʒən]@noun: телевидение@2024-03-22@0@2
+works hard@@работать усердно@2024-03-22@0@1
+have a rest@@иметь отдых, отдыхать@2024-03-22@0@2
+swim@[swɪm]@verb: плавать, плыть@2024-03-22@0@1
+football@[ˈfʊtbɔːl]@noun: футбол@2024-03-22@0@2
+fly@[flaɪ]@летать@2024-03-22@0@1
+in the morning@@утром@2024-03-22@0@2
+wash up the dishes@@мыть посуду@2024-03-22@0@0
+like@[laɪk]@verb: нравиться@2024-03-22@0@2
+theatre@[ˈθɪətər]@noun: театр@2024-03-22@0@2
+Cambodia@[kæmˈboʊ.di.ə]@noun: Камбоджа@2024-03-29@1@0
+cost@[kɒst]@noun: цена, стоимость; verb: стоить@2024-03-22@0@2
+know@[nəʊ]@verb: знать, иметь понятие@2024-03-22@0@2
+city@[ˈsɪti]@noun: город (большой)@2024-03-22@0@2
+town@[taʊn]@noun: город (небольшой)@2024-03-29@1@0
+listen to music@@слушать музыку@2024-03-22@0@2
+also@[ˈɔːlsəʊ]@adverb: также@2024-03-22@0@-1
+uncle@[ˈʌŋkl]@noun: дядя@2024-03-22@0@0
+do business@@заниматься бизнесом@2024-03-22@0@1
+really@[ˈrɪəli]@adverb: на самом деле, действительно, реально@2024-03-22@0@2
+the United States@@noun: Соединённые Штаты@2024-03-22@0@2
+pound@[paʊnd]@noun: фунт@2024-03-22@0@1
+university@[ˌjuːnɪˈvɜːsəti]@noun: университет@2024-03-22@0@1
+go to the park@@ходить в парк@2024-03-22@0@1
+too@[tuː]@adverb: тоже@2024-03-22@0@1
+look@[lʊk]@verb: смотреть@2024-03-22@0@1
+French@@adjective: французский@2024-03-29@1@0
+China@[ˈtʃaɪnə]@noun: Китай@2024-03-22@0@0
+dollar@[ˈdɒlər]@noun: доллар@2024-03-22@0@1
+beautiful@[ˈbjuːtɪfəl]@adjective: красивый@2024-03-22@0@0
+order@[ˈɔːdər]@noun: заказ; verb: заказ@2024-03-22@0@2
+a cup of tea@@чашечка чая@2024-03-22@0@1
+go to Italy next year@@ездить в Италию в следущем месяце@2024-03-22@0@2
+call@[kɔːl]@verb: называться, называть@2024-03-22@0@0
+get@[ɡet]@verb: приобретать, забирать, получать@2024-03-22@0@2
+watch@[wɒtʃ]@verb: смотреть@2024-03-22@0@1
+channel@[ˈtʃænəl]@noun: канал@2024-03-29@1@0
+another@[əˈnʌðər]@pronoun: другой@2024-03-22@0@1
+pronoun@[ˈprəʊnaʊn]@noun: местоимение@2024-03-22@0@1
+rent@[rent]@verb: арендовать, снимать@2024-03-22@0@2
+secretary@[ˈsekrətəri]@noun: секретарь@2024-03-22@0@0
+all the information@@вся информация (известно какая)@2024-03-22@0@1
+own@[əʊn]@adjective: свой собственный@2024-03-22@0@2
+New York@[ˌnuː ˈjɔːrk]@noun: Нью Йорк@2024-03-22@0@2
+everything@[ˈevriθɪŋ]@pronoun: всё (исп. на конце)@2024-03-22@0@1
+information@[ˌɪnfəˈmeɪʃən]@noun: информация, сведения@2024-03-22@0@2
+dress@[dres]@verb: одеваться; noun: платье@2024-03-22@0@1
+abroad@[əˈbrɔːd]@adverb: за границей@2024-03-22@0@2
+talk@[tɔːk]@verb: говорить (с кем-то)@2024-03-22@0@2
+speak@[spiːk]@verb: говорить (на каком-то языке)@2024-03-22@0@2
+tell@[tel]@verb: говорить (кому-то)@2024-03-22@0@1
+one more time@@ещё один раз@2024-03-22@0@2
+read a book in english@@читать книгу на английском@2024-03-22@0@1
+write it down@@phrasal verb: записать это@2024-03-22@0@2
+go to the party@@ходить на вечеринку@2024-03-22@0@0
+restaurant@[ˈres.tə.rɑːnt]@noun: ресторан@2024-03-22@0@2
+hear all the story@@услышать всю историю@2024-03-22@0@2
+hear@[hɪər]@verb: слышать, услышать@2024-03-22@0@1
+translate@[trænzˈleɪt]@verb: переводить@2024-03-22@0@1
+word@[wɜːd]@noun: слово@2024-03-22@0@2
+phrase@[freɪz]@noun: фраза@2024-03-22@0@2
+sentence@[ˈsentəns]@noun: предложение (в грамматике)@2024-03-22@0@0
+less@[les]@quantifier: меньше@2024-03-22@0@1
+quantifier@[ˈkwɒntɪfaɪər]@noun: квантификатор@2024-03-22@0@0
+earn@[ɜːn]@verb: зарабатывать@2024-03-22@0@1
+free time@@свободное время@2024-03-22@0@1
+speech@[spiːtʃ]@noun: (устная) речь, выступление@2024-03-22@0@1
+native speaker@@noun: носитель языка@2024-03-22@0@2
+be@[bɪ]@verb: быть@2024-03-22@0@2
+become@[bɪˈkʌm]@verb: становиться@2024-03-22@0@2
+join@[dʒɔɪn]@verb: вступать, присоединиться@2024-03-22@0@1
+support@[səˈpɔːt]@noun: поддержка; verb: поддерживать@2024-03-22@0@1
+stay@[steɪ]@verb: оставаться, останавливаться  (где-то)@2024-03-22@0@0
+sit@[sɪt]@verb: сидеть@2024-03-22@0@2
+much@[mʌtʃ]@quantifier: много (в отрицании)@2024-03-22@0@2
+mathematics@[mæθəmˈætɪks]@noun: математика@2024-03-22@0@2
+piano@[piˈænəʊ]@noun: фортепиано, пианино@2024-03-22@0@0
+newspaper@[ˈnuːzˌpeɪpər]@noun: газета@2024-03-22@0@1
+magazine@[ˌmæɡəˈziːn]@noun: журнал@2024-03-22@0@1
+chinese@@китайский@2024-03-22@0@2
+politics@[ˈpɒlətɪks]@noun: политика@2024-03-22@0@0
+physical exercises@@физические упражнения@2024-03-22@0@2
+gym@[dʒɪm]@noun: зал@2024-03-22@0@2
+all day@@целый день@2024-03-22@0@-1
+later@[ˈleɪ.t̬ɚ]@adverb: позже@2024-03-22@0@1
+any@[ˈen.i]@pronoun: любой@2024-03-22@0@0
+exercise@[ˈeksəsaɪz]@noun: упражнение@2024-03-22@0@2
+prefer@[prɪˈfɜːr]@verb: предпочитать@2024-03-22@0@2
+homework@[ˈhəʊmwɜːk]@noun: домашнее задание, уроки@2024-03-22@0@2
+director@[dɪˈrektər]@noun: директор@2024-03-22@0@1
+ask@[ɑːsk]@verb: спрашивать, просить@2024-03-22@0@1
+cousin@[ˈkʌzən]@noun: двоюродный брат, двоюродная сестра@2024-03-22@0@2
+concert@[ˈkɒnsət]@noun: концерт@2024-03-22@0@1
+classical@[ˈklæsɪkəl]@adjective: классическая@2024-03-22@0@1
+smoke@[sməʊk]@noun: дым, курение; verb: курить@2024-03-22@0@1
+healthy@[ˈhelθi]@adjective: здоровый@2024-03-22@0@1
+drive fast@@водить быстро@2024-03-22@0@2
+drive@[draɪv]@noun: езда; verb: водить@2024-03-22@0@2
+slowly@[ˈsləʊli]@adverb: медленно@2024-03-22@0@0
+finish@[ˈfɪnɪʃ]@verb: заканчивать; noun: конец, финиш@2024-03-22@0@0
+because@[bɪˈkəz]@conjunction: потому что@2024-03-22@0@2
+conjunction@[kənˈdʒʌŋkʃən]@noun: союз (в грамматике)@2024-03-22@0@-1
+begin@[bɪˈɡɪn]@verb: начинать@2024-03-22@0@2
+together@[təˈɡeðər]@adverb: вместе@2024-03-22@0@2
+separate@[ˈsepərət]@adjective: отдельный@2024-03-22@0@0
+separately@@adverb: раздельно@2024-03-22@0@1
+go shopping@@ходить за покупками@2024-03-22@0@1
+on foot@@пешком@2024-03-22@0@2
+history@[ˈhɪstəri]@noun: история (предмет)@2024-03-22@0@1
+walk@[wɔːk]@verb: ходить, идти пешком@2024-03-22@0@2
+advise@[ədˈvaɪz]@verb: советовать@2024-03-22@0@1
+pen@[pen]@noun: ручка@2024-03-22@0@1
+recommendation@[ˌrekəmenˈdeɪʃən]@noun: рекомендация@2024-03-22@0@0
+practice@[ˈpræktɪs]@(noun) практика, тренировка@2024-03-22@0@-1
+check@[tʃek]@verb: проверять@2024-03-22@0@1
+document@[ˈdɒkjəmənt]@noun: документ@2024-03-22@0@1
+file@[faɪl]@noun: файл@2024-03-22@0@0
+letter@[ˈletər]@noun: письмо, буква@2024-03-22@0@1
+regularly@[ˈreɡjələli]@adverb: регулярно@2024-03-22@0@1
+train@[treɪn]@noun: поезд, тренировка; verb: тренироваться@2024-03-22@0@1
+rest@[rest]@noun: отдых@2024-03-22@0@0
+the United Kingdom@[jʊˌnaɪ.tɪd ˈkɪŋ.dəm]@noun: Соединённое Королевство@2024-03-22@0@2
+communicate@[kəˈmjuː.nɪ.keɪt]@verb: общаться@2024-03-22@0@2
+other@[ˈʌðər]@adjective: другие@2024-03-22@0@1
+aunt@[ɑːnt]@noun: тётя@2024-03-22@0@0
+ahead@[əˈhed]@adjective: впереди; adverb: вперёд@2024-03-22@0@1
+effectively@[ɪˈfektɪvli]@adverb: эффективно@2024-03-22@0@0
+by myself@@самостоятельно@2024-03-22@0@0
+businesswoman@[ˈbɪznɪsˌwʊmən]@деловая женщина@2024-03-22@0@2
+those@[ðəʊz]@pronoun: те@2024-03-22@0@1
+show@[ʃəʊ]@verb: показывать@2024-03-22@0@0
+offer@[ˈɒfər]@noun: предложение; verb: предлагать@2024-03-22@0@1
+professionally@[prəˈfeʃənəli]@adverb: профессионально@2024-03-22@0@1
+example@[ɪɡˈzɑːmpl]@noun: пример, образец@2024-03-22@0@0
+better@[ˈbetər]@adjective: лучше@2024-03-22@0@2
+hundred@[ˈhʌndrəd]@сотня@2024-03-22@0@0
+progress@[ˈprəʊɡres]@noun: прогресс, успехи@2024-03-29@1@0
+certainly@[ˈsɜːtənli]@adverb: непременно, безусловно, уверенно@2024-03-29@1@0
+sure@[ʃɔːr]@adjective: уверенный. конечно@2024-03-29@1@0
+of course@[əvˈkɔːs]@adverb: конечно!@2024-03-22@0@1
+dance@[dɑːns]@verb: танцевать@2024-03-22@0@1
+from  time to time@@время от времени, временами@2024-03-22@0@1
+believe@[bɪˈliːv]@verb: считать, верить@2024-03-22@0@1
+travel@[ˈtrævəl]@verb: путешествовать@2024-03-22@0@1
+urgent@[ˈɜːdʒənt]@adjective: срочный; adverb: срочно@2024-03-22@0@1
+advice@[ədˈvaɪs]@noun: совет@2024-03-29@1@0
+orange@[ˈɒrɪndʒ]@adjective: оранжевый, апельсиновый@2024-03-22@0@1
+juice@[dʒuːs]@noun: сок@2024-03-22@0@2
+subject@[ˈsʌbdʒɪkt]@noun: предмет@2024-03-22@0@2
+draw@[drɔː]@verb: рисовать@2024-03-22@0@1
+seldom@[ˈseldəm]@adverb: редко@2024-03-22@0@1
+rarely@[ˈreəli]@adverb: редко@2024-03-22@0@1
+ghost@[ɡəʊst]@noun: привидение@2024-03-22@0@2
+near@[nɪər]@adverb: близко, около, поблизости@2024-03-22@0@2
+classmate@[ˈklɑːsmeɪt]@noun: одноклассник@2024-03-22@0@2
+neighbor@[ˈneɪbər]@noun: сосед@2024-03-22@0@1
+expensive@[ɪkˈspensɪv]@adjective: дорогой, дорогостоящий@2024-03-22@0@0
+husband@[ˈhʌzbənd]@noun: муж@2024-03-22@0@0
+cheap@[tʃiːp]@adjective: дешевый@2024-03-22@0@1
+perfectly@[ˈpɜːfɪktli]@adverb: совершенно, вполне@2024-03-22@0@-1
+meet@[miːt]@verb: встречать(ся)@2024-03-22@0@1
+leave@[liːv]@verb: уходить, уезжать, забывать (какую-то вещь)@2024-03-22@0@2
+forget@[fəˈɡet]@verb: забывать (что-то в уме)@2024-03-22@0@1
+useful@[ˈjuːsfəl]@adjective: полезный@2024-03-22@0@2
+general@[ˈdʒenərəl]@adjective: общий, основной@2024-03-22@0@1
+scheme@[skiːm]@noun: план, схема@2024-03-22@0@0
+mean@[miːn]@verb: значить, иметь ввиду@2024-03-22@0@2
+explain@[ɪkˈspleɪn]@verb: объяснять@2024-03-22@0@1
+get to@@phrasal verb: добираться (куда-то)@2024-03-22@0@1
+product@[ˈprɒdʌkt]@noun: продукция, изделие, продукт@2024-03-22@0@1
+spend@[spend]@verb: тратить@2024-03-22@0@0
+eat for breakfast@@есть на завтрак@2024-03-22@0@0
+come home@@приходить домой@2024-03-22@0@1
+look like@@phrasal verb: выглядеть@2024-03-22@0@0
+grow@[ɡrəʊ]@verb: расти, выращивать@2024-03-22@0@2
+garden@[ˈɡɑːdən]@noun: сад@2024-03-22@0@1
+cook@[kʊk]@verb: готовить (еду)@2024-03-22@0@2
+children@[ˈtʃɪldrən]@дети@2024-03-22@0@1
+daughter@[ˈdɔːtər]@noun: дочь@2024-03-22@0@2
+supplier@[səˈplaɪər]@noun: поставщик@2024-03-22@0@1
+produce@[prəˈdjuːs]@verb: производить@2024-03-22@0@0
+reply@[rɪˈplaɪ]@verb: отвечать (формальный вар.)@2024-03-22@0@1
+promise@[ˈprɒmɪs]@verb: обещать@2024-03-22@0@1
+think differently, think another way@@думать иначе [2]@2024-03-22@0@2
+refuse@[rɪˈfjuːz]@verb: отказываться@2024-03-22@0@0
+consider@[kənˈsɪdər]@verb: считать, полагать@2024-03-22@0@-2
+a waste of time@@phrasal verb: потеря времени@2024-03-22@0@2
+control@[kənˈtrəʊl]@noun: контроль, управление; verb: контролировать@2024-03-22@0@1
+quickly@[ˈkwɪkli]@adverb: быстро@2024-03-22@0@2
+interest@[ˈɪntrəst]@noun: интерес; verb: интересовать@2024-03-22@0@2
+hobby@[ˈhɒbi]@noun: хобби@2024-03-22@0@2
+colleague@[ˈkɒliːɡ]@noun: коллега@2024-03-22@0@1
+worse@[wɜːs]@adjective: хуже@2024-03-22@0@1
+violin@[ˌvaɪəˈlɪn]@noun: скрипка@2024-03-22@0@-1
+make progress@@phrasal verb: делать прогресс@2024-03-22@0@1
+greatly@[ˈɡreɪtli]@adverb: чрезвычайно, великолепно@2024-03-29@1@0
+naturally@[ˈnætʃərəli]@adverb: естественно@2024-03-22@0@0
+talented@[ˈtæləntid]@adjective: талантливый@2024-03-22@0@1
+outside@[ˌaʊtˈsaɪd]@preposition: снаружи@2024-03-22@0@1
+preposition@[ˌprepəˈzɪʃən]@noun: предлог (в грамматике)@2024-03-22@0@-1
+inside@[ˌɪnˈsaɪd]@noun: внутренняя часть; preposition: внутри@2024-03-29@1@0
+hard-working@[ˌhɑːdˈwɜːkɪŋ]@adjective: усердный, трудолюбивый@2024-03-22@0@1
+kind@[kaɪnd]@adjective: добрый, любезный@2024-03-22@0@1
+person@[ˈpɜːsən]@noun: человек, личность@2024-03-22@0@2
+housewife@[ˈhaʊswaɪf]@noun: домохозяйка@2024-03-22@0@1
+building@[ˈbɪldɪŋ]@noun: здание@2024-03-22@0@1
+small@[smɔːl]@adjective: маленький, небольшой@2024-03-22@0@1
+table@[ˈteɪbl]@noun: стол@2024-03-22@0@1
+desk@[desk]@noun: письменный стол@2024-03-22@0@2
+detail@[ˈdiːteɪl]@noun: подробность, деталь@2024-03-22@0@1
+difficult@[ˈdɪfɪkəlt]@adjective: трудный@2024-03-22@0@2
+busy@[ˈbɪzi]@adjective: занятой@2024-03-29@1@0
+tired@[taɪəd]@adjective: усталый@2024-03-22@0@1
+touch@[tʌtʃ]@verb: трогать@2024-03-22@0@2
+sales manager@@noun: менеджер по продажам@2024-03-22@0@1
+excellent@[ˈek.səl.ənt]@adjective: превосходный, отличный@2024-03-22@0@1
+real@[rɪəl]@adjective: реальный, действительный@2024-03-29@1@0
+terrible@[ˈterəbl]@adjective: ужасный@2024-03-22@0@1
+effective@[ɪˈfektɪv]@adjective: эффективный@2024-03-22@0@0
+kitchen@[ˈkɪtʃɪn]@noun: кухня@2024-03-22@0@1
+bathroom@[ˈbɑːθruːm]@noun: ванная@2024-03-22@0@2
+angry@[ˈæŋɡri]@adjective: сердитый, злой@2024-03-22@0@1
+key@[kiː]@noun: ключ@2024-03-22@0@2
+number@[ˈnʌmbər]@noun: число@2024-03-22@0@1
+hotel@[həʊˈtel]@noun: гостиница, отель@2024-03-22@0@1
+sick@[sɪk]@adjective: больной, вытошнить@2024-03-22@0@1
+ill@[ɪl]@adjective: больной@2024-03-22@0@2
+comfortable@[ˈkʌmftəbl]@adjective: удобный, комфортабельный@2024-03-22@0@1
+useless@[ˈjuːsləs]@adjective: бесполезный, никуда не годный@2024-03-22@0@1
+rich@[rɪtʃ]@adjective: богатый@2024-03-22@0@1
+poor@[pɔːr]@adjective: бедный@2024-03-22@0@1
+informative@[ɪnˈfɔːmətɪv]@adjective: информативный, содержательный@2024-03-22@0@1
+hospital@[ˈhɒspɪtəl]@noun: больница@2024-03-22@0@1
+high@[haɪ]@adjective: высокий (не про человека)@2024-03-22@0@0
+powerful@[ˈpaʊəfəl]@adjective: мощный@2024-03-22@0@0
+amazing@[əˈmeɪzɪŋ]@adjective: удивительный@2024-03-22@0@0
+married@[ˈmærid]@adjective: женатый, замужняя@2024-03-22@0@0
+single@[ˈsɪŋɡl]@adjective: единственный, холост@2024-03-22@0@0
+stupid@[ˈstjuːpɪd]@adjective: глупый@2024-03-22@0@1
+silly@[ˈsɪli]@adjective: глупый, дурацкий@2024-03-22@0@0
+foolish@[ˈfuːlɪʃ]@adjective: дурацкий@2024-03-22@0@1
+clever@[ˈklevər]@adjective: умный@2024-03-22@0@2
+smart@[smɑːt]@adjective: умный@2024-03-22@0@2
+you’re mistaken@@ты ошибаешься@2024-03-22@0@1
+warm@[wɔːm]@adjective: теплый@2024-03-22@0@2
+obvious@[ˈɒbviəs]@adjective: очевидный@2024-03-22@0@2
+cloudy@[ˈklaʊdi]@adjective: облачный@2024-03-22@0@1
+windy@[ˈwɪndi]@adjective: ветреный@2024-03-22@0@1
+choice@[tʃɔɪs]@noun: выбор@2024-03-22@0@0
+it's on the right (left)@@это справа (слева)@2024-03-22@0@2
+far@[fɑːr]@adverb: далеко@2024-03-22@0@2
+brilliant@[ˈbrɪliənt]@adjective: блестящий@2024-03-22@0@0
+lifestyle@[ˈlaɪfstaɪl]@noun: уклад жизни, жизненный образ@2024-03-22@0@2
+innovative@[ˈɪnəveɪtɪv]@adjective: новаторский, иновационный@2024-03-22@0@2
+popular@[ˈpɒpjələr]@adjective: популярный, распространенный@2024-03-22@0@2
+knowledge@[ˈnɒlɪdʒ]@noun: знание@2024-03-22@0@1
+basic@[ˈbeɪsɪk]@adjective: основной, базовый@2024-03-22@0@2
+way of life@@жизненный путь@2024-03-22@0@1
+afraid@[əˈfreɪd]@adjective: напуганный@2024-03-22@0@2
+pregnant@[ˈpreɡnənt]@adjective: беременная@2024-03-22@0@1
+well-paid@[ˌwelˈpeɪd]@adjective: хорошо-оплачиваемый@2024-03-22@0@2
+dangerous@[ˈdeɪndʒərəs]@adjective: опасный@2024-03-22@0@2
+enough@[ɪˈnʌf]@pronoun, quantifier: достаточный@2024-03-22@0@2
+reliable@[rɪˈlaɪəbl]@adjective: надежный@2024-03-22@0@2
+plan@[plæn]@noun: план@2024-03-22@0@2
+funny@[ˈfʌni]@adjective: смешной@2024-03-22@0@1
+surprised@[səˈpraɪzd]@adjective: удивленный@2024-03-22@0@0
+serious@[ˈsɪəriəs]@adjective: серьезный@2024-03-29@1@0
+at all@@вовсе (если исп. на конце)@2024-03-22@0@1
+office@[ˈɒfɪs]@noun: офис@2024-03-22@0@1
+acquaintance@[əˈkweɪntəns]@noun: знакомый@2024-03-22@0@1
+wrong@[rɒŋ]@adjective: неправильный, неверный@2024-03-22@0@0
+team@[tiːm]@noun: команда@2024-03-22@0@2
+specialist@[ˈspeʃəlɪst]@noun: специалист@2024-03-22@0@1
+expert@[ˈekspɜːt]@noun: эксперт@2024-03-22@0@0
+area@[ˈeəriə]@noun: область (какая то площадь)@2024-03-22@0@1
+experienced@[ɪkˈspɪəriənst]@adjective: опытный@2024-03-22@0@1
+pleasant@[ˈplezənt]@adjective: приятный@2024-03-22@0@0
+feeling@[ˈfiːlɪŋ]@noun: чувство@2024-03-22@0@1
+successful@[səkˈsesfəl]@adjective: успешный@2024-03-29@1@0
+actress@[ˈæktrəs]@noun: актриса@2024-03-22@0@2
+it's clear@@ясно (погода)@2024-03-22@0@0
+clear@[klɪər]@adjective: ясный, понятный@2024-03-29@1@0
+singer@[ˈsɪŋər]@noun: певец@2024-03-22@0@0
+famous@[ˈfeɪməs]@adjective: знаменитый@2024-03-22@0@1
+writer@[ˈraɪtər]@noun: писатель@2024-03-22@0@1
+project@[ˈprɒdʒekt]@noun: проект@2024-03-22@0@1
+strong@[strɒŋ]@adjective: сильный@2024-03-22@0@0
+lazy@[ˈleɪzi]@adjective: ленивый@2024-03-22@0@1
+quite@[kwaɪt]@adverb: довольно@2024-03-22@0@-1
+rather@[ˈrɑːðər]@adverb: довольно (в сложной ситуации)@2024-03-22@0@1
+emotional@[ɪˈməʊʃənəl]@adjective: эмоциональный@2024-03-29@1@0
+similar@[ˈsɪmɪlər]@adjective: похожий@2024-03-22@0@1
+the same@@phrasal verb: такой же (такие же) (в конце)@2024-03-22@0@1
+traditional@[trəˈdɪʃənəl]@adjective: традиционный@2024-03-22@0@1
+freelancer@[ˈfriːlɑːns]@noun: человек, работающий внештатно@2024-03-22@0@1
+satisfactory@[ˌsætɪsˈfæktəri]@adjective: удовлетворительный@2024-03-22@0@0
+salary@[ˈsæləri]@noun: оклад, заработная плата@2024-03-22@0@1
+it’s your turn@@ваш черёд@2024-03-22@0@0
+independent@[ˌɪndɪˈpendənt]@adjective: независимый@2024-03-22@0@1
+outstanding@[ˌaʊtˈstændɪŋ]@adjective: выдающийся@2024-03-22@0@2
+special@[ˈspeʃəl]@adjective: особенный@2024-03-29@1@0
+guest@[ɡest]@noun: гость@2024-03-22@0@2
+unusual@[ʌnˈjuːʒuəl]@adjective: необычный@2024-03-22@0@1
+shocking@[ˈʃɒkɪŋ]@adjective: поразительный, шокирующий@2024-03-22@0@2
+available@[əˈveɪləbl]@adjective: доступный@2024-03-22@0@2
+lawyer@[ˈlɔɪər]@noun: юрист@2024-03-22@0@0
+he's twenty (years old)@@ему 20@2024-03-22@0@1
+training@[ˈtreɪnɪŋ]@noun: тренировка@2024-03-22@0@2
+thanks a million@@idiom: миллион раз спасибо@2024-03-22@0@1
+certain@[ˈsɜːtən]@adjective: уверенный@2024-03-22@0@0
+safe place@@безопасное место@2024-03-22@0@2
+decision@[dɪˈsɪʒən]@noun: решение@2024-03-22@0@2
+common@[ˈkɒmən]@adjective: обычный, широко распространенный@2024-03-29@1@0
+solution@[səˈluːʃən]@noun: решение (the answer to a problem)@2024-03-22@0@1
+percent@[pəˈsent]@adjective: процентный; noun: процент@2024-03-22@0@0
+satisfy@[ˈsætɪsfaɪ]@verb: удовлетворять@2024-03-22@0@2
+acceptable@[əkˈseptəbl]@adjective: приемлемый@2024-03-22@0@-2
+appearance@[əˈpɪərəns]@noun: внешность@2024-03-22@0@-1
+realize@[ˈrɪəlaɪz]@verb: осуществлять@2024-03-22@0@-1
+to make a dream come true@@phrasal verb: осуществить мечту@2024-03-22@0@-1
+surprising@[səˈpraɪzɪŋ]@adjective: удивительный@2024-03-22@0@-1
+unexpected@[ˌʌnɪkˈspektɪd]@adjective: неожиданный@2024-03-22@0@-2
+employee@[ɪmˈplɔɪiː]@noun: рабочий, служащий@2024-03-22@0@1
+avoid@[əˈvɔɪd]@verb: избегать@2024-03-22@0@1
+timeless@[ˈtaɪmləs]@adjective: неустаревающий, вечный@2024-03-22@0@0
+indeed@[ɪnˈdiːd]@adverb: в самом деле@2024-03-22@0@-2
+daily@[ˈdeɪli]@adjective: ежедневный@2024-03-22@0@1
+still@[stɪl]@adverb: всё ещё@2024-03-22@0@1
+nearest@@adjective: близжайший@2024-03-22@0@1
+apologize@[əˈpɒlədʒaɪz]@verb: извиняться@2024-03-22@0@2
+how much@@сколько (стоимость)@2024-03-22@0@1
+present@[ˈprezənt]@adjective: присутствовать@2024-03-22@0@2
+absent@[ˈæbsənt]@adjective: отсутствующий@2024-03-29@1@0
+edit@[ˈedɪt]@verb: редактировать@2024-03-22@0@1
+view@[vjuː]@noun: взгляд, вид@2024-03-22@0@2
+tool@[tuːl]@noun: инструмент@2024-03-22@0@1
+lid@[lɪd]@noun: крышка@2024-03-22@0@0
+attach@[əˈtætʃ]@verb: прикреплять, присоединять@2024-03-22@0@-1
+patient@[ˈpeɪʃənt]@adjective: терпеливый; noun: пациент@2024-03-22@0@1
+wallet@[ˈwɒlɪt]@noun: бумажник@2024-03-22@0@0
+assume@[əˈsjuːm]@verb: предполагать@2024-03-22@0@-1
+perhaps@[pəˈhæps]@adverb: может быть, возможно@2024-03-22@0@0
+impressive@[ɪmˈpresɪv]@adjective: впечатляющий@2024-03-22@0@-1
+no way@@ни при каких условиях, ни за что@2024-03-29@1@0
+smite@[smaɪt]@to hit someone forcefully or to have a sudden powerful or damaging effect on someone@2024-03-22@0@2
+divine@[dɪˈvaɪn]@adjective: божественный@2024-03-22@0@1
+sniveling@[ˈsnɪv.əl.ɪŋ]@adjective: used to describe someone you do not like because they are weak and unpleasant@2024-03-22@0@0
+attractive@[əˈtræk.tɪv]@adjective: привлекательный@2024-03-22@0@2
+topic@[ˈtɒpɪk]@тема@2024-03-22@0@2
+dish@[dɪʃ]@noun: блюдо@2024-03-22@0@1
+suit@[suːt]@noun: костюм@2024-03-22@0@0
+clothes@[kləʊðz]@noun: одежда@2024-03-22@0@2
+justice@[ˈdʒʌstɪs]@noun: справедливость@2024-03-22@0@1
+confidence@[ˈkɒnfɪdəns]@noun: уверенность@2024-03-22@0@1
+be late@@опаздывать (конструкция)@2024-03-22@0@1
+last@[lɑːst]@verb: продолжаться, длиться@2024-03-22@0@1
+nowadays@[ˈnaʊədeɪz]@noun: в наше время, теперь@2024-03-22@0@1
+trainer@@noun: тренер@2024-03-22@0@2
+fitness@@noun: фитнес, хорошее здоровье@2024-03-22@0@1
+instructor@@noun: инструктор@2024-03-22@0@1
+memory@@noun: память@2024-03-22@0@2
+thought@[θɔːt]@noun: мысль, идея@2024-03-22@0@-1
+meaning@@noun: значение@2024-03-22@0@2
+impossible@@adjective: невозможный@2024-03-22@0@1
+website@@noun: веб-сайт@2024-03-29@1@1
+happiness@@noun: счастье@2024-03-22@0@1
+sweater@@noun: свитер@2024-03-22@0@2
+toy@@noun: игрушка@2024-03-22@0@1
+statement@@утверждение@2024-03-22@0@2
+truth@@noun: правда@2024-03-22@0@2
+discuss@@verb: обсуждать@2024-03-22@0@1
+expect@@verb: ожидать@2024-03-22@0@0
+disagree@@verb: не соглашаться@2024-03-22@0@1
+divorced@[dɪˈvɔːst]@adjective: разведенный@2024-03-22@0@2
+the most beautiful@@самый(ая) красивый(ая)@2024-03-22@0@2
+satisfied@[ˈsætɪsfaɪd]@adjective: удовлетворенный, довольный@2024-03-22@0@2
+fully@@adjective: полностью@2024-03-22@0@2
+opinion@@noun: мнение@2024-03-22@0@2
+address@[əˈdres]@noun: адрес@2024-03-22@0@1
+weight@@noun: вес@2024-03-22@0@1
+hypothesize@[haɪˈpɒθ.ə.saɪz]@(verb) to give a possible but not yet proved explanation for something@2024-03-22@0@2
+reference book@[ˈref.ər.əns]@(noun) a book of facts, such as a dictionary or an encyclopedia, that you look at to discover particular information@2024-03-22@0@-1
+particular@[pəˈtɪk.jə.lər]@(adjective) special, or this and not any other@2024-03-22@0@-1
+especially@[ɪˈspeʃ.əl.i]@adverb: very much; more than usual or more than other people or things@2024-03-22@0@1
+incredible@@adjective: impossible, or very difficult, to believe@2024-03-22@0@2
+wonder@[ˈwʌn.dɚ]@verb: to ask yourself questions or express a wish to know about something@2024-03-22@0@0
+apartment@@noun: апартамент@2024-03-22@0@2
+considerable@@adjcetive: значительный@2024-03-22@0@-1
+weak point@@слабое место@2024-03-22@0@1
+depend@@verb: зависеть@2024-03-22@0@1
+it depends on him@@это зависит от него@2024-03-22@0@1
+combine@@verb: совмещать@2024-03-29@1@0
+studies@@noun: учёба@2024-03-22@0@0
+full of mistakes@@полон ошибок@2024-03-22@0@2
+what time is it now? what's the time?@@сколько времени? [2]@2024-03-22@0@2
+loud@@adjective: громкий@2024-03-22@0@2
+quiet@@adjective: тихий@2024-03-22@0@0
+a long time ago@@phrase: давно@2024-03-22@0@2
+happily@@adverb: счастливо@2024-03-22@0@2
+pass@@verb: сдавать@2024-03-22@0@1
+irregular@@adjective: необычный@2024-03-22@0@-1
+regular@@adjective: обычный@2024-03-22@0@-1
+it happened to me@@это произошло со мной@2024-03-22@0@1
+at last@@наконец@2024-03-22@0@0
+close@@verb: закрывать@2024-03-22@0@1
+open@@verb: открывать@2024-03-29@1@0
+decide@@verb: решать@2024-03-22@0@2
+to wait for someone@@ждать кого-то@2024-03-22@0@0
+grateful@@adjective: благодарный@2024-03-22@0@-1
+instead of@@adverb: вместо чего-то@2024-03-22@0@-1
+family@@noun: семья@2024-03-22@0@2
+fail@@verb: завалить@2024-03-22@0@0
+again and again@@снова и снова@2024-03-22@0@1
+correct@@adjective: правильный, подходящий@2024-03-22@0@-1
+to have a good time@@phrase: хорошо проводить время@2024-03-22@0@0
+to have a great time@@phrase: прекрасно проводить время@2024-03-29@1@0
+without@@без@2024-03-22@0@1
+article@@noun: статья, артикль@2024-03-22@0@1
+some@@quantifier: несколько@2024-03-22@0@2
+several@@quantifier: несколько@2024-03-22@0@1
+each other@@друг друга@2024-03-22@0@1
+immediately@@adverb: сразу@2024-03-22@0@2
+to take an offer@@принять предложение@2024-03-22@0@1
+floor@@(noun) пол@2024-03-22@0@1
+i felt much better@@(phrase) я чувствовал на много лучше@2024-03-22@0@1
+put@@(verb) положить, поместить@2024-03-22@0@1
+give@@(verb) давать@2024-03-29@1@0
+think@@(verb) думать@2024-03-22@0@1
+thousand@@(noun) тысяча@2024-03-22@0@0
+well known@@(adjective) хорошо известный@2024-03-22@0@2
+educated@@(adjective) образованный@2024-03-22@0@2
+secret@@(noun) секрет@2024-03-22@0@1
+inexperienced@@(adjective) неопытный@2024-03-29@1@0
+leader@@(noun) лидер@2024-03-22@0@2
+shy@@(adjective) застенчивый@2024-03-22@0@0
+task@@(noun) задача@2024-03-29@1@0
+an hour ago@@(phrase) час назад@2024-03-22@0@1
+conference@@(noun) конференция@2024-03-22@0@2
+the day before yesterday@@(phrase) позавчера@2024-03-22@0@2
+to sit down@@(phrase) присаживаться@2024-03-22@0@0
+to sit in an armchair@@(phrase) сесть в кресло@2024-03-22@0@1
+o sit on a chair@@(phrase) сесть на стул@2024-03-22@0@1
+stand@@(verb) стоять@2024-03-22@0@2
+for the first time@@(phrase) в первый раз@2024-03-22@0@1
+lose@@(verb) терять@2024-03-29@1@0
+concentration@@(noun) концентрация@2024-03-22@0@2
+as you understand@@(phrase) как ты понимаешь@2024-03-22@0@0
+service@@(noun) услуга (действие)@2024-03-29@1@0
+delivery@@(noun) доставка@2024-03-22@0@0
+local@@(adjective) местный@2024-03-22@0@1
+by chance, by accident@@(phrase) случайно [2]@2024-03-22@0@2
+almost@@(adverb) почти@2024-03-22@0@1
+for the second time@@(phrase) во второй раз@2024-03-22@0@1
+soft@@(adjective) мягкий@2024-03-22@0@2
+young@@(adjective) молодой@2024-03-22@0@2
+achievement@@(noun) достижение@2024-03-22@0@1
+on time@@(phrase) вовремя@2024-03-22@0@1
+voice@@(noun) голос@2024-03-22@0@1
+comprehension@[ˌkɒmprɪˈhenʃən]@(noun) понимание@2024-03-22@0@-2
+frustrated@[frʌsˈtreɪtɪd]@(adjective) разочарованный, расстроенный@2024-03-22@0@-1
+improve@[ɪmˈpruːv]@(verb) улучшать(ся)@2024-03-22@0@0
+fiction@[ˈfɪkʃən]@(noun) беллетристика, художественная литература@2024-03-22@0@-2
+scrambled eggs@@(noun) яичница-болтунья@2024-03-22@0@-2
+noodles@[ˈnuːdlz]@(noun) лапша@2024-03-22@0@-2
+taste@[teɪst]@(noun) вкус@2024-03-22@0@-1
+actually@[ˈæktʃuəli]@(adverb) в действительности@2024-03-22@0@-1
+pan@[pæn]@(noun) кастрюля@2024-03-22@0@1
+tonight@[təˈnaɪt]@(noun, adverb) сегодня вечером, сегодняшний вечер@2024-03-29@1@0
+pancake@[ˈpænkeɪk]@(noun) блин, оладья@2024-03-22@0@-1
+butter@[ˈbʌtər]@(noun) масло@2024-03-22@0@1
+peanut@[ˈpiːnʌt]@(noun) арахис@2024-03-22@0@-1
+thin@[θɪn]@(adjective) тонкий@2024-03-22@0@-1
+weekday@[ˈwiːkdeɪ]@(noun) рабочий день@2024-03-22@0@0
+thankful@@(adjective) благодарный@2024-03-22@0@0
+pleasure@[ˈpleʒər]@(noun) удовольствие@2024-03-22@0@0
+appreciate@@(verb) ценить@2024-03-22@0@1
+a couple of@@(phrase) парочка@2024-03-22@0@2
+sandwich@@(noun) бутерброд, сендвич@2024-03-29@1@0
+fly away@@(phrase) улетать@2024-03-22@0@0
+like a baby@@(phrase) как ребёнок@2024-03-22@0@1
+lake@@(noun) озеро@2024-03-29@1@0
+portion@@(noun) порция@2024-03-22@0@2
+swimming pool@@(noun) бассейн@2024-03-22@0@1
+vegetable@@(noun) овощ@2024-03-22@0@1
+a carton of milk@@(phrase) пакет молока@2024-03-22@0@1
+bottle@@(noun) бутылка@2024-03-22@0@1
+wake up@@(phrase) просыпаться@2024-03-22@0@2
+brake down@@(phrase) ломаться@2024-03-22@0@1
+keep@@(verb) хранить, держать@2024-03-22@0@2
+hold@@(verb) держать@2024-03-22@0@2
+arm@@(noun) рука@2024-03-22@0@1
+let@@(verb) позволять@2024-03-22@0@1
+let somebody do something@@(phrase) позволять кому то делать что то@2024-03-22@0@1
+go out@@(phrase) уходить@2024-03-22@0@0
+midnight@@(noun) полночь@2024-03-22@0@0
+until@@(conjuction) до (в смысле до тех пор пока)@2024-03-22@0@1
+the following@@(phrase) следующее@2024-03-22@0@0
+behaviour@@(noun) поведение@2024-03-22@0@1
+anything@@что-нибудь (ничего - в отрицании)@2024-03-22@0@2
+competition@@(noun) соревнование@2024-03-22@0@1
+tournament@@(noun) турнир@2024-03-22@0@1
+wind@@(noun) ветер@2024-03-22@0@2
+suddenly@@(adverb) вдруг@2024-03-22@0@2
+unexpectedly@@(adverb) неожиданно@2024-03-22@0@2
+grow up@@(phrase) вырастать@2024-03-22@0@1
+lie@@(verb) лежать@2024-03-29@1@0
+lie down@@(phrase) прилечь@2024-03-22@0@0
+to lie to someone@@(phrase) солгать кому то@2024-03-22@0@0
+fall@@(verb) падать@2024-03-22@0@1
+sharply@@(adverb) резко@2024-03-22@0@2
+fall down@@(phrase) падать на землю@2024-03-22@0@1
+wear@@(verb) носить@2024-03-22@0@2
+casual clothes@@(phrase) повседневная одежда@2024-03-22@0@0
+glasses@@(noun) очки@2024-03-29@1@0
+hurt@@(verb) ушибить, повредить@2024-03-22@0@2
+finger@@(noun) палец@2024-03-22@0@1
+throw@@(verb) бросать@2024-03-22@0@1
+throw away@@(phrase) выбрасывать@2024-03-22@0@2
+lend@@(verb) одалживать@2024-03-22@0@1
+ring@@(verb) звенеть, звонить (в звонок)@2024-03-22@0@0
+alarm clock@@(noun) будильник@2024-03-22@0@2
+hide@@(verb) прятаться@2024-03-22@0@1
+behind@@(preposition) за, позади@2024-03-22@0@0
+beat@@(verb) бить@2024-03-22@0@2
+camel@@(noun) верблюд@2024-03-29@1@0
+to go cycling@@(phrase) кататься на велосипеде@2024-03-22@0@1
+to go jogging@@(phrase) ходить на пробежку@2024-03-22@0@0
+uncountable@@(noun) неисчесляемое@2024-03-22@0@-1
+revolutionary@@(adjective) революционный@2024-03-22@0@0
+performance@@(noun) представление@2024-03-22@0@-1
+solve@@(verb) решать (проблему)@2024-03-22@0@2
+at first@@(phrase) с начала (в конце употребляется)@2024-03-22@0@0
+event@@(noun) событие@2024-03-22@0@2
+unavailable@@(adjective) не доступен (в одно слово)@2024-03-22@0@1
+modern@@(adjective) современный@2024-03-22@0@1
+issue@@(noun) вопрос, проблема@2024-03-22@0@0
+during@@(preposition) в течение@2024-03-22@0@-1
+submit@@(verb) подтвердить@2024-03-22@0@-1
+mess@@(noun) беспорядок@2024-03-22@0@1
+research@@(noun) исследование@2024-03-22@0@-2
+latest@@(adjective) самые последние@2024-03-22@0@1
+follow@@(verb) следовать@2024-03-22@0@2
+return@@(verb) возвращать(ся) (одним словом)@2024-03-22@0@1
+to achieve your aim@@(phrase) достигать цели@2024-03-22@0@1
+speaking@@(noun) разговорный@2024-03-22@0@0
+vocabulary@@(noun) словарный запас@2024-03-22@0@1
+point of view@@(phrase) точка зрения@2024-03-22@0@2
+listening skills@@(phrase) навыки аудирования@2024-03-22@0@1
+disappointed@@(adjcetive) разочарованный@2024-03-22@0@2
+proud of something@@(phrase) гордиться чем то (это прилагательное)@2024-03-22@0@1
+against@@(adjective) против@2024-03-22@0@0
+profitable@@(adjective) прибыльный@2024-03-22@0@0
+true@@(adjective) правдивое@2024-03-22@0@-1
+hospitable@@(adjective) гостипреимный@2024-03-22@0@1
+alternative@[ɔːlˈtɜːnətɪv]@(noun) альтернатива@2024-03-22@0@1
+conclusion@@(noun) вывод@2024-03-22@0@1
+moreover@@(adverb) более того@2024-03-22@0@-1
+react@@(verb) реагировать, отреагировать (если реагировать на что-то, то использ. с частицей to)@2024-03-22@0@2
+manage to do@@(phrase) смочь сделать@2024-03-22@0@2
+arrive@@(verb) прибыть (куда-то)@2024-03-22@0@2
+invest@@(verb) инвестировать@2024-03-22@0@2
+admire@@(verb) восхищаться@2024-03-22@0@1
+i am so not ... (v-ing) i am so not going to the party@@(phrase) очень сильное отрицание что-то делать@2024-03-22@0@-1
+let me ... (verb) let me help you with your bags@@(phrase) позволь мне... (так же в значении что вы что-то собираетесь сейчас делать)@2024-03-22@0@2
+i can't believe ... (noun + verb(past)) i can't believe you ate the last piece of cake@@(phrase) в ситуациях когда кто-то сделал что-то что вам не нравится или что-то что бы вы не хотели чтобы он делал@2024-03-22@0@0
+i have never been so ... (adjective) i've never been so thrilled to start a new job@@(phrase) сильная эмоция которую ещё не испытывали до@2024-03-22@0@-1
+thrilled@@(adjective) взволнованный@2024-03-22@0@-1
+why don't you ... (verb) why don't you try it?@@(phrase) почему бы тебе не ... (и тут глагол)@2024-03-22@0@0
+why don't you give it a try and see how it goes?@@(phrase) почему бы тебе не попробовать это и не посмотреть как получится?@2024-03-22@0@1
+it's not that ... (adjective) it's not that hard to learn english@@(phrase) это не так ... (и тут приглательное). пример: это не так сложно (это сложно, но не на столько)@2024-03-22@0@-1
+i can't wait to ... (verb) i can't wait to see you@@(phrase) я не могу дождаться что-бы что то сделать@2024-03-22@0@2
+trip@@(noun) поездка@2024-03-22@0@2
+intensively@@(adverb) интенсивно@2024-03-22@0@1
+increadibly@@(adverb) невероятно@2024-03-22@0@-1
+museum@@(noun) музей@2024-03-22@0@2
+cope@@(verb) справляться@2024-03-22@0@1
+concluiton@@(noun) вывод@2024-03-22@0@1
+championship@@(noun) чемпионат@2024-03-29@1@0
+with great pleasure@@(phrase) с большим удовольствием@2024-03-22@0@2
+reach@@(verb) достигать@2024-03-22@0@-1
+soon@@(adverb) скоро, вскоре@2024-03-22@0@0
+inform@@(verb) информировать@2024-03-22@0@2
+anyway@@(adverb) в любом случае, всё равно@2024-03-22@0@0
+introduce@@(verb) представить (что-то кому то)@2024-03-22@0@2
+cancel@@(verb) отменять@2024-03-22@0@0
+sooner or later@@(phrase) рано или поздно@2024-03-22@0@2
+absolutely@@(adverb) абсолютно@2024-03-22@0@2
+consume@@(verb) потреблять, поглощать@2024-03-22@0@-1
+parcel@@(noun) посылка@2024-03-22@0@0
+deserve@@(verb) заслуживать@2024-03-29@1@0
+repeat@@(verb) повторять@2024-03-22@0@1
+sign@@(verb) подписывать@2024-03-22@0@1
+deny@@(verb) отрицать@2024-03-22@0@2
+waste@@(verb) излишне тратить@2024-03-22@0@2
+first of all@@(phrase) прежде всего (в конце ставится)@2024-03-22@0@0
+guts@@(noun) кишки@2024-03-22@0@1
+kinda@@(adverb) вроде@2024-03-22@0@1
+chick@@цыпленок, птенец@2024-03-22@0@2
+flick@@фильм, резкое движение@2024-03-22@0@-1
+clothed@@одет@2024-03-22@0@0
+to ask her out@@пригласить ее на свидание@2024-03-22@0@0
+hold-up@@задержка@2024-03-22@0@0
+plaque@@бляшка, почетный значок@2024-03-22@0@0
+day off@@выходной@2024-03-22@0@1
+nest@@гнездо@2024-03-22@0@1
+hang@@висеть@2024-03-22@0@0
+recognition@@признание@2024-03-22@0@0
+according@@согласно, соответственно@2024-03-22@0@-1
+mess up@@испортить@2024-03-22@0@2
+slack off@@отлынивать@2024-03-22@0@1
+founding@@основание (чего то)@2024-03-22@0@-1
+I bet@@Бьюсь об заклад@2024-03-22@0@1
+coast@@берег@2024-03-22@0@1
+illusion@@иллюзия@2024-03-22@0@2
+advantage@@преимущество@2024-03-22@0@-1
+subtract@@(verb) вычитатть@2024-03-29@1@0
+vote@@голосовать@2024-03-22@0@1
+take part@@принять участие@2024-03-29@1@0
+elections@@выборы@2024-03-22@0@0
+develop@@развивать@2024-03-22@0@0
+goods@@товары@2024-03-22@0@1
+be against@@быть против@2024-03-22@0@1
+express@@выражать@2024-03-22@0@1
+share@@делиться@2024-03-22@0@0
+lead@@вести, приводить, направлять@2024-03-22@0@2
+loss@@потеря@2024-03-22@0@0
+goverment@@правительство@2024-03-22@0@0
+exhibition@@выставка@2024-03-22@0@1
+supply@@поставлять@2024-03-22@0@2
+sensation@@сенсация@2024-03-22@0@1
+laugh@@смеяться@2024-03-22@0@1
+worry@@волноваться@2024-03-22@0@-1
+double@@удвоить@2024-03-22@0@2
+income@@доход, прибыль@2024-03-22@0@2
+honestly@@честно@2024-03-22@0@0
+weekend@@выходные@2024-03-22@0@2
+international@@международный@2024-03-22@0@2
+revise@@освежить, повторить@2024-03-22@0@0
+tense@@время (в грамматике)@2024-03-22@0@-1
+exception@@исключение@2024-03-22@0@2
+aspect@@аспект@2024-03-22@0@0
+revision@@пересмотр, проверка@2024-03-22@0@-1
+fix@@фиксировать@2024-03-22@0@1
+refresh@@обновить, освежить@2024-03-22@0@-2
+and so on@@(phrase) и так далее (пишется на конце)@2024-03-22@0@1
+throw someone off@@сбить кого-то с толку@2024-03-22@0@-1
+cushion@@подушка@2024-03-22@0@-1
+couch@@диван@2024-03-22@0@1
+scissors@@ножницы@2024-03-22@0@2
+upstairs@@наверху, наверх (в здании)@2024-03-22@0@1
+towel@@полотенце@2024-03-22@0@1
+mentally scarred@@морально травмирован@2024-03-22@0@0
+glued@@приклееный@2024-03-29@1@0
+eyelids@@веки (глазные)@2024-03-22@0@1
+saggy@@отвисший, обвисший@2024-03-22@0@2
+wrinkled@@сморщенный@2024-03-22@0@-2
+shrivel@@высыхать, сморщиваться@2024-03-22@0@-1
+rescue@@спасать@2024-03-22@0@1
+new@@новый@2024-03-22@0@1
+it's getting dark@@темнеет@2024-03-24@0@1
+experience@@испытывать@2024-03-24@0@0
+chess@@шахматы@2024-03-24@0@1
+compare@@сравнивать@2024-03-24@0@1
+concentrate@@концентрироваться, концентрат@2024-03-24@0@2
+invitation@@приглашение@2024-03-24@0@1
+report@@доклад@2024-03-24@0@2
+wish@@желать, желание, просьба@2024-03-24@0@0
+belong@@принадлежать@2024-03-24@0@2
+unbelievable@@невероятный, невероятно@2024-03-24@0@-1
+behave@@вести себя, поступать@2024-03-24@0@2
+mention@@упоминать, упоминание@2024-03-24@0@0
+calculate@@подсчитывать@2024-03-24@0@2
+take an exam@@сдавать экзамен@2024-03-24@0@2
+overwork@@перерабатывать, переработка@2024-03-24@0@2
+shine@@светить, свет@2024-03-24@0@2
+brightly@@ярко@2024-03-24@0@2
+factory@@фабрика@2024-03-24@0@2
+expand@@расширять(ся)@2024-03-24@0@0
+employer@@работодатель@2024-03-24@0@0
+provide@@предоставлять, обеспечивать@2024-03-24@0@0
+condition@@положение, обстановка, обстоятельство, состояние@2024-03-24@0@2
+explanation@@объяснение@2024-03-24@0@1
+strategy@@стратегия@2024-03-29@1@0
+reality@@реальность@2024-03-24@0@1
+praise@[preɪz]@хвалить@2024-03-24@0@-1
+optimistic@@оптимистичный@2024-03-24@0@2
+resource@[ˈriːsɔːrs]@ресурс@2024-03-24@0@1
+quality@@качество@2024-03-24@0@2
+increase@@повышать, увеличивать@2024-03-24@0@1
+widen@@расширять@2024-03-24@0@1
+enlarge@@увеличивать, укрупнять@2024-03-24@0@2
+enrich@@обогащать@2024-03-24@0@0
+kidding@@высмеивать, издиваться, шутить@2024-03-24@0@0
+joke@@шутка, шутить@2024-03-24@0@2
+recover@@выздоравливать@2024-03-24@0@0
+kiss@@целовать, поцелуй@2024-03-24@0@1
+bring@@приносить@2024-03-24@0@0
+weak@@слабый@2024-03-24@0@0
+tasty@@вкусный@2024-03-29@1@0
+delicious@@вкусный (более сильное чем tasty)@2024-03-24@0@1
+worst@@худший@2024-03-29@1@0
+scenario@[sɪˈnɑːriəʊ]@сценарий@2024-03-25@0@1
+opportunity@@возможность@2024-03-25@0@-1
+economy@@экономика@2024-03-25@0@1
+describe@@описывать@2024-03-25@0@2
+argue@@спорить@2024-03-29@1@0
+accident@@происшествие@2024-03-25@0@2
+criticize@@критиковать@2024-03-25@0@1
+knock@@стучать@2024-03-29@1@0
+look after@@заботиться@2024-03-25@0@1
+take care of@@(phrase) заботиться@2024-03-25@0@2
+treat someone@@(phrase) обращаться с кем то@2024-03-25@0@0
+fight@@сражаться, бой@2024-03-25@0@0
+demand@@требовать@2024-03-25@0@2
+pronounce@@произносить@2024-03-25@0@0
+slide@@слайд@2024-03-26@0@0
+suppose@@полагать, предполагать@2024-03-26@0@-1
+mission@@миссия@2024-03-26@0@0
+enthusiasm@@энтузиазм@2024-03-26@0@1
+shout@@кричать@2024-03-27@0@0
+take place@@(phrase) проходит где-то (что происходит где-то)@2024-03-27@0@1
+owe@@быть должным (что-то)@2024-03-27@0@1
+lecture@@лекция@2024-03-27@0@1
+most of all@@больше всего (на конце исп.)@2024-03-27@0@0
+unknown@@неизвестный@2024-03-27@0@0
+risk@@риск@2024-03-28@0@0
+carry@@нести (что то тяжелое)@2024-03-28@0@0
+heavy@@тяжелый@2024-03-28@0@0
+beach@@пляж@2024-03-28@0@0
+face@@сталкиваться@2024-03-28@0@0
+clean the house@@убираться дома@2024-03-28@0@0
+climb up@@взбираться вверх@2024-03-28@0@0
+mountain@[ˈmaʊntɪn]@гора@2024-03-28@0@0
+curiosity@[ˌkjʊəriˈɒsəti]@любопытство@2024-03-28@0@0
+average@[ˈævərɪdʒ]@средний@2024-03-28@0@0
