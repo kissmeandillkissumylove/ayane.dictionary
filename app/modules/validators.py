@@ -1,4 +1,4 @@
-class BaseValidation:
+class BaseValidator:
 	"""
 	base class for data validation.
 	"""
@@ -10,7 +10,7 @@ class BaseValidation:
 		raise NotImplementedError
 
 
-class StringValidation(BaseValidation):
+class StringValidator(BaseValidator):
 	"""
 	class for the string validation.
 	"""
@@ -24,7 +24,7 @@ class StringValidation(BaseValidation):
 		return isinstance(value, str)
 
 
-class NoneValidation(BaseValidation):
+class NoneValidator(BaseValidator):
 	"""
 	class for the None validation.
 	"""
