@@ -1,5 +1,4 @@
 from dataclasses import dataclass
-from typing import Union
 
 from app.modules.JSONReader import JSONReader
 from app.modules.paths import CONFIG_TEMPLATE
@@ -19,5 +18,5 @@ class ValidationTypes:
 		keys = JSONReader.read_json(CONFIG_TEMPLATE).keys()
 		valid_types = {}
 		for key in keys:
-			valid_types[key] = Union[str, None]
+			valid_types[key] = [str, None]
 		return valid_types
