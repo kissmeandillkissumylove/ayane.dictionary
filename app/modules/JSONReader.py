@@ -1,3 +1,7 @@
+"""
+contains a class whose job is to read json files or return None if the file is not
+json.
+"""
 import json
 import re
 from dataclasses import dataclass
@@ -29,7 +33,7 @@ class JSONReader:
 		"""
 		if cls._validate_path(path):
 			with open(path, "r", encoding="utf-8") as file_json:
-				config = json.load(file_json)
-			return config
+				file = json.load(file_json)
+			return file
 		else:
 			return None

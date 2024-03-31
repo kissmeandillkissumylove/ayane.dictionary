@@ -1,3 +1,6 @@
+"""
+contains classes whose job is to validate the configuration file.
+"""
 import re
 from dataclasses import dataclass
 
