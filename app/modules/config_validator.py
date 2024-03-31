@@ -46,7 +46,7 @@ class ConfigValidationTemplate:
 		"""
 		return self._template["types"]
 
-	def get_patters(self) -> dict:
+	def get_patterns(self) -> dict:
 		"""
 		:return: patterns dictionary.
 		"""
@@ -71,6 +71,6 @@ class ConfigValidator:
 				return False
 			if type(value) not in config_template.get_types()[key]:
 				return False
-			if not re.search(config_template.get_patters()[key], value):
+			if not re.search(config_template.get_patterns()[key], value):
 				return False
 		return True
