@@ -32,8 +32,11 @@ class JSONReader:
 		:return: dictionary.
 		"""
 		if cls._validate_path(path):
-			with open(path, "r", encoding="utf-8") as file_json:
-				file = json.load(file_json)
-			return file
+			try:
+				with open(path, "r", encoding="utf-8") as file_json:
+					file = json.load(file_json)
+				return file
+			except FileNotFoundError:
+				return None
 		else:
 			return None
