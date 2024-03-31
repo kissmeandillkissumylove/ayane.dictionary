@@ -65,12 +65,23 @@ class ConfigValidator:
 		:param config: config dictionary.
 		:return: boolean.
 		"""
-		config_template = ConfigValidationTemplate()
-		for key, value in config.items():
-			if key not in config_template.get_types():
-				return False
-			if type(value) not in config_template.get_types()[key]:
-				return False
-			if not re.search(config_template.get_patterns()[key], value):
-				return False
-		return True
+		if isinstance(config, dict) and config != {}:
+			config_template = ConfigValidationTemplate()
+
+			for key, value in config.items():
+				if key not in config_template.get_types():
+					return False
+
+				if value is None:
+					continue
+
+				if type(value) not in config_template.get_types()[key]:
+					return False
+
+				if value is not None and not re.search(
+						config_template.get_patterns()[key], value):
+					return False
+
+			return True
+
+		return False
