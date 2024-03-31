@@ -1,3 +1,7 @@
+"""
+implementation of a smart dictionary for learning foreign words.
+2024/03/31 https://github.com/kissmeandillkissumylove/ayane.dictionary
+"""
 import tkinter
 
 from modules.JSONReader import JSONReader
@@ -7,7 +11,7 @@ from modules.paths import CONFIG_0
 
 class App(tkinter.Tk):
 	"""
-	main application class. creates main window.
+	main application class. creates the main window.
 	"""
 
 	def __init__(self, config: dict = None):
