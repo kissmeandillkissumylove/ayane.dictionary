@@ -2,6 +2,7 @@
 tests for JSONReader.
 """
 import json
+import os.path
 import unittest
 from unittest.mock import patch
 
@@ -76,12 +77,14 @@ class TestJSONReader(unittest.TestCase):
 		self.assertIsNone(result)
 
 	def test_read_json_empty_json_file(self):
-		path = "tests_files/empty_file.json"
+		path = path = os.path.join(
+			os.path.dirname(__file__), "tests_files/empty_file.json")
 		result = JSONReader.read_json(path)
 		self.assertIsNone(result)
 
 	def test_read_json_not_empty_json_file(self):
-		path = "tests_files/not_empty_file.json"
+		path = os.path.join(
+			os.path.dirname(__file__), "tests_files/not_empty_file.json")
 		result = JSONReader.read_json(path)
 		expected = {
 			"key": "value",
