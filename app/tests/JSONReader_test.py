@@ -76,12 +76,12 @@ class TestJSONReader(unittest.TestCase):
 		self.assertIsNone(result)
 
 	def test_read_json_empty_json_file(self):
-		path = "empty_file.json"
+		path = "tests_files/empty_file.json"
 		result = JSONReader.read_json(path)
 		self.assertIsNone(result)
 
 	def test_read_json_not_empty_json_file(self):
-		path = "not_empty_file.json"
+		path = "tests_files/not_empty_file.json"
 		result = JSONReader.read_json(path)
 		expected = {
 			"key": "value",
