@@ -36,7 +36,12 @@ class JSONReader:
 				with open(path, "r", encoding="utf-8") as file_json:
 					file = json.load(file_json)
 				return file
+
 			except FileNotFoundError:
 				return None
+
+			except json.JSONDecodeError:
+				return None
+
 		else:
 			return None
