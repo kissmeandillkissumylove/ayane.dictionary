@@ -2,13 +2,12 @@
 contains a container with injections that are needed for dependencies in the
 code.
 """
-from injector import Module, Binder, singleton
+from injector import Module, Binder
 
 from app.modules.file_readers import JsonFileReader
 from app.modules.path_validators import BasePathValidator, JsonPathValidator
 
 
-@singleton
 class ModuleDI(Module):
 	"""
 	main container with injections.
