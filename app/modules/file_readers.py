@@ -40,7 +40,7 @@ class JsonFileReader(BaseFileReader):
 		if not isinstance(path_validator, JsonPathValidator):
 			raise TypeError
 
-		self.path_validator = path_validator
+		self._path_validator = path_validator
 
 	def read_(
 			self,
@@ -55,7 +55,7 @@ class JsonFileReader(BaseFileReader):
 		:return: dictionary or None.
 		"""
 		if pattern != "":
-			if self.path_validator.validate_path(path, pattern):
+			if self._path_validator.validate_path(path, pattern):
 				try:
 					with open(path, "r", encoding=encoding) as file_json:
 						file = json.load(file_json)
