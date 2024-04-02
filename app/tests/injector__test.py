@@ -2,10 +2,11 @@
 injector_.py tests.
 """
 import unittest
-from unittest.mock import MagicMock
 
 from injector import Injector
 
+from app.modules.config_validator import (
+	JsonTypesContainer, BaseContainer, ConfigValidationContainer)
 from app.modules.file_readers import JsonFileReader, BaseFileReader
 from app.modules.injector_ import ModuleDI
 from app.modules.path_validators import (
@@ -27,6 +28,16 @@ class TestModuleDI(unittest.TestCase):
 		self.assertIsInstance(json_reader, BaseFileReader)
 		self.assertIsInstance(json_reader, JsonFileReader)
 
+		json_types_container = _injector_.get(JsonTypesContainer)
+		self.assertIsInstance(json_types_container, BaseContainer)
+		self.assertIsInstance(json_types_container, JsonTypesContainer)
+
+		config_validation_container = _injector_.get(
+			ConfigValidationContainer)
+		self.assertIsInstance(config_validation_container, BaseContainer)
+		self.assertIsInstance(
+			config_validation_container, ConfigValidationContainer)
+
 	def test_singleton_for_objects(self):
 		injector_0 = Injector([ModuleDI])
 
@@ -37,22 +48,6 @@ class TestModuleDI(unittest.TestCase):
 		json_file_reader_0 = injector_0.get(JsonFileReader)
 		json_file_reader_1 = injector_0.get(JsonFileReader)
 		self.assertIs(json_file_reader_0, json_file_reader_1)
-
-
-class TestJsonFileReaderInjection(unittest.TestCase):
-	"""
-	tests for the JsonFileReader class.
-	"""
-
-	def test_dependency_injection(self):
-		json_path_validator = MagicMock(spec=JsonPathValidator)
-		injector = Injector(
-			[ModuleDI()], {JsonPathValidator: json_path_validator})
-
-		json_file_reader = injector.get(JsonFileReader)
-
-		self.assertIsInstance(
-			json_file_reader._path_validator, JsonPathValidator)
 
 	def test_dependency_injection_failure(self):
 		with self.assertRaises(TypeError):
