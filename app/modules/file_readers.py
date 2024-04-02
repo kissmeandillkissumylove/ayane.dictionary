@@ -32,40 +32,43 @@ class JsonFileReader(BaseFileReader):
 	"""
 
 	@inject
-	def __init__(self, path_validator: JsonPathValidator):
+	def __init__(
+			self,
+			path_validator: JsonPathValidator,
+			pattern: str = r"\.json$"):
 		"""
 		JsonFileReader __init__.
 		:param path_validator: json path validator.
+		:param pattern: file path validation pattern ("" by default).
 		"""
 		if not isinstance(path_validator, JsonPathValidator):
 			raise TypeError
 
 		self._path_validator = path_validator
+		self._pattern = pattern
 
 	def read_(
 			self,
 			path: str,
-			pattern: str = "",
 			encoding: str = "utf-8") -> Union[dict, None]:
 		"""
 		reads JSON file and returns dictionary or None.
 		:param path: path to JSON file.
-		:param pattern: file path validation pattern ("" by default).
 		:param encoding: what encoding to read the file with (utf-8 by default).
 		:return: dictionary or None.
 		"""
-		if pattern != "":
-			if self._path_validator.validate_path(path, pattern):
-				try:
-					with open(path, "r", encoding=encoding) as file_json:
-						file = json.load(file_json)
-					return file
+		if self._path_validator.validate_path(path, self._pattern):
+			try:
+				with open(path, "r", encoding=encoding) as file_json:
+					file = json.load(file_json)
 
-				except FileNotFoundError:
-					return None
+				return file
 
-				except json.JSONDecodeError:
-					return None
-
-			else:
+			except FileNotFoundError:
 				return None
+
+			except json.JSONDecodeError:
+				return None
+
+		else:
+			return None
