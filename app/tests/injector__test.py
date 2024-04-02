@@ -2,6 +2,7 @@
 injector_.py tests.
 """
 import unittest
+from unittest.mock import MagicMock
 
 from injector import Injector
 
@@ -36,6 +37,27 @@ class TestModuleDI(unittest.TestCase):
 		json_file_reader_0 = injector_0.get(JsonFileReader)
 		json_file_reader_1 = injector_0.get(JsonFileReader)
 		self.assertIs(json_file_reader_0, json_file_reader_1)
+
+
+class TestJsonFileReaderInjection(unittest.TestCase):
+	"""
+	tests for the JsonFileReader class.
+	"""
+
+	def test_dependency_injection(self):
+		json_path_validator = MagicMock(spec=JsonPathValidator)
+		injector = Injector(
+			[ModuleDI()], {JsonPathValidator: json_path_validator})
+
+		json_file_reader = injector.get(JsonFileReader)
+
+		self.assertIsInstance(
+			json_file_reader.path_validator, JsonPathValidator)
+
+	def test_dependency_injection_failure(self):
+		with self.assertRaises(TypeError):
+			injector = Injector([ModuleDI()])
+			json_file_reader = injector.get()
 
 
 if __name__ == '__main__':
