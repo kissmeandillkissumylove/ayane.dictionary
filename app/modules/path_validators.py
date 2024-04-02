@@ -31,11 +31,11 @@ class JsonPathValidator(BasePathValidator):
 	"""
 
 	@staticmethod
-	def validate_path(path: str, pattern=r"\.json$") -> bool:
+	def validate_path(path: str, pattern: str) -> bool:
 		"""
 		checks if the path ends with ".json".
 		:param path: path to the file.
-		:param pattern: file path validation pattern ("\\.json$" by default).
+		:param pattern: file path validation pattern.
 		:return: boolean.
 		"""
 		if isinstance(path, str) and isinstance(pattern, str):
