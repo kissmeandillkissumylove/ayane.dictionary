@@ -4,8 +4,11 @@ code.
 """
 from injector import Module, Binder
 
+from app.modules.config_validator import (
+	JsonTypesContainer, ConfigValidationContainer)
 from app.modules.file_readers import JsonFileReader
-from app.modules.path_validators import BasePathValidator, JsonPathValidator
+from app.modules.path_validators import (
+	BasePathValidator, JsonPathValidator)
 
 
 class ModuleDI(Module):
@@ -23,4 +26,8 @@ class ModuleDI(Module):
 		"""
 		binder.bind(BasePathValidator, to=JsonPathValidator)
 		binder.bind(JsonPathValidator)
+
 		binder.bind(JsonFileReader)
+
+		binder.bind(JsonTypesContainer)
+		binder.bind(ConfigValidationContainer)
