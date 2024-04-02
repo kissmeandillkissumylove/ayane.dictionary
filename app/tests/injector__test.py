@@ -52,7 +52,7 @@ class TestJsonFileReaderInjection(unittest.TestCase):
 		json_file_reader = injector.get(JsonFileReader)
 
 		self.assertIsInstance(
-			json_file_reader.path_validator, JsonPathValidator)
+			json_file_reader._path_validator, JsonPathValidator)
 
 	def test_dependency_injection_failure(self):
 		with self.assertRaises(TypeError):
