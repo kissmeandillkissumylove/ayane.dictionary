@@ -5,7 +5,10 @@ import re
 from abc import abstractmethod, ABC
 from dataclasses import dataclass
 
+from injector import singleton
 
+
+@singleton
 @dataclass
 class BasePathValidator(ABC):
 	"""

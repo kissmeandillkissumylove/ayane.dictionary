@@ -6,11 +6,12 @@ import json
 from abc import ABC, abstractmethod
 from typing import Union
 
-from injector import inject
+from injector import inject, singleton
 
 from app.modules.path_validators import JsonPathValidator
 
 
+@singleton
 class BaseFileReader(ABC):
 	"""
 	abstract class for file reading.
