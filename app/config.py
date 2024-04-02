@@ -8,8 +8,8 @@ CONFIG_0 = BASE_DIR / CONNECT_JSON / "config_0.json"
 CONFIG_PATTERNS = (
 		BASE_DIR / CONNECT_JSON / "config_validation_patterns.json")
 
-NOT_EMPTY_JSON = BASE_DIR / "tests/tests_files/not_empty_test.json"
-EMPTY_JSON = BASE_DIR / "tests/tests_files/empty_test.json"
+NOT_EMPTY_JSON = BASE_DIR / "tests/tests_files/not_empty.json"
+EMPTY_JSON = BASE_DIR / "tests/tests_files/empty.json"
 
 # TXT FILES.
-NOT_EMPTY_TXT = BASE_DIR / "tests/tests_files/not_empty_test.txt"
+NOT_EMPTY_TXT = BASE_DIR / "tests/tests_files/not_empty.txt"
