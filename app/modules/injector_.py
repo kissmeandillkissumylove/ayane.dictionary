@@ -8,7 +8,7 @@ from app.modules.config_validator import (
 	JsonTypesContainer, ConfigValidationContainer)
 from app.modules.file_readers import JsonFileReader
 from app.modules.path_validators import (
-	BasePathValidator, JsonPathValidator)
+	BasePathValidator, PathValidator)
 
 
 class ModuleDI(Module):
@@ -24,8 +24,8 @@ class ModuleDI(Module):
 			and configure the injector.
 		:return: None.
 		"""
-		binder.bind(BasePathValidator, to=JsonPathValidator)
-		binder.bind(JsonPathValidator)
+		binder.bind(BasePathValidator, to=PathValidator)
+		binder.bind(PathValidator)
 
 		binder.bind(JsonFileReader)
 

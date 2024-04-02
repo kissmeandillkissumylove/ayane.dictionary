@@ -25,7 +25,7 @@ class BasePathValidator(ABC):
 		raise NotImplementedError
 
 
-class JsonPathValidator(BasePathValidator):
+class PathValidator(BasePathValidator):
 	"""
 	validator for JSON file paths.
 	"""

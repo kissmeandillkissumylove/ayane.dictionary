@@ -8,7 +8,7 @@ from typing import Union
 
 from injector import inject, singleton
 
-from app.modules.path_validators import JsonPathValidator
+from app.modules.path_validators import PathValidator
 
 
 @singleton
@@ -34,14 +34,14 @@ class JsonFileReader(BaseFileReader):
 	@inject
 	def __init__(
 			self,
-			path_validator: JsonPathValidator,
+			path_validator: PathValidator,
 			pattern: str = r"\.json$"):
 		"""
 		JsonFileReader __init__.
 		:param path_validator: json path validator.
 		:param pattern: file path validation pattern ("" by default).
 		"""
-		if not isinstance(path_validator, JsonPathValidator):
+		if not isinstance(path_validator, PathValidator):
 			raise TypeError
 
 		self._path_validator = path_validator
