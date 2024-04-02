@@ -2,42 +2,78 @@
 contains classes whose job is to validate the configuration file.
 """
 import re
-from dataclasses import dataclass
+from abc import ABC, abstractmethod
 
-from app.modules.JSONReader import JSONReader
-from app.modules.paths import CONFIG_TEMPLATE
+from injector import singleton, inject
+
+from app.config import CONFIG_PATTERNS
+from app.modules.file_readers import JsonFileReader
 
 
-@dataclass
-class ValidationTypes:
+@singleton
+class BaseContainer(ABC):
+	"""
+	abstract class for storing data from file.
+	"""
+	pass
+
+
+@singleton
+class BaseValidator(ABC):
+	"""
+	abstract class for validator.
+	"""
+
+	@abstractmethod
+	def validate(self, *args, **kwargs):
+		"""
+		validate function.
+		"""
+		raise NotImplementedError
+
+
+class JsonTypesContainer(BaseContainer):
 	"""
 	contains valid configuration file types.
 	"""
 
-	@classmethod
-	def load_types(cls) -> dict:
+	@inject
+	def __init__(self, file_reader: JsonFileReader):
 		"""
-		creates valid types for configuration file.
+		:param file_reader: requires file reader.
 		"""
-		keys = JSONReader.read_json(CONFIG_TEMPLATE).keys()
+		self._file_reader = file_reader
+
+	def load_types(self) -> dict:
+		"""
+		creates valid types from the file.
+		:return: dictionary.
+		"""
+		keys = self._file_reader.read_(str(CONFIG_PATTERNS))
 		valid_types = {}
+
 		for key in keys:
 			valid_types[key] = [str, None]
+
 		return valid_types
 
 
-class ConfigValidationTemplate:
+class ConfigValidationContainer(BaseContainer):
 	"""
 	contains valid types and patterns for checking the configuration file.
 	"""
 
-	def __init__(self):
+	@inject
+	def __init__(
+			self,
+			types_container: JsonTypesContainer,
+			file_reader: JsonFileReader):
 		"""
-		contains valid types and patterns for checking the configuration file.
+		ConfigValidationContainer __init__.
 		"""
 		self._template = {
-			"types": ValidationTypes.load_types(),
-			"patterns": JSONReader.read_json(CONFIG_TEMPLATE)
+			"types": types_container.load_types(),
+			"patterns": file_reader.read_(CONFIG_PATTERNS)
 		}
 
 	def get_types(self) -> dict:
@@ -53,33 +89,39 @@ class ConfigValidationTemplate:
 		return self._template["patterns"]
 
 
-class ConfigValidator:
+class ConfigValidator(BaseValidator):
 	"""
 	checks the validity of the configuration file.
 	"""
 
-	@classmethod
-	def validate_config(cls, config: dict) -> bool:
+	@inject
+	def __init__(self, validation_container: ConfigValidationContainer):
+		"""
+		ConfigValidator __init__.
+		:param validation_container: ConfigValidationContainer object.
+		"""
+		self._validation_container = validation_container
+
+	def validate(self, config: dict) -> bool:
 		"""
 		checks that the config matches the types and template.
 		:param config: config dictionary.
 		:return: boolean.
 		"""
 		if isinstance(config, dict) and config != {}:
-			config_template = ConfigValidationTemplate()
 
 			for key, value in config.items():
-				if key not in config_template.get_types():
+				if key not in self._validation_container.get_types():
 					return False
 
 				if value is None:
 					continue
 
-				if type(value) not in config_template.get_types()[key]:
+				if type(value) not in self._validation_container.get_types()[key]:
 					return False
 
 				if value is not None and not re.search(
-						config_template.get_patterns()[key], value):
+						self._validation_container.get_patterns()[key], value):
 					return False
 
 			return True
