@@ -76,6 +76,10 @@ class ConfigValidationContainer(BaseContainer):
 			"patterns": file_reader.read_(CONFIG_PATTERNS)
 		}
 
+		if self._template["patterns"]:
+			if self._template["types"].keys() != self._template["patterns"].keys():
+				raise TypeError
+
 	def get_types(self) -> dict:
 		"""
 		:return: types dictionary.
