@@ -1,0 +1,146 @@
+[
+  {
+    "geometry": "500x265+500+",
+    "title": "ᴋɪssᴍᴇᴀɴᴅɪʟʟᴋɪssᴜᴍʏʟöᴠᴇ",
+    "icon": "../data/icon.ico",
+    "background": "#000000"
+  },
+  {
+    "geometry": "500x265+",
+    "title": "ᴋɪssᴍᴇᴀɴᴅɪʟʟᴋɪssᴜᴍʏʟöᴠᴇ",
+    "icon": "../data/icon.ico",
+    "background": "#000000"
+  },
+  {
+    "geometry": "500x266",
+    "title": "ᴋɪssᴍᴇᴀɴᴅɪʟʟᴋɪssᴜᴍʏʟöᴠᴇ",
+    "icon": "../data/icon.ico",
+    "background": "#000000"
+  },
+  {
+    "geometry": "1000000000x10000000000",
+    "title": "ᴋɪssᴍᴇᴀɴᴅɪʟʟᴋɪssᴜᴍʏʟöᴠᴇ",
+    "icon": "../data/icon.ico",
+    "background": "#000000"
+  },
+  {
+    "geometry": "500X266",
+    "title": "ᴋɪssᴍᴇᴀɴᴅɪʟʟᴋɪssᴜᴍʏʟöᴠᴇ",
+    "icon": "../data/icon.ico",
+    "background": "#000000"
+  },
+  {
+    "geometry": 500000,
+    "title": "",
+    "icon": "../data/icon.ico",
+    "background": "#000000"
+  },
+  {
+    "geometry": [
+      4000,
+      4000
+    ],
+    "title": "",
+    "icon": "../data/icon.ico",
+    "background": "#000000"
+  },
+  {
+    "geometry": "500x265+500+200",
+    "title": "longlonglonglonglonglong(more_than_32_symbol)",
+    "icon": "../data/icon.ico",
+    "background": "#000000"
+  },
+  {
+    "geometry": "500x265+500+200",
+    "title": 500000,
+    "icon": "../data/icon.ico",
+    "background": "#000000"
+  },
+  {
+    "geometry": "500x265+500+200",
+    "title": [
+      4000,
+      4000
+    ],
+    "icon": "../data/icon.ico",
+    "background": "#000000"
+  },
+  {
+    "geometry": "500x265+500+200",
+    "title": null,
+    "icon": "../data/icon",
+    "background": "#000000"
+  },
+  {
+    "geometry": "500x265+500+200",
+    "title": null,
+    "icon": "../data/icon.icon",
+    "background": "#000000"
+  },
+  {
+    "geometry": "500x265+500+200",
+    "title": null,
+    "icon": "../data/icon.txt",
+    "background": "#000000"
+  },
+  {
+    "geometry": "500x265+500+200",
+    "title": null,
+    "icon": "../data/icon.png",
+    "background": "#000000"
+  },
+  {
+    "geometry": "500x265+500+200",
+    "title": null,
+    "icon": "",
+    "background": "#000000"
+  },
+  {
+    "geometry": "500x265+500+200",
+    "title": "ᴋɪssᴍᴇᴀɴᴅɪʟʟᴋɪssᴜᴍʏʟöᴠᴇ",
+    "icon": "icon.ico",
+    "background": "#FFFAAAa"
+  },
+  {
+    "geometry": "500x265+500+200",
+    "title": "ᴋɪssᴍᴇᴀɴᴅɪʟʟᴋɪssᴜᴍʏʟöᴠᴇ",
+    "icon": "icon.ico",
+    "background": "#aaaFFF1"
+  },
+  {
+    "geometry": "500x265+500+200",
+    "title": "ᴋɪssᴍᴇᴀɴᴅɪʟʟᴋɪssᴜᴍʏʟöᴠᴇ",
+    "icon": "icon.ico",
+    "background": "000000"
+  },
+  {
+    "geometry": "500x265+500+200",
+    "title": "ᴋɪssᴍᴇᴀɴᴅɪʟʟᴋɪssᴜᴍʏʟöᴠᴇ",
+    "icon": "icon.ico",
+    "background": "#FFFFFG"
+  },
+  {
+    "geometry": "500x265+500+200",
+    "title": "ᴋɪssᴍᴇᴀɴᴅɪʟʟᴋɪssᴜᴍʏʟöᴠᴇ",
+    "icon": "icon.ico",
+    "background": 5000
+  },
+  {
+    "geometry": "500x265+500+200",
+    "title": "ᴋɪssᴍᴇᴀɴᴅɪʟʟᴋɪssᴜᴍʏʟöᴠᴇ",
+    "icon": "icon.ico",
+    "background": [
+      4000,
+      4000
+    ]
+  },
+  {
+    "geometry": 1,
+    "title": 1,
+    "icon": 1,
+    "background": 1
+  },
+  {
+    "geometry": 1
+  }
+]
