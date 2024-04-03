@@ -113,6 +113,8 @@ class ConfigValidator(BaseValidator):
 		:return: boolean.
 		"""
 		if isinstance(config, dict) and config != {}:
+			if config.keys() != self._validation_container.get_types().keys():
+				return False
 
 			for key, value in config.items():
 				if key not in self._validation_container.get_types():
