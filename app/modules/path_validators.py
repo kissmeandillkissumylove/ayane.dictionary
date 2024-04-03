@@ -27,13 +27,13 @@ class BasePathValidator(ABC):
 
 class PathValidator(BasePathValidator):
 	"""
-	validator for JSON file paths.
+	validator for file paths.
 	"""
 
 	@staticmethod
 	def validate_path(path: str, pattern: str) -> bool:
 		"""
-		checks if the path ends with ".json".
+		checks if the path ends with "*.extension".
 		:param path: path to the file.
 		:param pattern: file path validation pattern.
 		:return: boolean.
