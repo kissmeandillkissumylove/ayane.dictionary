@@ -19,3 +19,11 @@ NOT_EMPTY_TXT = str(BASE_DIR / "tests/tests_files/not_empty.txt")
 
 # ICO FILES.
 TEST_ICON_ICO = str(BASE_DIR / "tests/tests_files/test_icon.ico")
+
+# COLORS.
+GRAY = "#B5B5B5"
+BLACK = "#000000"
+
+# FONT.
+FONT = "verdana 8"
+BOLD = " bold"
