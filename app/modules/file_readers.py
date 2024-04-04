@@ -35,7 +35,7 @@ class JsonFileReader(BaseFileReader):
 	def __init__(
 			self,
 			path_validator: PathValidator,
-			pattern: str = r"\.json$"):
+			pattern: str = "\\.json$"):
 		"""
 		JsonFileReader __init__.
 		:param path_validator: json path validator.
