@@ -4,7 +4,7 @@ implementation of a smart dictionary for learning foreign words.
 """
 import tkinter
 from abc import ABC, abstractmethod
-from typing import NoReturn
+from typing import Union
 
 from injector import singleton, inject, Injector
 
@@ -69,7 +69,7 @@ class MainWindow(BaseWindow):
 			else:
 				raise ConfigNotFoundError(f"file '{CONFIG_0}' not found.")
 
-	def _setup_config(self, config: dict) -> NoReturn:
+	def _setup_config(self, config: dict):
 		"""
 		set settings by configuration dictionary.
 		:param config: dictionary with values.
@@ -93,7 +93,7 @@ class MainWindow(BaseWindow):
 		return self._injector
 
 	@injector.setter
-	def injector(self, new_injector: Injector) -> NoReturn:
+	def injector(self, new_injector: Injector):
 		"""
 		sets new injector.
 		:return: NoReturn.
