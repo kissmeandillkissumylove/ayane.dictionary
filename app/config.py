@@ -16,3 +16,6 @@ INCORRECT_CONFIG = str(
 
 # TXT FILES.
 NOT_EMPTY_TXT = str(BASE_DIR / "tests/tests_files/not_empty.txt")
+
+# ICO FILES.
+TEST_ICON_ICO = str(BASE_DIR / "tests/tests_files/test_icon.ico")
