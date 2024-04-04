@@ -1,6 +1,6 @@
 """
-contains a container with injections that are needed for dependencies in the
-code.
+contains a container with injections that are needed for dependencies in
+the code.
 """
 from injector import Module, Binder
 
@@ -21,8 +21,8 @@ class ModuleDI(Module):
 		"""
 		creates instances of objects and injects dependencies wherever the
 		@inject decorator requires them.
-		:param binder: (injector.Binder) an object used to register dependencies
-			and configure the injector.
+		:param binder: (injector.Binder) an object used to register
+			dependencies and configure the injector.
 		:return: None.
 		"""
 		binder.bind(JsonFileReader, to=JsonFileReader)
