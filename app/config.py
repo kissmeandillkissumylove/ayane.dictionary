@@ -7,7 +7,10 @@ CONNECT_JSON = "modules/files_json"
 CONFIG_0 = str(BASE_DIR / CONNECT_JSON / "config_0.json")
 CONFIG_PATTERNS = str((
 		BASE_DIR / CONNECT_JSON / "config_validation_patterns.json"))
+OBJECTS_PLACES = str(
+	BASE_DIR / CONNECT_JSON / "objects_places.json")
 
+# JSON TEST FILES.
 NOT_EMPTY_JSON = str(BASE_DIR / "tests/tests_files/not_empty.json")
 EMPTY_JSON = str(BASE_DIR / "tests/tests_files/empty.json")
 CORRECT_CONFIG = str(BASE_DIR / "tests/tests_files/correct_config.json")
