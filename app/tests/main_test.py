@@ -8,12 +8,10 @@ from unittest.mock import Mock, patch
 from app.config import TEST_ICON_ICO
 from app.main import MainWindow
 from app.modules.custom_exceptions import ConfigNotFoundError
-from app.tests.mock_resetter import reset_mocks
 
 
 class TestMainWindow(unittest.TestCase):
 
-	@reset_mocks
 	def test_init_with_valid_config(self):
 		mock_config_validator = Mock()
 		mock_config_validator.validate.return_value = True
@@ -34,7 +32,6 @@ class TestMainWindow(unittest.TestCase):
 		self.assertEqual(main_window.title(), "Test Window")
 		self.assertEqual(main_window.cget("background"), "#FFFFFF")
 
-	@reset_mocks
 	@mock.patch("app.main.MainWindow")
 	def test_set_icon(self, mock_main_window):
 		main_window_instance = mock_main_window.return_value
@@ -44,7 +41,6 @@ class TestMainWindow(unittest.TestCase):
 		main_window_instance.iconbitmap.assert_called_once_with(
 			TEST_ICON_ICO)
 
-	@reset_mocks
 	@patch('app.main.JsonFileReader')
 	@patch('app.main.ConfigValidator')
 	def test_init_with_invalid_config(

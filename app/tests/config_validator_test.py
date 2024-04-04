@@ -8,12 +8,10 @@ from unittest.mock import Mock
 from app.config import CORRECT_CONFIG, INCORRECT_CONFIG
 from app.modules.config_validator import (
 	JsonTypesContainer, ConfigValidationContainer, ConfigValidator)
-from app.tests.mock_resetter import reset_mocks
 
 
 class TestJsonTypesContainer(unittest.TestCase):
 
-	@reset_mocks
 	def test_load_types_is_dict(self):
 		mock_file_reader = Mock()
 		mock_file_reader.read_.return_value = {"key1": 1, "key2": 2}
@@ -22,7 +20,6 @@ class TestJsonTypesContainer(unittest.TestCase):
 		result = types_container.load_types()
 		self.assertIsInstance(result, dict)
 
-	@reset_mocks
 	def test_load_types(self):
 		mock_file_reader = Mock()
 		mock_file_reader.read_.return_value = {"key1": 1, "key2": 2}
@@ -35,7 +32,6 @@ class TestJsonTypesContainer(unittest.TestCase):
 
 class TestConfigValidationContainer(unittest.TestCase):
 
-	@reset_mocks
 	def test_init(self):
 		mock_types_container = Mock()
 		mock_types_container.load_types.return_value = {
@@ -53,7 +49,6 @@ class TestConfigValidationContainer(unittest.TestCase):
 			"types": {"key": [str, None]}, "patterns": {"key": "pattern"}}
 		self.assertEqual(config_validator_container._template, expected)
 
-	@reset_mocks
 	def test_get_types(self):
 		mock_container = Mock()
 		mock_container.load_types.return_value = {"key": [str, None]}
@@ -68,7 +63,6 @@ class TestConfigValidationContainer(unittest.TestCase):
 		self.assertIsInstance(config_validator_container.get_types(), dict)
 		self.assertEqual(config_validator_container.get_types(), expected)
 
-	@reset_mocks
 	def test_get_patterns(self):
 		mock_container = Mock()
 		mock_container.load_types.return_value = {"key": [str, None]}
@@ -86,7 +80,6 @@ class TestConfigValidationContainer(unittest.TestCase):
 
 class TestConfigValidator(unittest.TestCase):
 
-	@reset_mocks
 	def test_validate_correct_config_files(self):
 		mock_validation_container = Mock()
 		mock_validation_container.get_types.return_value = {
@@ -110,7 +103,6 @@ class TestConfigValidator(unittest.TestCase):
 		for correct_config in correct_configs_list:
 			self.assertTrue(config_validator.validate(correct_config))
 
-	@reset_mocks
 	def test_validate_incorrect_config_files(self):
 		mock_validation_container = Mock()
 		mock_validation_container.get_types.return_value = {
@@ -134,8 +126,7 @@ class TestConfigValidator(unittest.TestCase):
 		for incorrect_config in incorrect_configs_list:
 			self.assertFalse(config_validator.validate(incorrect_config))
 
-	@reset_mocks
-	def test_validate_incorrect_config_files(self):
+	def test_validate_incorrect_config_files_one_field(self):
 		mock_validation_container = Mock()
 		mock_validation_container.get_types.return_value = {
 			"geometry": [str, None],

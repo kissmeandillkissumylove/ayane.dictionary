@@ -8,7 +8,6 @@ from unittest.mock import Mock
 from app.config import NOT_EMPTY_JSON, EMPTY_JSON, NOT_EMPTY_TXT
 from app.modules.file_readers import JsonFileReader
 from app.modules.path_validators import PathValidator
-from app.tests.mock_resetter import reset_mocks
 
 
 class TestJsonFileReader(unittest.TestCase):
@@ -16,7 +15,6 @@ class TestJsonFileReader(unittest.TestCase):
 	tests for JsonFileReader.
 	"""
 
-	@reset_mocks
 	def test_read_existing_file(self):
 		mock_validator = Mock(spec=PathValidator)
 		mock_validator.validate_path.return_value = True
@@ -29,7 +27,6 @@ class TestJsonFileReader(unittest.TestCase):
 		result = file_reader.read_(NOT_EMPTY_JSON)
 		self.assertEqual(result, file_contents)
 
-	@reset_mocks
 	def test_read_existing_file_data_substitution(self):
 		mock_validator = Mock(spec=PathValidator)
 		mock_validator.validate_path.return_value = True
@@ -43,7 +40,6 @@ class TestJsonFileReader(unittest.TestCase):
 		file_contents = {"key": "value"}
 		self.assertEqual(result, file_contents)
 
-	@reset_mocks
 	def test_read_file_not_found_error(self):
 		mock_validator = Mock(spec=PathValidator)
 		mock_validator.validate_path.return_value = True
@@ -56,7 +52,6 @@ class TestJsonFileReader(unittest.TestCase):
 
 		self.assertIsNone(result)
 
-	@reset_mocks
 	def test_read_json_decode_error(self):
 		mock_validator = Mock(spec=PathValidator)
 		mock_validator.validate_path.return_value = True
@@ -69,7 +64,6 @@ class TestJsonFileReader(unittest.TestCase):
 
 		self.assertIsNone(result)
 
-	@reset_mocks
 	def test_read_invalid_file(self):
 		mock_validator = Mock(spec=PathValidator)
 		mock_validator.validate_path.return_value = True
@@ -78,7 +72,6 @@ class TestJsonFileReader(unittest.TestCase):
 		result = file_reader.read_(NOT_EMPTY_TXT)
 		self.assertIsNone(result)
 
-	@reset_mocks
 	def test_read_empty_path(self):
 		mock_validator = Mock(spec=PathValidator)
 		mock_validator.validate_path.return_value = True
@@ -87,7 +80,6 @@ class TestJsonFileReader(unittest.TestCase):
 		result = file_reader.read_("")
 		self.assertIsNone(result)
 
-	@reset_mocks
 	def test_read_empty_json(self):
 		mock_validator = Mock(spec=PathValidator)
 		mock_validator.validate_path.return_value = True
@@ -96,7 +88,6 @@ class TestJsonFileReader(unittest.TestCase):
 		result = file_reader.read_(EMPTY_JSON)
 		self.assertIsNone(result)
 
-	@reset_mocks
 	def test_read_validator_false(self):
 		mock_validator = Mock(spec=PathValidator)
 		mock_validator.validate_path.return_value = False
