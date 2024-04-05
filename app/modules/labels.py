@@ -3,11 +3,13 @@ all the labels are here.
 """
 import tkinter
 from abc import ABC, abstractmethod
-from tkinter import NW
+from tkinter import NW, W
 
 from injector import singleton
 
-from app.config import GRAY, BLACK, FONT
+from app.config import (
+	GRAY, BLACK, FONT, ALMOST_BLACK, WHITE, MISTAKES_TEXT_LABEL,
+	RED, BOLD)
 
 
 @singleton
@@ -91,3 +93,51 @@ class ScreenTranslationLabel(BaseLabel):
 			justify="left",
 			foreground=BLACK,
 			font=FONT)
+
+
+class MistakesTextLabel(BaseLabel):
+	"""
+	on-screen label just for text.
+	"""
+
+	def __init__(self):
+		"""
+		MistakesTextLabel __init__.
+		"""
+		super().__init__()
+		self._setup_config()
+
+	def _setup_config(self):
+		"""
+		sets configure for the label.
+		"""
+		self.configure(
+			background=ALMOST_BLACK,
+			bd=0,
+			anchor=W,
+			foreground=WHITE,
+			text=MISTAKES_TEXT_LABEL)
+
+
+class MistakesCounterLabel(BaseLabel):
+	"""
+	on-screen label which will count the number of incorrect answers.
+	"""
+
+	def __init__(self):
+		"""
+		MistakesCounterLabel __init__.
+		"""
+		super().__init__()
+		self._setup_config()
+
+	def _setup_config(self):
+		"""
+		sets configure for the label.
+		"""
+		self.configure(
+			background=ALMOST_BLACK,
+			bd=0,
+			text=0,
+			foreground=RED,
+			font=FONT + BOLD)
