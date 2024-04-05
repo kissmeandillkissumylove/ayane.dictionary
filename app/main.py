@@ -15,7 +15,9 @@ from app.modules.buttons import (
 from app.modules.config_validator import ConfigValidator
 from app.modules.custom_exceptions import ConfigNotFoundError
 from app.modules.file_readers import JsonFileReader
-from app.modules.labels import ScreenWordLabel, ScreenTranslationLabel
+from app.modules.labels import (
+	ScreenWordLabel, ScreenTranslationLabel, MistakesCounterLabel,
+	MistakesTextLabel)
 
 
 @singleton
@@ -75,6 +77,10 @@ class MainWindow(BaseWindow):
 		self._wrong_button = self._injector.get(WrongButton)
 		self._again_button = self._injector.get(AgainButton)
 		self._save_button = self._injector.get(SaveButton)
+
+		self._mistakes_text_label = self._injector.get(MistakesTextLabel)
+		self._mistakes_counter_label = self._injector.get(
+			MistakesCounterLabel)
 
 		if config and self._config_validator.validate(config):
 			self._setup_config(config)
@@ -182,6 +188,11 @@ class MainWindow(BaseWindow):
 		self._again_button.set_position(*pos)
 		pos = self._objects_places["save_button"].values()
 		self._save_button.set_position(*pos)
+
+		pos = self._objects_places["mistakes_text_label"].values()
+		self._mistakes_text_label.set_position(*pos)
+		pos = self._objects_places["mistakes_counter_label"].values()
+		self._mistakes_counter_label.set_position(*pos)
 
 		self.mainloop()
 
