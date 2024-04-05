@@ -77,8 +77,6 @@ class MainWindow(BaseWindow):
 			else:
 				raise ConfigNotFoundError(f"file '{CONFIG_0}' not found.")
 
-		self.setup_all_the_objects_and_run()
-
 	def _setup_config(self, config: dict):
 		"""
 		set settings by configuration dictionary.
@@ -188,7 +186,9 @@ def main():
 	"""
 	from app.modules.injector_ import ModuleDI
 	_injector_ = Injector([ModuleDI])
-	_injector_.get(MainWindow)
+
+	main_window = _injector_.get(MainWindow)
+	main_window.setup_all_the_objects_and_run()
 
 
 if __name__ == "__main__":
