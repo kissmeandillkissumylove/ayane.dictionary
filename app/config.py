@@ -31,6 +31,7 @@ WHITE = "#FFFFFF"
 BLUE = "#2D81B2"
 ALMOST_BLACK = "#19191A"
 LIME = "#32CD32"
+DARK_BLUE = "#2200AC"
 
 # FONT.
 FONT = "verdana 8"
@@ -43,4 +44,4 @@ RIGHT_BUTTON = "ʀɪɢʜᴛ"
 WRONG_BUTTON = "ᴡʀᴏɴɢ"
 AGAIN_BUTTON = "ᴀɢᴀɪɴ"
 SAVE_BUTTON = "sᴀᴠᴇ"
-DARK_BLUE = "#2200AC"
+MISTAKES_TEXT_LABEL = "ᴍɪsᴛᴀᴋᴇs:"
