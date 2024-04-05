@@ -20,6 +20,22 @@ class BaseLabel(ABC, tkinter.Label):
 	def _setup_config(self, *args, **kwargs):
 		raise NotImplementedError
 
+	def set_position(self, x_pos: int, y_pos: int, width: int, height: int):
+		"""
+		sets position for the label.
+		:param x_pos: int.
+		:param y_pos: int.
+		:param width: int.
+		:param height: int.
+		"""
+		if (
+				type(x_pos) is int and type(y_pos) is int and
+				type(width) is int and type(height) is int
+		):
+			self.place(x=x_pos, y=y_pos, width=width, height=height)
+		else:
+			raise tkinter.TclError(f"{self.__class__.__name__} set_position")
+
 
 class ScreenWordLabel(BaseLabel):
 	"""
