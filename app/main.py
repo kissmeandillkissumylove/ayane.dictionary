@@ -9,6 +9,9 @@ from typing import Union
 from injector import singleton, inject, Injector
 
 from app.config import CONFIG_0, OBJECTS_PLACES
+from app.modules.buttons import (
+	NextButton, ShowButton, RightButton, WrongButton, AgainButton,
+	SaveButton)
 from app.modules.config_validator import ConfigValidator
 from app.modules.custom_exceptions import ConfigNotFoundError
 from app.modules.file_readers import JsonFileReader
@@ -65,6 +68,13 @@ class MainWindow(BaseWindow):
 		self._screen_word_label = self._injector.get(ScreenWordLabel)
 		self._screen_translation_label = self._injector.get(
 			ScreenTranslationLabel)
+
+		self._next_button = self._injector.get(NextButton)
+		self._show_button = self._injector.get(ShowButton)
+		self._right_button = self._injector.get(RightButton)
+		self._wrong_button = self._injector.get(WrongButton)
+		self._again_button = self._injector.get(AgainButton)
+		self._save_button = self._injector.get(SaveButton)
 
 		if config and self._config_validator.validate(config):
 			self._setup_config(config)
@@ -159,6 +169,20 @@ class MainWindow(BaseWindow):
 		self._screen_word_label.set_position(*pos)
 		pos = self._objects_places["screen_translation_label"].values()
 		self._screen_translation_label.set_position(*pos)
+
+		pos = self._objects_places["next_button"].values()
+		self._next_button.set_position(*pos)
+		pos = self._objects_places["show_button"].values()
+		self._show_button.set_position(*pos)
+		pos = self._objects_places["right_button"].values()
+		self._right_button.set_position(*pos)
+		pos = self._objects_places["wrong_button"].values()
+		self._wrong_button.set_position(*pos)
+		pos = self._objects_places["again_button"].values()
+		self._again_button.set_position(*pos)
+		pos = self._objects_places["save_button"].values()
+		self._save_button.set_position(*pos)
+
 		self.mainloop()
 
 
