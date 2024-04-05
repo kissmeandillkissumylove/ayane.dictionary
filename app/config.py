@@ -26,7 +26,21 @@ TEST_ICON_ICO = str(BASE_DIR / "tests/tests_files/test_icon.ico")
 # COLORS.
 GRAY = "#B5B5B5"
 BLACK = "#000000"
+RED = "#DF1313"
+WHITE = "#FFFFFF"
+BLUE = "#2D81B2"
+ALMOST_BLACK = "#19191A"
+LIME = "#32CD32"
 
 # FONT.
 FONT = "verdana 8"
 BOLD = " bold"
+
+# TEXTS.
+NEXT_BUTTON = "ɴᴇxᴛ"
+SHOW_BUTTON = "sʜᴏᴡ"
+RIGHT_BUTTON = "ʀɪɢʜᴛ"
+WRONG_BUTTON = "ᴡʀᴏɴɢ"
+AGAIN_BUTTON = "ᴀɢᴀɪɴ"
+SAVE_BUTTON = "sᴀᴠᴇ"
+DARK_BLUE = "#2200AC"
