@@ -129,16 +129,6 @@ class MainWindow(BaseWindow):
 		else:
 			raise ValueError("screen_word_label setter.")
 
-	def _setup_screen_word_label(self):
-		"""
-		displays the screen_word_label on the screen.
-		:return: NoReturn
-		"""
-		pos = self._objects_places["screen_word_label"]
-		self._screen_word_label.place(
-			x=pos["x_pos"], y=pos["y_pos"],
-			width=pos["width"], height=pos["height"])
-
 	@property
 	def screen_translation_label(
 			self) -> Union[None, ScreenTranslationLabel]:
@@ -160,23 +150,15 @@ class MainWindow(BaseWindow):
 		else:
 			raise ValueError("screen_translation_label setter.")
 
-	def _setup_screen_translation_label(self):
-		"""
-		displays the screen_translation_label on the screen.
-		:return: NoReturn
-		"""
-		pos = self._objects_places["screen_translation_label"]
-		self._screen_translation_label.place(
-			x=pos["x_pos"], y=pos["y_pos"],
-			width=pos["width"], height=pos["height"])
-
 	def setup_all_the_objects_and_run(self):
 		"""
 		displays all the objects on the screen.
 		:return: NoReturn
 		"""
-		self._setup_screen_word_label()
-		self._setup_screen_translation_label()
+		pos = self._objects_places["screen_word_label"].values()
+		self._screen_word_label.set_position(*pos)
+		pos = self._objects_places["screen_translation_label"].values()
+		self._screen_translation_label.set_position(*pos)
 		self.mainloop()
 
 
