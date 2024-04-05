@@ -5,6 +5,9 @@ the code.
 from injector import Module, Binder
 
 from app.main import MainWindow
+from app.modules.buttons import (
+	NextButton, ShowButton, RightButton, WrongButton, AgainButton,
+	SaveButton)
 from app.modules.config_validator import (
 	JsonTypesContainer, ConfigValidationContainer, ConfigValidator,
 	BaseValidator)
@@ -34,5 +37,12 @@ class ModuleDI(Module):
 
 		binder.bind(ScreenWordLabel, to=ScreenWordLabel)
 		binder.bind(ScreenTranslationLabel, to=ScreenTranslationLabel)
+
+		binder.bind(NextButton, to=NextButton)
+		binder.bind(ShowButton, to=ShowButton)
+		binder.bind(RightButton, to=RightButton)
+		binder.bind(WrongButton, to=WrongButton)
+		binder.bind(AgainButton, to=AgainButton)
+		binder.bind(SaveButton, to=SaveButton)
 
 		binder.bind(MainWindow, to=MainWindow)
