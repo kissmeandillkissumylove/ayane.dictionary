@@ -4,5 +4,11 @@
     "y_pos": 5,
     "width": 490,
     "height": 50
+  },
+  "screen_translation_label": {
+    "x_pos": 5,
+    "y_pos": 60,
+    "width": 490,
+    "height": 50
   }
 }

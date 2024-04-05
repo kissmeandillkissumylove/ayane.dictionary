@@ -12,7 +12,7 @@ from app.config import CONFIG_0, OBJECTS_PLACES
 from app.modules.config_validator import ConfigValidator
 from app.modules.custom_exceptions import ConfigNotFoundError
 from app.modules.file_readers import JsonFileReader
-from app.modules.labels import ScreenWordLabel
+from app.modules.labels import ScreenWordLabel, ScreenTranslationLabel
 
 
 @singleton
@@ -63,6 +63,8 @@ class MainWindow(BaseWindow):
 		self._objects_places = file_reader.read_(OBJECTS_PLACES)
 
 		self._screen_word_label = self._injector.get(ScreenWordLabel)
+		self._screen_translation_label = self._injector.get(
+			ScreenTranslationLabel)
 
 		if config and self._config_validator.validate(config):
 			self._setup_config(config)
@@ -139,12 +141,44 @@ class MainWindow(BaseWindow):
 			x=pos["x_pos"], y=pos["y_pos"],
 			width=pos["width"], height=pos["height"])
 
+	@property
+	def screen_translation_label(
+			self) -> Union[None, ScreenTranslationLabel]:
+		"""
+		returns screen_translation_label or None.
+		:return: label or None.
+		"""
+		return self._screen_translation_label
+
+	@screen_translation_label.setter
+	def screen_translation_label(
+			self, screen_translation_label: ScreenTranslationLabel):
+		"""
+		sets new value for the _screen_translation_label.
+		:param screen_translation_label: ScreenWordLabel object.
+		"""
+		if isinstance(screen_translation_label, ScreenTranslationLabel):
+			self._screen_translation_label = screen_translation_label
+		else:
+			raise ValueError("screen_translation_label setter.")
+
+	def _setup_screen_translation_label(self):
+		"""
+		displays the screen_translation_label on the screen.
+		:return: NoReturn
+		"""
+		pos = self._objects_places["screen_translation_label"]
+		self._screen_translation_label.place(
+			x=pos["x_pos"], y=pos["y_pos"],
+			width=pos["width"], height=pos["height"])
+
 	def setup_all_the_objects_and_run(self):
 		"""
 		displays all the objects on the screen.
 		:return: NoReturn
 		"""
 		self._setup_screen_word_label()
+		self._setup_screen_translation_label()
 		self.mainloop()
 
 

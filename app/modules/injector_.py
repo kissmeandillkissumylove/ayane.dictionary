@@ -9,7 +9,7 @@ from app.modules.config_validator import (
 	JsonTypesContainer, ConfigValidationContainer, ConfigValidator,
 	BaseValidator)
 from app.modules.file_readers import JsonFileReader
-from app.modules.labels import ScreenWordLabel
+from app.modules.labels import ScreenWordLabel, ScreenTranslationLabel
 from app.modules.path_validators import PathValidator
 
 
@@ -33,5 +33,6 @@ class ModuleDI(Module):
 		binder.bind(ConfigValidator, to=ConfigValidator)
 
 		binder.bind(ScreenWordLabel, to=ScreenWordLabel)
+		binder.bind(ScreenTranslationLabel, to=ScreenTranslationLabel)
 
 		binder.bind(MainWindow, to=MainWindow)

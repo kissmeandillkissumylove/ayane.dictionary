@@ -47,3 +47,31 @@ class ScreenWordLabel(BaseLabel):
 			justify="left",
 			foreground=BLACK,
 			font=FONT)
+
+
+class ScreenTranslationLabel(BaseLabel):
+	"""
+	on-screen label that is needed to display a current word translation.
+	"""
+
+	def __init__(self):
+		"""
+		ScreenTranslationLabel __init__.
+		"""
+		super().__init__()
+		self._setup_config()
+
+	def _setup_config(self):
+		"""
+		sets configure for the label.
+		"""
+		self.configure(
+			background=GRAY,
+			bd=0,
+			anchor=NW,
+			pady=2,
+			padx=2,
+			wraplength=486,
+			justify="left",
+			foreground=BLACK,
+			font=FONT)
