@@ -12,7 +12,9 @@ from app.modules.config_validator import (
 	JsonTypesContainer, ConfigValidationContainer, ConfigValidator,
 	BaseValidator)
 from app.modules.file_readers import JsonFileReader
-from app.modules.labels import ScreenWordLabel, ScreenTranslationLabel
+from app.modules.labels import (
+	ScreenWordLabel, ScreenTranslationLabel, MistakesTextLabel,
+	MistakesCounterLabel)
 from app.modules.path_validators import PathValidator
 
 
@@ -44,5 +46,8 @@ class ModuleDI(Module):
 		binder.bind(WrongButton, to=WrongButton)
 		binder.bind(AgainButton, to=AgainButton)
 		binder.bind(SaveButton, to=SaveButton)
+
+		binder.bind(MistakesTextLabel, to=MistakesTextLabel)
+		binder.bind(MistakesCounterLabel, to=MistakesCounterLabel)
 
 		binder.bind(MainWindow, to=MainWindow)
