@@ -46,5 +46,17 @@
     "y_pos": 115,
     "width": 50,
     "height": 20
+  },
+  "mistakes_text_label": {
+    "x_pos": 335,
+    "y_pos": 115,
+    "width": 60,
+    "height": 20
+  },
+  "mistakes_counter_label": {
+    "x_pos": 400,
+    "y_pos": 115,
+    "width": 95,
+    "height": 20
   }
 }
