@@ -11,7 +11,7 @@ from injector import singleton, inject, Injector
 from app.config import CONFIG_0, OBJECTS_PLACES
 from app.modules.buttons import (
 	NextButton, ShowButton, RightButton, WrongButton, AgainButton,
-	SaveButton)
+	SaveButton, AddButton, FindButton, EditButton)
 from app.modules.config_validator import ConfigValidator
 from app.modules.custom_exceptions import ConfigNotFoundError
 from app.modules.file_readers import JsonFileReader
@@ -81,6 +81,10 @@ class MainWindow(BaseWindow):
 		self._mistakes_text_label = self._injector.get(MistakesTextLabel)
 		self._mistakes_counter_label = self._injector.get(
 			MistakesCounterLabel)
+
+		self._add_button = self._injector.get(AddButton)
+		self._find_button = self._injector.get(FindButton)
+		self._edit_button = self._injector.get(EditButton)
 
 		if config and self._config_validator.validate(config):
 			self._setup_config(config)
@@ -193,6 +197,13 @@ class MainWindow(BaseWindow):
 		self._mistakes_text_label.set_position(*pos)
 		pos = self._objects_places["mistakes_counter_label"].values()
 		self._mistakes_counter_label.set_position(*pos)
+
+		pos = self._objects_places["add_button"].values()
+		self._add_button.set_position(*pos)
+		pos = self._objects_places["find_button"].values()
+		self._find_button.set_position(*pos)
+		pos = self._objects_places["edit_button"].values()
+		self._edit_button.set_position(*pos)
 
 		self.mainloop()
 

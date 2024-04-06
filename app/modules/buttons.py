@@ -9,7 +9,7 @@ from injector import singleton
 from app.config import (
 	RED, WHITE, BLUE, NEXT_BUTTON, ALMOST_BLACK, SHOW_BUTTON,
 	LIME, RIGHT_BUTTON, WRONG_BUTTON, AGAIN_BUTTON, SAVE_BUTTON,
-	DARK_BLUE)
+	DARK_BLUE, DARK_GREEN, ADD_BUTTON, FIND_BUTTON, EDIT_BUTTON)
 
 
 @singleton
@@ -242,5 +242,105 @@ class SaveButton(BaseButton):
 	def _command(self):
 		"""
 		saves all the changes in a dictionary.
+		"""
+		pass
+
+
+class AddButton(BaseButton):
+	"""
+	a "add" button which adds a new word to a database.
+	"""
+
+	def __init__(self):
+		"""
+		AddButton __init__.
+		"""
+		super().__init__()
+		self._setup_config()
+
+	def _setup_config(self):
+		"""
+		sets configure for the button.
+		"""
+		self.configure(
+			background=DARK_GREEN,
+			foreground=WHITE,
+			activebackground=BLUE,
+			disabledforeground=ALMOST_BLACK,
+			text=ADD_BUTTON,
+			bd=2,
+			command=self._command,
+			state="normal")
+
+	def _command(self):
+		"""
+		adds a new word to the dictionary.
+		"""
+		pass
+
+
+class FindButton(BaseButton):
+	"""
+	a "find" button which finds an existing word in a database.
+	"""
+
+	def __init__(self):
+		"""
+		FindButton __init__.
+		"""
+		super().__init__()
+		self._setup_config()
+
+	def _setup_config(self):
+		"""
+		sets configure for the button.
+		"""
+		self.configure(
+			background=DARK_GREEN,
+			foreground=WHITE,
+			activebackground=BLUE,
+			disabledforeground=ALMOST_BLACK,
+			text=FIND_BUTTON,
+			bd=2,
+			command=self._command,
+			state="normal")
+
+	def _command(self):
+		"""
+		finds the word and shows it in the fields.
+		"""
+		pass
+
+
+class EditButton(BaseButton):
+	"""
+	a "edit" button which edits the translation and transcription fields of
+	a word.
+	"""
+
+	def __init__(self):
+		"""
+		EditButton __init__.
+		"""
+		super().__init__()
+		self._setup_config()
+
+	def _setup_config(self):
+		"""
+		sets configure for the button.
+		"""
+		self.configure(
+			background=DARK_GREEN,
+			foreground=WHITE,
+			activebackground=BLUE,
+			disabledforeground=ALMOST_BLACK,
+			text=EDIT_BUTTON,
+			bd=2,
+			command=self._command,
+			state="normal")
+
+	def _command(self):
+		"""
+		edits word's parameters.
 		"""
 		pass

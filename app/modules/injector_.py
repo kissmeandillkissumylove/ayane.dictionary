@@ -7,7 +7,7 @@ from injector import Module, Binder
 from app.main import MainWindow
 from app.modules.buttons import (
 	NextButton, ShowButton, RightButton, WrongButton, AgainButton,
-	SaveButton)
+	SaveButton, AddButton, FindButton, EditButton)
 from app.modules.config_validator import (
 	JsonTypesContainer, ConfigValidationContainer, ConfigValidator,
 	BaseValidator)
@@ -49,5 +49,9 @@ class ModuleDI(Module):
 
 		binder.bind(MistakesTextLabel, to=MistakesTextLabel)
 		binder.bind(MistakesCounterLabel, to=MistakesCounterLabel)
+
+		binder.bind(AddButton, to=AddButton)
+		binder.bind(FindButton, to=FindButton)
+		binder.bind(EditButton, to=EditButton)
 
 		binder.bind(MainWindow, to=MainWindow)

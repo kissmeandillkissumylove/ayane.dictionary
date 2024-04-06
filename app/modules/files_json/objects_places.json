@@ -58,5 +58,23 @@
     "y_pos": 115,
     "width": 95,
     "height": 20
+  },
+  "add_button": {
+    "x_pos": 5,
+    "y_pos": 140,
+    "width": 50,
+    "height": 20
+  },
+  "find_button": {
+    "x_pos": 60,
+    "y_pos": 140,
+    "width": 50,
+    "height": 20
+  },
+  "edit_button": {
+    "x_pos": 115,
+    "y_pos": 140,
+    "width": 50,
+    "height": 20
   }
 }
