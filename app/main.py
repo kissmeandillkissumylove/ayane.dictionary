@@ -20,6 +20,8 @@ from app.modules.labels import (
 	MistakesTextLabel, WordsTextLabel, WordsCounterLabel,
 	WordTextLabel, TranscriptionTextLabel, TranslationTextLabel,
 	ResultTextLabel)
+from app.modules.texts import (
+	WordText, TranscriptionText, TranslationText)
 
 
 @singleton
@@ -97,6 +99,10 @@ class MainWindow(BaseWindow):
 		self._translation_text_label = self._injector.get(
 			TranslationTextLabel)
 		self._result_text_label = self._injector.get(ResultTextLabel)
+
+		self._word_text = self._injector.get(WordText)
+		self._transcription_text = self._injector.get(TranslationText)
+		self._translation_text = self._injector.get(TranscriptionText)
 
 		if config and self._config_validator.validate(config):
 			self._setup_config(config)
@@ -230,6 +236,13 @@ class MainWindow(BaseWindow):
 		self._translation_text_label.set_position(*pos)
 		pos = self._objects_places["result_text_label"].values()
 		self._result_text_label.set_position(*pos)
+
+		pos = self._objects_places["word_text"].values()
+		self._word_text.set_position(*pos)
+		pos = self._objects_places["transcription_text"].values()
+		self._transcription_text.set_position(*pos)
+		pos = self._objects_places["translation_text"].values()
+		self._translation_text.set_position(*pos)
 
 		self.mainloop()
 

@@ -18,6 +18,8 @@ from app.modules.labels import (
 	WordTextLabel, TranscriptionTextLabel, TranslationTextLabel,
 	ResultTextLabel)
 from app.modules.path_validators import PathValidator
+from app.modules.texts import (
+	WordText, TranscriptionText, TranslationText)
 
 
 class ModuleDI(Module):
@@ -63,5 +65,9 @@ class ModuleDI(Module):
 		binder.bind(TranscriptionTextLabel, to=TranscriptionTextLabel)
 		binder.bind(TranslationTextLabel, to=TranslationTextLabel)
 		binder.bind(ResultTextLabel, to=ResultTextLabel)
+
+		binder.bind(WordText, to=WordText)
+		binder.bind(TranscriptionText, to=TranscriptionText)
+		binder.bind(TranslationText, to=TranslationText)
 
 		binder.bind(MainWindow, to=MainWindow)

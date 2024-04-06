@@ -86,7 +86,7 @@
   "words_counter_label": {
     "x_pos": 225,
     "y_pos": 140,
-    "width": 270,
+    "width": 140,
     "height": 20
   },
   "word_text_label": {
@@ -111,6 +111,24 @@
     "x_pos": 5,
     "y_pos": 240,
     "width": 85,
+    "height": 20
+  },
+  "word_text": {
+    "x_pos": 95,
+    "y_pos": 165,
+    "width": 270,
+    "height": 20
+  },
+  "transcription_text": {
+    "x_pos": 95,
+    "y_pos": 190,
+    "width": 270,
+    "height": 20
+  },
+  "translation_text": {
+    "x_pos": 95,
+    "y_pos": 215,
+    "width": 270,
     "height": 20
   }
 }
