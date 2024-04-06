@@ -17,7 +17,9 @@ from app.modules.custom_exceptions import ConfigNotFoundError
 from app.modules.file_readers import JsonFileReader
 from app.modules.labels import (
 	ScreenWordLabel, ScreenTranslationLabel, MistakesCounterLabel,
-	MistakesTextLabel, WordsTextLabel, WordsCounterLabel)
+	MistakesTextLabel, WordsTextLabel, WordsCounterLabel,
+	WordTextLabel, TranscriptionTextLabel, TranslationTextLabel,
+	ResultTextLabel)
 
 
 @singleton
@@ -88,6 +90,13 @@ class MainWindow(BaseWindow):
 
 		self._words_text_label = self._injector.get(WordsTextLabel)
 		self._words_counter_label = self._injector.get(WordsCounterLabel)
+
+		self._word_text_label = self._injector.get(WordTextLabel)
+		self._transcription_text_label = self._injector.get(
+			TranscriptionTextLabel)
+		self._translation_text_label = self._injector.get(
+			TranslationTextLabel)
+		self._result_text_label = self._injector.get(ResultTextLabel)
 
 		if config and self._config_validator.validate(config):
 			self._setup_config(config)
@@ -212,6 +221,15 @@ class MainWindow(BaseWindow):
 		self._words_text_label.set_position(*pos)
 		pos = self._objects_places["words_counter_label"].values()
 		self._words_counter_label.set_position(*pos)
+
+		pos = self._objects_places["word_text_label"].values()
+		self._word_text_label.set_position(*pos)
+		pos = self._objects_places["transcription_text_label"].values()
+		self._transcription_text_label.set_position(*pos)
+		pos = self._objects_places["translation_text_label"].values()
+		self._translation_text_label.set_position(*pos)
+		pos = self._objects_places["result_text_label"].values()
+		self._result_text_label.set_position(*pos)
 
 		self.mainloop()
 

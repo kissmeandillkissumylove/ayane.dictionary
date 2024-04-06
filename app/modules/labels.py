@@ -9,7 +9,8 @@ from injector import singleton
 
 from app.config import (
 	GRAY, BLACK, FONT, ALMOST_BLACK, WHITE, MISTAKES_TEXT_LABEL,
-	RED, BOLD, WORDS_LABEL, GREEN)
+	RED, BOLD, WORDS_LABEL, GREEN, RESULT_LABEL,
+	TRANSCRIPTION_LABEL, TRANSLATION_LABEL)
 
 
 @singleton
@@ -189,3 +190,99 @@ class WordsCounterLabel(BaseLabel):
 			text="0/0",
 			foreground=GREEN,
 			font=FONT + BOLD)
+
+
+class WordTextLabel(BaseLabel):
+	"""
+	on-screen label just for text.
+	"""
+
+	def __init__(self):
+		"""
+		WordTextLabel __init__.
+		"""
+		super().__init__()
+		self._setup_config()
+
+	def _setup_config(self):
+		"""
+		sets configure for the label.
+		"""
+		self.configure(
+			background=ALMOST_BLACK,
+			bd=0,
+			anchor=W,
+			foreground=WHITE,
+			text=WORDS_LABEL[:-2] + WORDS_LABEL[-1])
+
+
+class TranscriptionTextLabel(BaseLabel):
+	"""
+	on-screen label just for text.
+	"""
+
+	def __init__(self):
+		"""
+		TranscriptionTextLabel __init__.
+		"""
+		super().__init__()
+		self._setup_config()
+
+	def _setup_config(self):
+		"""
+		sets configure for the label.
+		"""
+		self.configure(
+			background=ALMOST_BLACK,
+			bd=0,
+			anchor=W,
+			foreground=WHITE,
+			text=TRANSCRIPTION_LABEL)
+
+
+class TranslationTextLabel(BaseLabel):
+	"""
+	on-screen label just for text.
+	"""
+
+	def __init__(self):
+		"""
+		TranslationTextLabel __init__.
+		"""
+		super().__init__()
+		self._setup_config()
+
+	def _setup_config(self):
+		"""
+		sets configure for the label.
+		"""
+		self.configure(
+			background=ALMOST_BLACK,
+			bd=0,
+			anchor=W,
+			foreground=WHITE,
+			text=TRANSLATION_LABEL)
+
+
+class ResultTextLabel(BaseLabel):
+	"""
+	on-screen label just for text.
+	"""
+
+	def __init__(self):
+		"""
+		ResultTextLabel __init__.
+		"""
+		super().__init__()
+		self._setup_config()
+
+	def _setup_config(self):
+		"""
+		sets configure for the label.
+		"""
+		self.configure(
+			background=ALMOST_BLACK,
+			bd=0,
+			anchor=W,
+			foreground=WHITE,
+			text=RESULT_LABEL)
