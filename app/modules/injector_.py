@@ -16,7 +16,7 @@ from app.modules.labels import (
 	ScreenWordLabel, ScreenTranslationLabel, MistakesTextLabel,
 	MistakesCounterLabel, WordsTextLabel, WordsCounterLabel,
 	WordTextLabel, TranscriptionTextLabel, TranslationTextLabel,
-	ResultTextLabel)
+	ResultTextLabel, ResultCommandLabel)
 from app.modules.path_validators import PathValidator
 from app.modules.texts import (
 	WordText, TranscriptionText, TranslationText)
@@ -69,5 +69,6 @@ class ModuleDI(Module):
 		binder.bind(WordText, to=WordText)
 		binder.bind(TranscriptionText, to=TranscriptionText)
 		binder.bind(TranslationText, to=TranslationText)
+		binder.bind(ResultCommandLabel, to=ResultCommandLabel)
 
 		binder.bind(MainWindow, to=MainWindow)

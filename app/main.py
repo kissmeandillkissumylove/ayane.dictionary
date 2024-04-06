@@ -19,7 +19,7 @@ from app.modules.labels import (
 	ScreenWordLabel, ScreenTranslationLabel, MistakesCounterLabel,
 	MistakesTextLabel, WordsTextLabel, WordsCounterLabel,
 	WordTextLabel, TranscriptionTextLabel, TranslationTextLabel,
-	ResultTextLabel)
+	ResultTextLabel, ResultCommandLabel)
 from app.modules.texts import (
 	WordText, TranscriptionText, TranslationText)
 
@@ -89,6 +89,8 @@ class MainWindow(BaseWindow):
 		self._add_button = self._injector.get(AddButton)
 		self._find_button = self._injector.get(FindButton)
 		self._edit_button = self._injector.get(EditButton)
+		self._result_command_label = self._injector.get(
+			ResultCommandLabel)
 
 		self._words_text_label = self._injector.get(WordsTextLabel)
 		self._words_counter_label = self._injector.get(WordsCounterLabel)
@@ -243,6 +245,8 @@ class MainWindow(BaseWindow):
 		self._transcription_text.set_position(*pos)
 		pos = self._objects_places["translation_text"].values()
 		self._translation_text.set_position(*pos)
+		pos = self._objects_places["result_command_label"].values()
+		self._result_command_label.set_position(*pos)
 
 		self.mainloop()
 

@@ -286,3 +286,27 @@ class ResultTextLabel(BaseLabel):
 			anchor=W,
 			foreground=WHITE,
 			text=RESULT_LABEL)
+
+
+class ResultCommandLabel(BaseLabel):
+	"""
+	on-screen label which displays a command result.
+	"""
+
+	def __init__(self):
+		"""
+		ResultCommandLabel __init__.
+		"""
+		super().__init__()
+		self._setup_config()
+
+	def _setup_config(self):
+		"""
+		sets configure for the label.
+		"""
+		self.configure(
+			background=ALMOST_BLACK,
+			bd=0,
+			anchor=W,
+			foreground=WHITE,
+			text="")

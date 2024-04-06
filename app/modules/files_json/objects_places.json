@@ -130,5 +130,11 @@
     "y_pos": 215,
     "width": 270,
     "height": 20
+  },
+  "result_command_label": {
+    "x_pos": 95,
+    "y_pos": 240,
+    "width": 270,
+    "height": 20
   }
 }
