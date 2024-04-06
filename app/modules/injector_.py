@@ -14,7 +14,7 @@ from app.modules.config_validator import (
 from app.modules.file_readers import JsonFileReader
 from app.modules.labels import (
 	ScreenWordLabel, ScreenTranslationLabel, MistakesTextLabel,
-	MistakesCounterLabel)
+	MistakesCounterLabel, WordsTextLabel, WordsCounterLabel)
 from app.modules.path_validators import PathValidator
 
 
@@ -53,5 +53,8 @@ class ModuleDI(Module):
 		binder.bind(AddButton, to=AddButton)
 		binder.bind(FindButton, to=FindButton)
 		binder.bind(EditButton, to=EditButton)
+
+		binder.bind(WordsTextLabel, to=WordsTextLabel)
+		binder.bind(WordsCounterLabel, to=WordsCounterLabel)
 
 		binder.bind(MainWindow, to=MainWindow)

@@ -33,6 +33,7 @@ ALMOST_BLACK = "#19191A"
 LIME = "#32CD32"
 DARK_BLUE = "#2200AC"
 DARK_GREEN = "#19732E"
+GREEN = "#58BD66"
 
 # FONT.
 FONT = "verdana 8"
@@ -49,3 +50,4 @@ MISTAKES_TEXT_LABEL = "ᴍɪsᴛᴀᴋᴇs:"
 ADD_BUTTON = "ᴀᴅᴅ"
 FIND_BUTTON = "ꜰɪɴᴅ"
 EDIT_BUTTON = "ᴇᴅɪᴛ"
+WORDS_LABEL = "ᴡᴏʀᴅs:"

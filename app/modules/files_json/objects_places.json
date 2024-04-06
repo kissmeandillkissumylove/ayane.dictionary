@@ -76,5 +76,17 @@
     "y_pos": 140,
     "width": 50,
     "height": 20
+  },
+  "words_text_label": {
+    "x_pos": 170,
+    "y_pos": 140,
+    "width": 50,
+    "height": 20
+  },
+  "words_counter_label": {
+    "x_pos": 225,
+    "y_pos": 140,
+    "width": 270,
+    "height": 20
   }
 }

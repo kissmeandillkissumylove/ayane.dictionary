@@ -17,7 +17,7 @@ from app.modules.custom_exceptions import ConfigNotFoundError
 from app.modules.file_readers import JsonFileReader
 from app.modules.labels import (
 	ScreenWordLabel, ScreenTranslationLabel, MistakesCounterLabel,
-	MistakesTextLabel)
+	MistakesTextLabel, WordsTextLabel, WordsCounterLabel)
 
 
 @singleton
@@ -85,6 +85,9 @@ class MainWindow(BaseWindow):
 		self._add_button = self._injector.get(AddButton)
 		self._find_button = self._injector.get(FindButton)
 		self._edit_button = self._injector.get(EditButton)
+
+		self._words_text_label = self._injector.get(WordsTextLabel)
+		self._words_counter_label = self._injector.get(WordsCounterLabel)
 
 		if config and self._config_validator.validate(config):
 			self._setup_config(config)
@@ -204,6 +207,11 @@ class MainWindow(BaseWindow):
 		self._find_button.set_position(*pos)
 		pos = self._objects_places["edit_button"].values()
 		self._edit_button.set_position(*pos)
+
+		pos = self._objects_places["words_text_label"].values()
+		self._words_text_label.set_position(*pos)
+		pos = self._objects_places["words_counter_label"].values()
+		self._words_counter_label.set_position(*pos)
 
 		self.mainloop()
 

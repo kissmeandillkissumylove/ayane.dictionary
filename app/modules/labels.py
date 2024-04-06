@@ -9,7 +9,7 @@ from injector import singleton
 
 from app.config import (
 	GRAY, BLACK, FONT, ALMOST_BLACK, WHITE, MISTAKES_TEXT_LABEL,
-	RED, BOLD)
+	RED, BOLD, WORDS_LABEL, GREEN)
 
 
 @singleton
@@ -140,4 +140,52 @@ class MistakesCounterLabel(BaseLabel):
 			bd=0,
 			text=0,
 			foreground=RED,
+			font=FONT + BOLD)
+
+
+class WordsTextLabel(BaseLabel):
+	"""
+	on-screen label just for text.
+	"""
+
+	def __init__(self):
+		"""
+		WordsTextLabel __init__.
+		"""
+		super().__init__()
+		self._setup_config()
+
+	def _setup_config(self):
+		"""
+		sets configure for the label.
+		"""
+		self.configure(
+			background=ALMOST_BLACK,
+			bd=0,
+			anchor=W,
+			foreground=WHITE,
+			text=WORDS_LABEL)
+
+
+class WordsCounterLabel(BaseLabel):
+	"""
+	on-screen label which will count the number of words in a dictionary.
+	"""
+
+	def __init__(self):
+		"""
+		WordsCounterLabel __init__.
+		"""
+		super().__init__()
+		self._setup_config()
+
+	def _setup_config(self):
+		"""
+		sets configure for the label.
+		"""
+		self.configure(
+			background=ALMOST_BLACK,
+			bd=0,
+			text="0/0",
+			foreground=GREEN,
 			font=FONT + BOLD)
