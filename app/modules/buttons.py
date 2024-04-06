@@ -15,7 +15,7 @@ from app.config import (
 @singleton
 class BaseButton(ABC, tkinter.Button):
 	"""
-	base label for the interface.
+	base button for the interface.
 	"""
 
 	@abstractmethod
@@ -28,7 +28,7 @@ class BaseButton(ABC, tkinter.Button):
 
 	def set_position(self, x_pos: int, y_pos: int, width: int, height: int):
 		"""
-		sets position for the label.
+		sets position for the button.
 		:param x_pos: int.
 		:param y_pos: int.
 		:param width: int.
