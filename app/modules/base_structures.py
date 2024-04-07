@@ -1,6 +1,7 @@
 """all the basic structures are collected here."""
 import tkinter
 from abc import abstractmethod, ABC
+from dataclasses import dataclass
 
 import injector
 from injector import Binder
@@ -35,4 +36,16 @@ class BaseFileReader(ABC):
 	@abstractmethod
 	def read_(self, *args, **kwargs):
 		"""reads the file."""
+		raise NotImplementedError
+
+
+@dataclass
+class BaseValidator(ABC):
+	"""abstract class for data validation."""
+
+	@staticmethod
+	@abstractmethod
+	def validate(*args, **kwargs) -> bool:
+		"""validates the data.
+		:return: boolean."""
 		raise NotImplementedError
