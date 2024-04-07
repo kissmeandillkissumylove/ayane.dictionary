@@ -38,7 +38,7 @@ class JsonFileReader(BaseFileReader):
 			(utf-8 by default).
 		:return: dictionary or None.
 		"""
-		if self._path_validator.validate_path(path, self._pattern):
+		if self._path_validator.validate(path, self._pattern):
 			try:
 				with open(path, "r", encoding=encoding) as file_json:
 					file = json.load(file_json)
