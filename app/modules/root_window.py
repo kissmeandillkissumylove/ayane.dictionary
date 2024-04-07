@@ -13,6 +13,7 @@ class RootWindow(BaseWindow):
 		super().__init__()
 
 		self._injection_container = None
+		self._configuration_dict = None
 
 	def _setup_configuration(self, *args, **kwargs):
 		"""sets root window configuration."""
@@ -38,6 +39,27 @@ class RootWindow(BaseWindow):
 		"""removes the reference to _injector_container. subsequently this
 		object will be deleted."""
 		del self._injection_container
+
+	@property
+	def configuration_dict(self) -> dict:
+		"""get _configuration_dict value.
+		:return: dict object."""
+		return self._configuration_dict
+
+	@configuration_dict.setter
+	def configuration_dict(self, config: dict):
+		"""sets new value for _configuration_dict.
+		:param config: dict object."""
+		if isinstance(config, dict):
+			self._configuration_dict = config
+		else:
+			pass
+
+	@configuration_dict.deleter
+	def configuration_dict(self):
+		"""removes the reference to _configuration_dict. subsequently this
+		object will be deleted."""
+		del self._configuration_dict
 
 	def run(self):
 		"""launches a window."""
