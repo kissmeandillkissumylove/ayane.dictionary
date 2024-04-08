@@ -15,6 +15,6 @@ logs = str(
 	BASE_DIR / connect_txt / "logs.log")
 
 # constants.
-LOG_SIZE_LIMIT = 10 * 1024 * 1024
+LOG_SIZE_LIMIT = 1 * 1024 * 1024
 NUM_LOG_FILES = 10
 
