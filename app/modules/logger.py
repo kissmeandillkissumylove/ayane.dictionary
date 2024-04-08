@@ -1,9 +1,10 @@
 """an application logger is here."""
 import logging
+from logging.handlers import RotatingFileHandler
 
 from injector import singleton
 
-from app.config import logs
+from app.config import logs, LOG_SIZE_LIMIT, NUM_LOG_FILES
 from app.modules.base_structures import BaseLogger
 
 
@@ -34,8 +35,10 @@ class CustomLogger(BaseLogger):
 			"%(message)-s",
 			datefmt="%Y-%m-%d %H:%M:%S")
 
-		handler_ = logging.FileHandler(
+		handler_ = RotatingFileHandler(
 			filename=logs,
+			maxBytes=LOG_SIZE_LIMIT,
+			backupCount=NUM_LOG_FILES,
 			mode="a",
 			encoding="utf-8")
 
