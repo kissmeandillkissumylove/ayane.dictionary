@@ -2,7 +2,7 @@
 import logging
 from logging.handlers import RotatingFileHandler
 
-from injector import singleton
+from injector import singleton, inject
 
 from app.config import logs, LOG_SIZE_LIMIT, NUM_LOG_FILES
 from app.modules.base_structures import BaseLogger
@@ -12,6 +12,7 @@ from app.modules.base_structures import BaseLogger
 class CustomLogger(BaseLogger):
 	"""application logger."""
 
+	@inject
 	def __init__(self, name: str, level: int = 30):
 		"""CustomLogger __init__."""
 		if isinstance(name, str):
