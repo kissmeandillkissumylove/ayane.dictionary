@@ -1,4 +1,5 @@
 """all the basic structures are collected here."""
+import logging
 import tkinter
 from abc import abstractmethod, ABC
 from dataclasses import dataclass
@@ -48,4 +49,18 @@ class BaseValidator(ABC):
 	def validate(*args, **kwargs) -> bool:
 		"""validates the data.
 		:return: boolean."""
+		raise NotImplementedError
+
+
+class BaseLogger(ABC, logging.Logger):
+	"""abstract class for logger."""
+
+	@abstractmethod
+	def _setup_logger(self, *args, **kwargs):
+		"""sets settings for the logger."""
+		raise NotImplementedError
+
+	@abstractmethod
+	def log(self, *args, **kwargs):
+		"""write the message to the log file."""
 		raise NotImplementedError
