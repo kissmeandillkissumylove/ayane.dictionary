@@ -25,7 +25,7 @@ class CustomLogger(BaseLogger):
 
 	def _setup_logger(self, name: str):
 		"""sets settings for the logger."""
-		formatter_debug = logging.Formatter(
+		formatter_ = logging.Formatter(
 			fmt=
 			"%(levelname)-12s"
 			"%(asctime)-30s"
@@ -34,16 +34,14 @@ class CustomLogger(BaseLogger):
 			"%(message)-s",
 			datefmt="%Y-%m-%d %H:%M:%S")
 
-		handler_debug = logging.FileHandler(
+		handler_ = logging.FileHandler(
 			filename=logs,
 			mode="a",
 			encoding="utf-8")
 
-		handler_debug.setLevel(logging.DEBUG)
-
-		handler_debug.setFormatter(formatter_debug)
-
-		self._logger.addHandler(handler_debug)
+		handler_.setLevel(logging.DEBUG)
+		handler_.setFormatter(formatter_)
+		self._logger.addHandler(handler_)
 
 	def set_logger_level(self, level: int):
 		"""sets logging level."""
