@@ -2,3 +2,4 @@
 /.idea
 **/__pycache__/
 /tmp
+/app/modules/txt/logs.log
