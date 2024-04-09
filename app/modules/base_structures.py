@@ -59,8 +59,3 @@ class BaseLogger(ABC, logging.Logger):
 	def _setup_logger(self, *args, **kwargs):
 		"""sets settings for the logger."""
 		raise NotImplementedError
-
-	@abstractmethod
-	def log(self, *args, **kwargs):
-		"""write the message to the log file."""
-		raise NotImplementedError
