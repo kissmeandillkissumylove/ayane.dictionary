@@ -3,3 +3,4 @@
 **/__pycache__/
 /tmp
 *.log
+*.log.[0-9]*
