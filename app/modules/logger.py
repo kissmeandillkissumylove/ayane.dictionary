@@ -152,12 +152,13 @@ class CustomLogger(BaseLogger):
 		"""write a message with "error" level and error traceback."""
 		module_name, lineno = self._get_caller_info()
 
+		message = self._truncate_value(message)
 		formatted_message = "%-25s%-8s%-52s" % (
 			module_name, lineno, message)
 
 		if error is not None:
 			traceback_str = traceback.format_exc()
-			formatted_message += "%s\n%s" % (error, traceback_str)
+			formatted_message += "\n%s\n%s" % (error, traceback_str)
 			self._logger.error(formatted_message)
 
 		else:
