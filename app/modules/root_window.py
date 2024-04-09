@@ -103,5 +103,5 @@ class RootWindow(BaseWindow):
 		"""launches a window."""
 		self._setup_configuration()
 
-		self._logger.log_debug("start main loop. root_window.run()")
+		self._logger.log_debug("start self.mainloop()")
 		self.mainloop()
