@@ -11,7 +11,7 @@ class MainInjectionContainer(BaseInjectionContainer):
 	@provider
 	def provide_custom_logger(self) -> CustomLogger:
 		"""returns CustomLogger object."""
-		return CustomLogger(__name__)
+		return CustomLogger(__name__, 10)
 
 	def configure(self, binder: Binder) -> None:
 		"""contains injections and the rules by which injections are
