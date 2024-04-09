@@ -1,43 +1,66 @@
-"""an application logger is here."""
+import inspect
 import logging
+import re
 from logging.handlers import RotatingFileHandler
+from typing import Tuple, Any
 
-from injector import singleton, inject
+from injector import singleton
 
-from app.config import logs, LOG_SIZE_LIMIT, NUM_LOG_FILES
+from app.config import (
+	MAX_VALUE_LENGTH, logs, LOG_SIZE_LIMIT, NUM_LOG_FILES)
 from app.modules.base_structures import BaseLogger
 
 
 @singleton
 class CustomLogger(BaseLogger):
-	"""application logger."""
+	"""logger."""
 
-	@inject
-	def __init__(self, name: str, level: int = 30):
-		"""CustomLogger __init__."""
-		if isinstance(name, str):
-			super().__init__(name)
+	def __init__(self, name: str, level: int):
+		"""Logger __init__."""
+		super().__init__(name)
 
-			self._logger = logging.getLogger()
-			self.set_logger_level(level)
-			self._setup_logger(name)
+		self._file = logs
+		self._pattern = "\\.log$"
+		self._logger = None
 
+		self._setup_logger(level)
+
+	@property
+	def file(self) -> str:
+		"""returns path to the log file."""
+		return self._file
+
+	@file.setter
+	def file(self, path: str):
+		"""sets new path to the log file."""
+		if bool(re.search(self._pattern, path)):
+			self._file = path
 		else:
-			raise TypeError("%s is not str." % name)
+			raise ValueError("wrong value for the path.")
 
-	def _setup_logger(self, name: str):
+	@file.deleter
+	def file(self):
+		"""removes the reference to _file. subsequently this
+		object will be deleted."""
+		del self._file
+
+	def _setup_logger(self, level: int):
 		"""sets settings for the logger."""
+		if level not in [10, 20, 30, 40, 50]:
+			raise ValueError("level value error.")
+
+		self._logger = logging.getLogger()
+		self._logger.setLevel(level)
+
 		formatter_ = logging.Formatter(
 			fmt=
-			"%(levelname)-12s"
-			"%(asctime)-30s"
-			"%(filename)-25s"
-			"%(lineno)-12s"
+			"%(levelname)-10s"
+			"%(asctime)-21s"
 			"%(message)-s",
 			datefmt="%Y-%m-%d %H:%M:%S")
 
 		handler_ = RotatingFileHandler(
-			filename=logs,
+			filename=self._file,
 			maxBytes=LOG_SIZE_LIMIT,
 			backupCount=NUM_LOG_FILES,
 			mode="a",
@@ -45,44 +68,79 @@ class CustomLogger(BaseLogger):
 
 		handler_.setLevel(logging.DEBUG)
 		handler_.setFormatter(formatter_)
+
 		self._logger.addHandler(handler_)
 
-	def set_logger_level(self, level: int):
-		"""sets logging level."""
-		if level == 10:
-			self._logger.setLevel(logging.DEBUG)
+	@staticmethod
+	def _get_caller_info() -> Tuple[str, int]:
+		"""returns module caller name and code line."""
+		frame = inspect.currentframe().f_back.f_back.f_back
+		module_name = inspect.getmodule(frame).__name__
 
-		elif level == 20:
-			self._logger.setLevel(logging.INFO)
+		lineno = frame.f_lineno
 
-		elif level == 30:
-			self._logger.setLevel(logging.WARNING)
+		return module_name, lineno
 
-		elif level == 40:
-			self._logger.setLevel(logging.ERROR)
+	@staticmethod
+	def _truncate_value(value: str) -> Any:
+		"""returns value trimmed to MAX_VALUE_LENGTH."""
+		if len(value) > MAX_VALUE_LENGTH:
+			value = value[:MAX_VALUE_LENGTH - 3] + "..."
 
-		elif level == 50:
-			self._logger.setLevel(logging.CRITICAL)
+		return value
 
-		else:
-			raise ValueError("wrong value for the logger.")
+	def _log_message(
+			self, level: str,
+			message: str,
+			arg: Any = None,
+			edit: str = "yes"):
+		"""prepares and writes logger message."""
+		if level not in ["debug", "info", "warning", "error", "critical"]:
+			raise ValueError("level value error.")
 
-	def log(self, level: int, message: str, *args, **kwargs):
-		"""write the message to the log file."""
-		if level == 10:
-			self._logger.debug(message)
+		if not isinstance(message, str):
+			raise TypeError("wrong type for the message")
 
-		elif level == 20:
-			self._logger.info(message)
+		module_name, lineno = self._get_caller_info()
 
-		elif level == 30:
-			self._logger.warning(message)
+		if edit == "no":
+			formatted_message = "%-25s%-8s%-s" % (
+				module_name, lineno, message)
+			getattr(self._logger, level)(formatted_message)
+			return
 
-		elif level == 40:
-			self._logger.error(message)
+		message = self._truncate_value(message)
 
-		elif level == 50:
-			self._logger.critical(message)
+		formatted_message = "%-25s%-8s%-52s" % (
+			module_name, lineno, message)
 
-		else:
-			raise ValueError("wrong value for the logger.")
+		if arg is not None:
+			truncated_value = self._truncate_value(str(arg))
+			formatted_message += "%-20s%-30s%-52s" % (
+				id(arg), type(arg), truncated_value)
+
+		getattr(self._logger, level)(formatted_message)
+
+	def log_debug(self, message: str, arg: Any = None):
+		"""write a message with "debug" level."""
+		self._log_message("debug", message, arg)
+
+	def log_info(self, message: str, arg: Any = None):
+		"""write a message with "info" level."""
+		self._log_message("info", message, arg)
+
+	def log_warning(self, message: str, arg: Any = None):
+		"""write a message with "warning" level."""
+		self._log_message("warning", message, arg)
+
+	def log_error(self, message: str, arg: Any = None):
+		"""write a message with "error" level."""
+		self._log_message("error", message, arg)
+
+	def log_critical(self, message: str, arg: Any = None):
+		"""write a message with "critical" level."""
+		self._log_message("critical", message, arg)
+
+	def log_escape(self, message: str, edit: str = "no"):
+		"""write a message with "critical" level."""
+		self._log_message("critical", message=message, edit=edit)
