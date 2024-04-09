@@ -117,7 +117,7 @@ class CustomLogger(BaseLogger):
 		if arg is not None:
 			truncated_value = self._truncate_value(str(arg))
 			formatted_message += "%-20s%-30s%-52s" % (
-				id(arg), type(arg), truncated_value)
+				id(arg), type(arg).__name__, truncated_value)
 
 		getattr(self._logger, level)(formatted_message)
 
