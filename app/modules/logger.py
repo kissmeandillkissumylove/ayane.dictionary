@@ -54,10 +54,7 @@ class CustomLogger(BaseLogger):
 		self._logger.setLevel(level)
 
 		formatter_ = logging.Formatter(
-			fmt=
-			"%(levelname)-10s"
-			"%(asctime)-21s"
-			"%(message)-s",
+			fmt="%(levelname)-10s%(asctime)-21s%(message)-s",
 			datefmt="%Y-%m-%d %H:%M:%S")
 
 		handler_ = RotatingFileHandler(
@@ -76,9 +73,15 @@ class CustomLogger(BaseLogger):
 	def _get_caller_info() -> Tuple[str, int]:
 		"""returns module caller name and code line."""
 		frame = inspect.currentframe().f_back.f_back.f_back
-		module_name = inspect.getmodule(frame).__name__
 
-		lineno = frame.f_lineno
+		module_name, lineno = "unknown", 0
+		if frame is not None:
+			module = inspect.getmodule(frame)
+
+			if module is not None:
+				module_name = module.__name__
+
+			lineno = frame.f_lineno
 
 		return module_name, lineno
 
