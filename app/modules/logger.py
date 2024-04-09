@@ -1,3 +1,4 @@
+"""application logger."""
 import inspect
 import logging
 import re
