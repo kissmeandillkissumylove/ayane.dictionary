@@ -2,6 +2,7 @@
 import inspect
 import logging
 import re
+import traceback
 from logging.handlers import RotatingFileHandler
 from typing import Tuple, Any
 
@@ -148,3 +149,18 @@ class CustomLogger(BaseLogger):
 	def log_escape(self, message: str, edit: str = "no"):
 		"""write a message with "critical" level."""
 		self._log_message("critical", message=message, edit=edit)
+
+	def log_traceback(self, message: str, error: Any = None):
+		"""write a message with "error" level and error traceback."""
+		module_name, lineno = self._get_caller_info()
+
+		formatted_message = "%-25s%-8s%-52s" % (
+			module_name, lineno, message)
+
+		if error is not None:
+			traceback_str = traceback.format_exc()
+			formatted_message += "%s\n%s" % (error, traceback_str)
+			self._logger.error(formatted_message)
+
+		else:
+			self._logger.error(formatted_message)
