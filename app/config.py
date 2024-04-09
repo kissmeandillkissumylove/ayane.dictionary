@@ -17,4 +17,4 @@ logs = str(
 # constants.
 LOG_SIZE_LIMIT = 1 * 1024 * 1024
 NUM_LOG_FILES = 10
-
+MAX_VALUE_LENGTH = 50
