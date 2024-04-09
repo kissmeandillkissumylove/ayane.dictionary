@@ -1,6 +1,7 @@
 """application logger."""
 import inspect
 import logging
+import os
 import re
 import traceback
 from logging.handlers import RotatingFileHandler
@@ -77,11 +78,8 @@ class CustomLogger(BaseLogger):
 
 		module_name, lineno = "unknown", 0
 		if frame is not None:
-			module = inspect.getmodule(frame)
-
-			if module is not None:
-				module_name = module.__name__
-
+			module_path = inspect.getfile(frame)
+			module_name = os.path.basename(module_path)
 			lineno = frame.f_lineno
 
 		return module_name, lineno
