@@ -7,6 +7,8 @@ connect_json = "modules/json"
 
 configuration_default = str(
 	BASE_DIR / connect_json / "configuration_default.json")
+configuration_patterns = str(
+	BASE_DIR / connect_json / "configuration_patterns.json")
 
 # txt files.
 connect_txt = "modules/txt"
