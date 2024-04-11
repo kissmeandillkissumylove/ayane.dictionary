@@ -19,7 +19,26 @@ class RootWindow(BaseWindow):
 
 	def _setup_configuration(self, *args, **kwargs):
 		"""sets root window configuration."""
-		self._logger.log_debug("start _setup_configuration()")
+		if self._configuration is not None:
+			self._logger.log_debug("start _setup_configuration()")
+
+			self.geometry(self._configuration["geometry"])
+			self._logger.log_debug(
+				"set: geometry", self._configuration["geometry"])
+
+			self.resizable(False, False)
+			self._logger.log_debug("set: resizable(False, False)")
+
+			self.title(self._configuration["title"])
+			self._logger.log_debug("set: title", self._configuration["title"])
+
+			self.iconbitmap(self._configuration["icon"])
+			self._logger.log_debug(
+				"set: iconbitmap", self._configuration["icon"])
+
+			self.configure(background=self._configuration["background"])
+			self._logger.log_debug(
+				"set: background", self._configuration["background"])
 
 	@property
 	def injection_container(self) -> Injector:
