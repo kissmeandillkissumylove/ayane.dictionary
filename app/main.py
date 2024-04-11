@@ -40,6 +40,8 @@ def main():
 		"run: set_config(current_config)", config_container)
 	config_container.set_config(current_config)
 
+	root_window.configuration = config_container.root_window
+
 	root_window.run()
 
 	_main_logger.log_escape(
