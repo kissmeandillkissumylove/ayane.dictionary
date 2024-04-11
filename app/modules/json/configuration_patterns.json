@@ -1,0 +1,17 @@
+{
+  "geometry": "^500x265(?:\\+\\d+)?(?:\\+\\d+)?$",
+  "title": "^.{0,32}$",
+  "icon": "\\.ico$",
+  "background": "^#[0-9a-fA-F]{6}$",
+  "pos_x": null,
+  "pos_y": null,
+  "width": null,
+  "height": null,
+  "foreground": "^#[0-9a-fA-F]{6}$",
+  "bd": null,
+  "padx": null,
+  "pady": null,
+  "wraplength": null,
+  "anchor": null,
+  "font": "\\w+ \\d+"
+}
