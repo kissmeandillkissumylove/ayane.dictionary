@@ -14,7 +14,7 @@ class RootWindow(BaseWindow):
 		super().__init__()
 
 		self._injection_container = None
-		self._configuration_dict = None
+		self._configuration = None
 		self._logger = None
 
 	def _setup_configuration(self, *args, **kwargs):
@@ -49,31 +49,31 @@ class RootWindow(BaseWindow):
 		del self._injection_container
 
 	@property
-	def configuration_dict(self) -> dict:
-		"""get _configuration_dict value.
+	def configuration(self) -> dict:
+		"""get _configuration value.
 		:return: dict object."""
-		return self._configuration_dict
+		return self._configuration
 
-	@configuration_dict.setter
-	def configuration_dict(self, config: dict):
-		"""sets new value for _configuration_dict.
+	@configuration.setter
+	def configuration(self, config: dict):
+		"""sets new value for _configuration.
 		:param config: dict object."""
 		if isinstance(config, dict):
-			self._configuration_dict = config
+			self._configuration = config
 			self._logger.log_debug(
-				"set: _configuration_dict",
-				self._configuration_dict)
+				"set: _configuration",
+				self._configuration)
 		else:
-			self._logger.log_warning("try: _configuration_dict", config)
+			self._logger.log_warning("try: _configuration", config)
 
-	@configuration_dict.deleter
-	def configuration_dict(self):
-		"""removes the reference to _configuration_dict. subsequently this
+	@configuration.deleter
+	def configuration(self):
+		"""removes the reference to _configuration. subsequently this
 		object will be deleted."""
 		self._logger.log_debug(
-			"del: _configuration_dict",
-			self._configuration_dict)
-		del self._configuration_dict
+			"del: _configuration",
+			self._configuration)
+		del self._configuration
 
 	@property
 	def logger(self) -> CustomLogger:
