@@ -6,7 +6,10 @@
     "background": "#000000"
   },
   "screen_word_label": {
-    "position": "5x5x290x50",
+    "pos_x": 5,
+    "pos_y": 5,
+    "width": 490,
+    "height": 50,
     "background": "#A61111",
     "foreground": "#000000",
     "bd": 0,
@@ -17,7 +20,10 @@
     "font": "verdana 8"
   },
   "screen_translation_label": {
-    "position": "5x60x290x50",
+    "pos_x": 5,
+    "pos_y": 60,
+    "width": 490,
+    "height": 50,
     "background": "#D74040",
     "foreground": "#000000",
     "bd": 0,
