@@ -1,10 +1,12 @@
 """contains file validators."""
 import re
+from dataclasses import dataclass
 
 from app.modules.base_structures import BaseValidator
 from app.modules.logger import CustomLogger
 
 
+@dataclass
 class PathValidator(BaseValidator):
 	"""validator for file paths."""
 
