@@ -1,5 +1,5 @@
 """contains the main application window."""
-from injector import singleton, Injector
+from injector import singleton, inject
 
 from app.modules.base_structures import BaseWindow
 from app.modules.logger import CustomLogger
@@ -9,13 +9,18 @@ from app.modules.logger import CustomLogger
 class RootWindow(BaseWindow):
 	"""main application window."""
 
-	def __init__(self):
+	@inject
+	def __init__(self, logger: CustomLogger):
 		"""RootWindow __init__."""
 		super().__init__()
 
+		if isinstance(logger, CustomLogger):
+			self._logger = logger
+		else:
+			raise TypeError("wrong type for the logger. %s" % type(logger))
+
 		self._injection_container = None
 		self._configuration = None
-		self._logger = None
 
 	def _setup_configuration(self, *args, **kwargs):
 		"""sets root window configuration."""
@@ -39,33 +44,6 @@ class RootWindow(BaseWindow):
 			self.configure(background=self._configuration["background"])
 			self._logger.log_debug(
 				"set: background", self._configuration["background"])
-
-	@property
-	def injection_container(self) -> Injector:
-		"""get _injection_container value.
-		:return: Injector objects."""
-		return self._injection_container
-
-	@injection_container.setter
-	def injection_container(self, injector: Injector):
-		"""sets new value for _injector_container.
-		:param injector: Injector object."""
-		if isinstance(injector, Injector):
-			self._injection_container = injector
-			self._logger.log_debug(
-				"set: _injection_container",
-				self._injection_container)
-		else:
-			self._logger.log_warning("try: _injection_container", injector)
-
-	@injection_container.deleter
-	def injection_container(self):
-		"""removes the reference to _injector_container. subsequently this
-		object will be deleted."""
-		self._logger.log_debug(
-			"del: _injection_container",
-			self._injection_container)
-		del self._injection_container
 
 	@property
 	def configuration(self) -> dict:
@@ -93,30 +71,6 @@ class RootWindow(BaseWindow):
 			"del: _configuration",
 			self._configuration)
 		del self._configuration
-
-	@property
-	def logger(self) -> CustomLogger:
-		"""get _logger value.
-		:return: CustomLogger object."""
-		return self._logger
-
-	@logger.setter
-	def logger(self, new_logger: CustomLogger):
-		"""sets new value for _logger.
-		:param new_logger: CustomLogger object."""
-		if isinstance(new_logger, CustomLogger):
-			self._logger = new_logger
-			self._logger.log_debug("set: _logger", self._logger)
-		else:
-			if self._logger is not None:
-				self._logger.log_warning("try: _logger", new_logger)
-
-	@logger.deleter
-	def logger(self):
-		"""removes the reference to _logger. subsequently this
-		object will be deleted."""
-		self._logger.log_debug("del: _logger", self._logger)
-		del self._logger
 
 	def run(self):
 		"""launches a window."""
