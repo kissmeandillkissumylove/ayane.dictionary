@@ -2,7 +2,6 @@
 import logging
 import tkinter
 from abc import abstractmethod, ABC
-from dataclasses import dataclass
 
 import injector
 from injector import Binder
@@ -40,7 +39,6 @@ class BaseFileReader(ABC):
 		raise NotImplementedError
 
 
-@dataclass
 class BaseValidator(ABC):
 	"""abstract class for data validation."""
 
@@ -58,4 +56,13 @@ class BaseLogger(ABC, logging.Logger):
 	@abstractmethod
 	def _setup_logger(self, *args, **kwargs):
 		"""sets settings for the logger."""
+		raise NotImplementedError
+
+
+class BaseContainer(ABC):
+	"""abstract class for the data container."""
+
+	@abstractmethod
+	def __init__(self):
+		"""BaseContainer __init__."""
 		raise NotImplementedError
