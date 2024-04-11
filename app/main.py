@@ -3,6 +3,7 @@
 from injector import Injector
 
 from app.config import configuration_default
+from app.modules.containers import ConfigContainer
 from app.modules.file_readers import JsonFileReader
 from app.modules.injections_container import MainInjectionContainer
 from app.modules.logger import CustomLogger
@@ -32,7 +33,12 @@ def main():
 	current_config = json_file_reader.read_(configuration_default)
 	_main_logger.log_debug("read the config file", current_config)
 
-	root_window.configuration_dict = current_config
+	config_container = _injection_container.get(ConfigContainer)
+	_main_logger.log_debug("set: config_container", config_container)
+
+	_main_logger.log_debug(
+		"run: set_config(current_config)", config_container)
+	config_container.set_config(current_config)
 
 	root_window.run()
 
