@@ -1,4 +1,4 @@
-"""contains file path validators."""
+"""contains file validators."""
 import re
 
 from app.modules.base_structures import BaseValidator
