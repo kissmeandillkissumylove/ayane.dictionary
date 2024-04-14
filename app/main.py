@@ -45,7 +45,8 @@ def set_app_configuration(
 		"run: set_config(current_config)", config_container)
 	config_container.set_config(current_config)
 
-	root_window.configuration = config_container.root_window
+	root_window.configuration_container = config_container
+	root_window.injection_container = injection_container
 
 
 def main():
