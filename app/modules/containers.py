@@ -27,18 +27,12 @@ class ConfigContainer(BaseContainer):
 
 	def set_config(self, config: dict):
 		"""sets configuration values."""
-		for key, value in config.items():
-			if key == "root_window":
-				self._set_root_window(value)
-				continue
+		self._set_root_window(config["root_window"])
 
-			if key == "screen_word_label":
-				self._set_screen_word_label(value)
-				continue
+		self._set_screen_word_label(config["screen_word_label"])
 
-			if key == "screen_translation_label":
-				self._set_screen_translation_label(value)
-				continue
+		self._set_screen_translation_label(
+			config["screen_translation_label"])
 
 	@property
 	def root_window(self) -> dict:
@@ -73,7 +67,7 @@ class ConfigContainer(BaseContainer):
 	@property
 	def screen_translation_label(self) -> dict:
 		"""returns _screen_translation_label."""
-		return self._screen_word_label
+		return self._screen_translation_label
 
 	def _set_screen_translation_label(self, config: dict):
 		"""sets a new value for the _screen_translation_label."""
