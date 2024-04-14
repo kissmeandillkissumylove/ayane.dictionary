@@ -16,7 +16,7 @@
     "padx": 2,
     "pady": 2,
     "wraplength": "...",
-    "anchor": "NW",
+    "anchor": "nw",
     "font": "verdana 8"
   },
   "screen_translation_label": {
@@ -30,7 +30,7 @@
     "padx": 2,
     "pady": 2,
     "wraplength": "...",
-    "anchor": "NW",
+    "anchor": "nw",
     "font": "verdana 8"
   }
 }
