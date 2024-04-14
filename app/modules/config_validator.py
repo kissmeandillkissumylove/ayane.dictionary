@@ -78,6 +78,8 @@ class ConfigValidator(BaseValidator):
 
 		for key in config.keys():
 			if config[key] is not None:
+				self._logger.log_debug("value: %s" % key, config[key])
+
 				if self._patterns[key]:
 					if not re.search(self._patterns[key], config[key]):
 						self._logger.log_warning(
@@ -91,12 +93,12 @@ class ConfigValidator(BaseValidator):
 				elif key == "wraplength":
 					config[key] = config["width"] - config["padx"] * 2
 					self._logger.log_debug(
-						"set: config['%s']" % key, config[key])
+						("set: config['%s']" % key), config[key])
 					continue
 
 				elif key == "anchor":
 					if not config[key] in [
-						"NW", "N", "NE", "W", "CENTER", "E", "SW", "S", "SE"]:
+						"nw", "n", "ne", "w", "center", "e", "sw", "s", "se"]:
 						self._logger.log_warning(
 							"try: config['%s'] is not valid key for the anchor" % key,
 							config[key])
@@ -105,7 +107,7 @@ class ConfigValidator(BaseValidator):
 						continue
 
 				elif key in [
-					"posx", "posy", "width", "height", "bd", "padx", "pady"]:
+					"pos_x", "pos_y", "width", "height", "bd", "padx", "pady"]:
 					if not isinstance(config[key], int):
 						self._logger.log_warning(
 							"try: config['%s'] is not int" % key, config[key])
@@ -118,9 +120,9 @@ class ConfigValidator(BaseValidator):
 					("try: config['%s'] is None" % key), config[key])
 				return False
 
-			self._logger.log_debug(
-				"validator admits label config", config)
-			return True
+		self._logger.log_debug(
+			"validator admits label config", config)
+		return True
 
 	def validate(self, config: dict, key: str) -> bool:
 		"""validates config."""
