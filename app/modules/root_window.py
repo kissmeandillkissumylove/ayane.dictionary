@@ -1,8 +1,10 @@
 """contains the main application window."""
-from injector import singleton, inject
+from injector import singleton, inject, Injector
 
 from app.modules.base_structures import BaseWindow
+from app.modules.containers import ConfigContainer
 from app.modules.logger import CustomLogger
+from app.modules.ui_element_factories import CreateLabel
 
 
 @singleton
@@ -47,6 +49,16 @@ class RootWindow(BaseWindow):
 			self._logger.log_debug(
 				"set: background", root_config["background"])
 
+			self._screen_word_label = self.injection_container.get(
+				CreateLabel)
+			self._screen_word_label.set_configuration(
+				self._configuration_container.screen_word_label)
+
+			self._screen_translation_label = self.injection_container.get(
+				CreateLabel)
+			self._screen_translation_label.set_configuration(
+				self._configuration_container.screen_translation_label)
+
 	@property
 	def configuration_container(self) -> ConfigContainer:
 		"""get _configuration_container value.
@@ -74,6 +86,32 @@ class RootWindow(BaseWindow):
 			"del: _configuration",
 			self._configuration_container)
 		del self._configuration_container
+
+	@property
+	def injection_container(self) -> Injector:
+		"""get _injection_container value.
+		:return: Injector object."""
+		return self._injection_container
+
+	@injection_container.setter
+	def injection_container(self, new_injector: Injector):
+		"""sets new value for _injection_container.
+		:param new_injector: Injector object."""
+		if not isinstance(new_injector, Injector):
+			self._logger.log_warning("try: _injection_container")
+		else:
+			self._injection_container = new_injector
+			self._logger.log_debug(
+				"set: _injection_container", self._injection_container)
+
+	@injection_container.deleter
+	def injection_container(self):
+		"""removes the reference to _injection_container.
+		subsequently this object will be deleted."""
+		self._logger.log_debug(
+			"del: _injection_container",
+			self._injection_container)
+		del self._injection_container
 
 	def run(self):
 		"""launches a window."""
