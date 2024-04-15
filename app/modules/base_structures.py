@@ -2,6 +2,7 @@
 import logging
 import tkinter
 from abc import abstractmethod, ABC
+from dataclasses import dataclass
 
 import injector
 from injector import Binder
@@ -66,3 +67,9 @@ class BaseContainer(ABC):
 	def __init__(self):
 		"""BaseContainer __init__."""
 		raise NotImplementedError
+
+
+@dataclass
+class BaseFuncContainer(ABC):
+	"""abstract class for the function container."""
+	...
