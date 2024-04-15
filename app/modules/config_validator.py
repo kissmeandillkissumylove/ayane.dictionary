@@ -172,7 +172,7 @@ class ConfigValidator(BaseValidator):
 
 		config["state"] = state
 		self._logger.log_debug(
-			"validator admits label config", config)
+			"validator admits button config", config)
 		return True
 
 	def validate(self, config: dict, key: str, state: str = "") -> bool:
