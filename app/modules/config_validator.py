@@ -86,7 +86,6 @@ class ConfigValidator(BaseValidator):
 							"try: re.search(%s, %s)" % (
 								self._patterns[key], config[key]))
 						return False
-
 					else:
 						continue
 
@@ -124,7 +123,59 @@ class ConfigValidator(BaseValidator):
 			"validator admits label config", config)
 		return True
 
-	def validate(self, config: dict, key: str) -> bool:
+	def _validate_button(self, config: dict, state: str) -> bool:
+		"""helper for the validate function."""
+		keys = {
+			"pos_x",
+			"pos_y",
+			"width",
+			"height",
+			"background",
+			"foreground",
+			"bd",
+			"activebackground",
+			"disabledforeground",
+			"text"}
+		self._logger.log_debug("set: keys", keys)
+
+		if set(config.keys()) != keys:
+			self._logger.log_warning(
+				"set(config.keys()) != keys", set(config.keys()))
+			return False
+
+		for key in config.keys():
+			if config[key] is not None:
+				self._logger.log_debug("value: %s" % key, config[key])
+
+				if self._patterns[key]:
+					if not re.search(self._patterns[key], config[key]):
+						self._logger.log_warning(
+							"try: re.search(%s, %s)" % (
+								self._patterns[key], config[key]))
+						return False
+					else:
+						continue
+
+				elif key in [
+					"pos_x", "pos_y", "width", "height", "bd", "padx", "pady"]:
+					if not isinstance(config[key], int):
+						self._logger.log_warning(
+							"try: config['%s'] is not int" % key, config[key])
+						return False
+					else:
+						continue
+
+			else:
+				self._logger.log_warning(
+					("try: config['%s'] is None" % key), config[key])
+				return False
+
+		config["state"] = state
+		self._logger.log_debug(
+			"validator admits label config", config)
+		return True
+
+	def validate(self, config: dict, key: str, state: str = "") -> bool:
 		"""validates config."""
 		if not isinstance(config, dict) and not isinstance(key, str):
 			self._logger.log_warning("try: config", config)
@@ -135,3 +186,6 @@ class ConfigValidator(BaseValidator):
 
 		if key == "label":
 			return self._validate_label(config)
+
+		if key == "button":
+			return self._validate_button(config, state)
