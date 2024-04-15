@@ -4,7 +4,7 @@ from injector import singleton, inject, Injector
 from app.modules.base_structures import BaseWindow
 from app.modules.containers import ConfigContainer
 from app.modules.logger import CustomLogger
-from app.modules.ui_element_factories import CreateLabel
+from app.modules.ui_element_factories import CreateLabel, CreateButton
 
 
 @singleton
@@ -58,6 +58,11 @@ class RootWindow(BaseWindow):
 				CreateLabel)
 			self._screen_translation_label.set_configuration(
 				self._configuration_container.screen_translation_label)
+
+			self._next_button = self.injection_container.get(
+				CreateButton)
+			self._next_button.set_configuration(
+				self._configuration_container.next_button, "next_command")
 
 	@property
 	def configuration_container(self) -> ConfigContainer:
