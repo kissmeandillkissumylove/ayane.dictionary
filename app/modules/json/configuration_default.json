@@ -32,5 +32,17 @@
     "wraplength": "...",
     "anchor": "nw",
     "font": "verdana 8"
+  },
+  "next_button": {
+    "pos_x": 5,
+    "pos_y": 115,
+    "width": 50,
+    "height": 20,
+    "background": "#DF1313",
+    "foreground": "#FFFFFF",
+    "activebackground": "#2D81B2",
+    "disabledforeground": "#19191A",
+    "text": "sʜᴏᴡ",
+    "bd": 2
   }
 }
