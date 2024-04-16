@@ -56,5 +56,17 @@
     "disabledforeground": "#19191A",
     "text": "sʜᴏᴡ",
     "bd": 2
+  },
+  "right_button": {
+    "pos_x": 115,
+    "pos_y": 115,
+    "width": 50,
+    "height": 20,
+    "background": "#32CD32",
+    "foreground": "#FFFFFF",
+    "activebackground": "#2D81B2",
+    "disabledforeground": "#19191A",
+    "text": "ʀɪɢʜᴛ",
+    "bd": 2
   }
 }

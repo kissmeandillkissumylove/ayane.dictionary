@@ -16,3 +16,10 @@ class CommandsContainer(BaseFuncContainer):
 	def show_command():
 		"""displays the word and transcription (if available)."""
 		print("2")
+
+	@staticmethod
+	def right_command():
+		"""press the button if the answer is correct. the button lowers the
+		priority of displaying the current word next time, because the user
+		knows this word well."""
+		print("3")

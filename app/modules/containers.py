@@ -26,6 +26,7 @@ class ConfigContainer(BaseContainer):
 		self._screen_translation_label = None
 		self._next_button = None
 		self._show_button = None
+		self._right_button = None
 
 	def set_config(self, config: dict):
 		"""sets configuration values."""
@@ -39,6 +40,8 @@ class ConfigContainer(BaseContainer):
 		self._set_next_button(config["next_button"])
 
 		self._set_show_button(config["show_button"])
+
+		self._set_right_button(config["right_button"])
 
 	@property
 	def root_window(self) -> dict:
@@ -113,3 +116,17 @@ class ConfigContainer(BaseContainer):
 				"set: _show_button", self._show_button)
 		else:
 			self._logger.log_warning("try: _show_button", config)
+
+	@property
+	def right_button(self) -> dict:
+		"""returns _right_button."""
+		return self._right_button
+
+	def _set_right_button(self, config: dict):
+		"""sets a new value for the _right_button."""
+		if self._config_validator.validate(config, "button", "disabled"):
+			self._right_button = config
+			self._logger.log_debug(
+				"set: _right_button", self._right_button)
+		else:
+			self._logger.log_warning("try: _right_button", config)
