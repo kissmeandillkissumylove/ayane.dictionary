@@ -80,5 +80,17 @@
     "disabledforeground": "#19191A",
     "text": "ᴡʀᴏɴɢ",
     "bd": 2
+  },
+  "again_button": {
+    "pos_x": 225,
+    "pos_y": 115,
+    "width": 50,
+    "height": 20,
+    "background": "#DF1313",
+    "foreground": "#FFFFFF",
+    "activebackground": "#2D81B2",
+    "disabledforeground": "#19191A",
+    "text": "ᴀɢᴀɪɴ",
+    "bd": 2
   }
 }

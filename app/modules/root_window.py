@@ -68,21 +68,24 @@ class RootWindow(BaseWindow):
 			self._logger.log_debug(
 				"set: _next_button", self._next_button)
 			self._next_button.set_configuration(
-				self._configuration_container.next_button, "next_command")
+				self._configuration_container.next_button,
+				"next_command")
 
 			self._show_button = self.injection_container.get(
 				CreateButton)
 			self._logger.log_debug(
 				"set: _show_button", self._show_button)
 			self._show_button.set_configuration(
-				self._configuration_container.show_button, "show_command")
+				self._configuration_container.show_button,
+				"show_command")
 
 			self._right_button = self.injection_container.get(
 				CreateButton)
 			self._logger.log_debug(
 				"set: _right_button", self._right_button)
 			self._right_button.set_configuration(
-				self._configuration_container.right_button, "right_command")
+				self._configuration_container.right_button,
+				"right_command")
 
 			self._wrong_button = self.injection_container.get(
 				CreateButton)
@@ -91,6 +94,14 @@ class RootWindow(BaseWindow):
 			self._wrong_button.set_configuration(
 				self._configuration_container.wrong_button,
 				"wrong_command")
+
+			self._again_button = self.injection_container.get(
+				CreateButton)
+			self._logger.log_debug(
+				"set: _again_button", self._again_button)
+			self._again_button.set_configuration(
+				self._configuration_container.again_button,
+				"again_command")
 
 	@property
 	def configuration_container(self) -> ConfigContainer:

@@ -30,3 +30,8 @@ class CommandsContainer(BaseFuncContainer):
 		the priority of displaying the current word next time, because the
 		user knows this word poorly."""
 		print("4")
+
+	@staticmethod
+	def again_command():
+		"""starts a new cycle of repeating words."""
+		print("5")
