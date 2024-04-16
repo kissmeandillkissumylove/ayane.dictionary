@@ -25,6 +25,7 @@ class ConfigContainer(BaseContainer):
 		self._screen_word_label = None
 		self._screen_translation_label = None
 		self._next_button = None
+		self._show_button = None
 
 	def set_config(self, config: dict):
 		"""sets configuration values."""
@@ -36,6 +37,8 @@ class ConfigContainer(BaseContainer):
 			config["screen_translation_label"])
 
 		self._set_next_button(config["next_button"])
+
+		self._set_show_button(config["show_button"])
 
 	@property
 	def root_window(self) -> dict:
@@ -96,3 +99,17 @@ class ConfigContainer(BaseContainer):
 				"set: _next_button", self._next_button)
 		else:
 			self._logger.log_warning("try: _next_button", config)
+
+	@property
+	def show_button(self) -> dict:
+		"""returns _show_button."""
+		return self._show_button
+
+	def _set_show_button(self, config: dict):
+		"""sets a new value for the _show_button."""
+		if self._config_validator.validate(config, "button", "disabled"):
+			self._show_button = config
+			self._logger.log_debug(
+				"set: _show_button", self._show_button)
+		else:
+			self._logger.log_warning("try: _show_button", config)
