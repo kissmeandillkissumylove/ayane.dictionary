@@ -84,6 +84,14 @@ class RootWindow(BaseWindow):
 			self._right_button.set_configuration(
 				self._configuration_container.right_button, "right_command")
 
+			self._wrong_button = self.injection_container.get(
+				CreateButton)
+			self._logger.log_debug(
+				"set: _wrong_button", self._wrong_button)
+			self._wrong_button.set_configuration(
+				self._configuration_container.wrong_button,
+				"wrong_command")
+
 	@property
 	def configuration_container(self) -> ConfigContainer:
 		"""get _configuration_container value.

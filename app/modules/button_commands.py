@@ -23,3 +23,10 @@ class CommandsContainer(BaseFuncContainer):
 		priority of displaying the current word next time, because the user
 		knows this word well."""
 		print("3")
+
+	@staticmethod
+	def wrong_command():
+		"""press the button if the answer is not correct. the button increases
+		the priority of displaying the current word next time, because the
+		user knows this word poorly."""
+		print("4")
