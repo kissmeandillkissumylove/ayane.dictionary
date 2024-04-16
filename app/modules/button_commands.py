@@ -11,3 +11,8 @@ class CommandsContainer(BaseFuncContainer):
 		"""the "next" button will randomly show the next word from the
 		dictionary."""
 		print("1")
+
+	@staticmethod
+	def show_command():
+		"""displays the word and transcription (if available)."""
+		print("2")
