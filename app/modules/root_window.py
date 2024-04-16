@@ -51,18 +51,31 @@ class RootWindow(BaseWindow):
 
 			self._screen_word_label = self.injection_container.get(
 				CreateLabel)
+			self._logger.log_debug(
+				"set: _screen_word_label", self._screen_word_label)
 			self._screen_word_label.set_configuration(
 				self._configuration_container.screen_word_label)
 
 			self._screen_translation_label = self.injection_container.get(
 				CreateLabel)
+			self._logger.log_debug(
+				"set: _screen_translation_label", self._screen_translation_label)
 			self._screen_translation_label.set_configuration(
 				self._configuration_container.screen_translation_label)
 
 			self._next_button = self.injection_container.get(
 				CreateButton)
+			self._logger.log_debug(
+				"set: _next_button", self._next_button)
 			self._next_button.set_configuration(
 				self._configuration_container.next_button, "next_command")
+
+			self._show_button = self.injection_container.get(
+				CreateButton)
+			self._logger.log_debug(
+				"set: _show_button", self._show_button)
+			self._show_button.set_configuration(
+				self._configuration_container.show_button, "show_command")
 
 	@property
 	def configuration_container(self) -> ConfigContainer:
