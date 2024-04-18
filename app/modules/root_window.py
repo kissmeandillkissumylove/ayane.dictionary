@@ -59,7 +59,8 @@ class RootWindow(BaseWindow):
 			self._screen_translation_label = self.injection_container.get(
 				CreateLabel)
 			self._logger.log_debug(
-				"set: _screen_translation_label", self._screen_translation_label)
+				"set: _screen_translation_label",
+				self._screen_translation_label)
 			self._screen_translation_label.set_configuration(
 				self._configuration_container.screen_translation_label)
 
