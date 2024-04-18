@@ -29,6 +29,7 @@ class ConfigContainer(BaseContainer):
 		self._right_button = None
 		self._wrong_button = None
 		self._again_button = None
+		self._save_button = None
 
 	def set_config(self, config: dict):
 		"""sets configuration values."""
@@ -48,6 +49,8 @@ class ConfigContainer(BaseContainer):
 		self._set_wrong_button(config["wrong_button"])
 
 		self._set_again_button(config["again_button"])
+
+		self._set_save_button(config["save_button"])
 
 	@property
 	def root_window(self) -> dict:
@@ -164,3 +167,17 @@ class ConfigContainer(BaseContainer):
 				"set: _again_button", self._again_button)
 		else:
 			self._logger.log_warning("try: _again_button", config)
+
+	@property
+	def save_button(self) -> dict:
+		"""returns _save_button."""
+		return self._save_button
+
+	def _set_save_button(self, config: dict):
+		"""sets a new value for the _save_button."""
+		if self._config_validator.validate(config, "button", "normal"):
+			self._save_button = config
+			self._logger.log_debug(
+				"set: _save_button", self._save_button)
+		else:
+			self._logger.log_warning("try: _save_button", config)

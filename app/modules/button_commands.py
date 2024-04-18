@@ -35,3 +35,8 @@ class CommandsContainer(BaseFuncContainer):
 	def again_command():
 		"""starts a new cycle of repeating words."""
 		print("5")
+
+	@staticmethod
+	def save_command():
+		"""saves all the changes in a dictionary to the file."""
+		print("6")
