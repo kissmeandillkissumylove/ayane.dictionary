@@ -50,3 +50,8 @@ class CommandsContainer(BaseFuncContainer):
 	def find_command():
 		"""finds the word and shows it in the fields."""
 		print("8")
+
+	@staticmethod
+	def edit_command():
+		"""edits word's parameters."""
+		print("9")
