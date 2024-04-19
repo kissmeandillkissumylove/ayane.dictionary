@@ -31,6 +31,7 @@ class ConfigContainer(BaseContainer):
 		self._again_button = None
 		self._save_button = None
 		self._add_button = None
+		self._find_button = None
 
 	def set_config(self, config: dict):
 		"""sets configuration values."""
@@ -54,6 +55,8 @@ class ConfigContainer(BaseContainer):
 		self._set_save_button(config["save_button"])
 
 		self._set_add_button(config["add_button"])
+
+		self._set_find_button(config["find_button"])
 
 	@property
 	def root_window(self) -> dict:
@@ -198,3 +201,17 @@ class ConfigContainer(BaseContainer):
 				"set: _add_button", self._add_button)
 		else:
 			self._logger.log_warning("try: _add_button", config)
+
+	@property
+	def find_button(self) -> dict:
+		"""returns _find_button."""
+		return self._find_button
+
+	def _set_find_button(self, config: dict):
+		"""sets a new value for the _find_button."""
+		if self._config_validator.validate(config, "button", "normal"):
+			self._find_button = config
+			self._logger.log_debug(
+				"set: _find_button", self._find_button)
+		else:
+			self._logger.log_warning("try: _find_button", config)

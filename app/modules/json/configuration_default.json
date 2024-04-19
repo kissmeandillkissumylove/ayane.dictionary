@@ -116,5 +116,17 @@
     "disabledforeground": "#19191A",
     "text": "ᴀᴅᴅ",
     "bd": 2
+  },
+  "find_button": {
+    "pos_x": 75,
+    "pos_y": 140,
+    "width": 65,
+    "height": 20,
+    "background": "#19732E",
+    "foreground": "#FFFFFF",
+    "activebackground": "#2D81B2",
+    "disabledforeground": "#19191A",
+    "text": "ꜰɪɴᴅ",
+    "bd": 2
   }
 }

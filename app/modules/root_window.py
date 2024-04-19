@@ -120,6 +120,14 @@ class RootWindow(BaseWindow):
 				self._configuration_container.add_button,
 				"add_command")
 
+			self._find_button = self.injection_container.get(
+				CreateButton)
+			self._logger.log_debug(
+				"set: _find_button", self._find_button)
+			self._find_button.set_configuration(
+				self._configuration_container.find_button,
+				"find_command")
+
 	@property
 	def configuration_container(self) -> ConfigContainer:
 		"""get _configuration_container value.

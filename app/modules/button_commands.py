@@ -45,3 +45,8 @@ class CommandsContainer(BaseFuncContainer):
 	def add_command():
 		"""adds a new word to the dictionary."""
 		print("7")
+
+	@staticmethod
+	def find_command():
+		"""finds the word and shows it in the fields."""
+		print("8")
