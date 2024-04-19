@@ -112,6 +112,14 @@ class RootWindow(BaseWindow):
 				self._configuration_container.save_button,
 				"save_command")
 
+			self._add_button = self.injection_container.get(
+				CreateButton)
+			self._logger.log_debug(
+				"set: _add_button", self._add_button)
+			self._add_button.set_configuration(
+				self._configuration_container.add_button,
+				"add_command")
+
 	@property
 	def configuration_container(self) -> ConfigContainer:
 		"""get _configuration_container value.
