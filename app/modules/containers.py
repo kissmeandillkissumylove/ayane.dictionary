@@ -35,6 +35,7 @@ class ConfigContainer(BaseContainer):
 		self._edit_button = None
 		self._words_label = None
 		self._words_counter_label = None
+		self._mistakes_label = None
 
 	def set_config(self, config: dict):
 		"""sets configuration values."""
@@ -53,6 +54,7 @@ class ConfigContainer(BaseContainer):
 		self._set_edit_button(config["edit_button"])
 		self._set_words_label(config["words_label"])
 		self._set_words_counter_label(config["words_counter_label"])
+		self._set_mistakes_label(config["mistakes_label"])
 
 	@property
 	def root_window(self) -> dict:
@@ -254,3 +256,17 @@ class ConfigContainer(BaseContainer):
 		else:
 			self._logger.log_warning(
 				"try: _words_counter_label", config)
+
+	@property
+	def mistakes_label(self) -> dict:
+		"""returns _mistakes_label."""
+		return self._mistakes_label
+
+	def _set_mistakes_label(self, config: dict):
+		"""sets a new value for the _mistakes_label."""
+		if self._config_validator.validate(config, "label"):
+			self._mistakes_label = config
+			self._logger.log_debug(
+				"set: _mistakes_label", self._mistakes_label)
+		else:
+			self._logger.log_warning("try: _mistakes_label", config)
