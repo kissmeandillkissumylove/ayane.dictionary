@@ -160,6 +160,15 @@ class RootWindow(BaseWindow):
 				self._configuration_container.mistakes_label)
 			self._mistakes_label.configure(text="ᴍɪsᴛᴀᴋᴇs:")
 
+			self._mistakes_counter_label = self.injection_container.get(
+				CreateLabel)
+			self._logger.log_debug(
+				"set: _mistakes_counter_label",
+				self._mistakes_counter_label)
+			self._mistakes_counter_label.set_configuration(
+				self._configuration_container.mistakes_counter_label)
+			self._mistakes_counter_label.configure(text=0)
+
 	@property
 	def configuration_container(self) -> ConfigContainer:
 		"""get _configuration_container value.

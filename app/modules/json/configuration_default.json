@@ -182,5 +182,19 @@
     "wraplength": "...",
     "anchor": "center",
     "font": "verdana 8"
+  },
+  "mistakes_counter_label": {
+    "pos_x": 355,
+    "pos_y": 140,
+    "width": 140,
+    "height": 20,
+    "background": "#19191A",
+    "foreground": "#DF1313",
+    "bd": 2,
+    "padx": 1,
+    "pady": 1,
+    "wraplength": "...",
+    "anchor": "center",
+    "font": "verdana 7"
   }
 }
