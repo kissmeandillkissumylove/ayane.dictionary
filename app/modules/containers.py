@@ -33,33 +33,24 @@ class ConfigContainer(BaseContainer):
 		self._add_button = None
 		self._find_button = None
 		self._edit_button = None
+		self._words_label = None
 
 	def set_config(self, config: dict):
 		"""sets configuration values."""
 		self._set_root_window(config["root_window"])
-
 		self._set_screen_word_label(config["screen_word_label"])
-
 		self._set_screen_translation_label(
 			config["screen_translation_label"])
-
 		self._set_next_button(config["next_button"])
-
 		self._set_show_button(config["show_button"])
-
 		self._set_right_button(config["right_button"])
-
 		self._set_wrong_button(config["wrong_button"])
-
 		self._set_again_button(config["again_button"])
-
 		self._set_save_button(config["save_button"])
-
 		self._set_add_button(config["add_button"])
-
 		self._set_find_button(config["find_button"])
-
 		self._set_edit_button(config["edit_button"])
+		self._set_words_label(config["words_label"])
 
 	@property
 	def root_window(self) -> dict:
@@ -232,3 +223,18 @@ class ConfigContainer(BaseContainer):
 				"set: _edit_button", self._edit_button)
 		else:
 			self._logger.log_warning("try: _edit_button", config)
+
+	@property
+	def words_label(self) -> dict:
+		"""returns _words_label."""
+		return self._words_label
+
+	def _set_words_label(self, config: dict):
+		"""sets a new value for the _words_label."""
+		if self._config_validator.validate(config, "label"):
+			self._words_label = config
+			self._logger.log_debug(
+				"set: _words_label", self._words_label)
+		else:
+			self._logger.log_warning("try: _words_label", config)
+

@@ -11,7 +11,7 @@
     "width": 490,
     "height": 50,
     "background": "#A61111",
-    "foreground": "#000000",
+    "foreground": "#FFFFFF",
     "bd": 0,
     "padx": 2,
     "pady": 2,
@@ -24,8 +24,8 @@
     "pos_y": 60,
     "width": 490,
     "height": 50,
-    "background": "#D74040",
-    "foreground": "#000000",
+    "background": "#A61111",
+    "foreground": "#FFFFFF",
     "bd": 0,
     "padx": 2,
     "pady": 2,
@@ -140,5 +140,20 @@
     "disabledforeground": "#19191A",
     "text": "sᴀᴠᴇ",
     "bd": 2
+  },
+  "words_label": {
+    "pos_x": 280,
+    "pos_y": 115,
+    "width": 70,
+    "height": 20,
+    "background": "#19191A",
+    "foreground": "#FFFFFF",
+    "bd": 2,
+    "padx": 1,
+    "pady": 1,
+    "wraplength": "...",
+    "anchor": "center",
+    "font": "verdana 8"
+  },
   }
 }

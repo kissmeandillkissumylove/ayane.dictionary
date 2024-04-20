@@ -136,6 +136,13 @@ class RootWindow(BaseWindow):
 				self._configuration_container.edit_button,
 				"edit_command")
 
+			self._words_label = self.injection_container.get(
+				CreateLabel)
+			self._logger.log_debug(
+				"set: _words_label", self._words_label)
+			self._words_label.set_configuration(
+				self._configuration_container.words_label)
+			self._words_label.configure(text="ᴡᴏʀᴅs:")
 	@property
 	def configuration_container(self) -> ConfigContainer:
 		"""get _configuration_container value.
