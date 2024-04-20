@@ -155,5 +155,18 @@
     "anchor": "center",
     "font": "verdana 8"
   },
+  "words_counter_label": {
+    "pos_x": 355,
+    "pos_y": 115,
+    "width": 140,
+    "height": 20,
+    "background": "#19191A",
+    "foreground": "#58BD66",
+    "bd": 2,
+    "padx": 1,
+    "pady": 1,
+    "wraplength": "...",
+    "anchor": "center",
+    "font": "verdana 7"
   }
 }

@@ -143,6 +143,15 @@ class RootWindow(BaseWindow):
 			self._words_label.set_configuration(
 				self._configuration_container.words_label)
 			self._words_label.configure(text="ᴡᴏʀᴅs:")
+
+			self._words_counter_label = self.injection_container.get(
+				CreateLabel)
+			self._logger.log_debug(
+				"set: _words_counter_label", self._words_counter_label)
+			self._words_counter_label.set_configuration(
+				self._configuration_container.words_counter_label)
+			self._words_counter_label.configure(text="0/0/0")
+
 	@property
 	def configuration_container(self) -> ConfigContainer:
 		"""get _configuration_container value.
