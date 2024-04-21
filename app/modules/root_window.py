@@ -210,6 +210,14 @@ class RootWindow(BaseWindow):
 				self._configuration_container.translation_label)
 			self._translation_label.configure(text="ᴛʀᴀɴsʟᴀᴛɪᴏɴ:")
 
+			self._result_label = self.injection_container.get(
+				CreateLabel)
+			self._logger.log_debug(
+				"set: _result_label", self._result_label)
+			self._result_label.set_configuration(
+				self._configuration_container.result_label)
+			self._result_label.configure(text="ʀᴇsᴜʟᴛ:")
+
 	@property
 	def configuration_container(self) -> ConfigContainer:
 		"""get _configuration_container value.

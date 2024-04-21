@@ -264,5 +264,19 @@
     "wraplength": "...",
     "anchor": "center",
     "font": "verdana 8"
+  },
+  "result_label": {
+    "pos_x": 5,
+    "pos_y": 265,
+    "width": 105,
+    "height": 20,
+    "background": "#19191A",
+    "foreground": "#FFFFFF",
+    "bd": 2,
+    "padx": 1,
+    "pady": 1,
+    "wraplength": "...",
+    "anchor": "center",
+    "font": "verdana 8"
   }
 }

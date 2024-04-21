@@ -42,6 +42,7 @@ class ConfigContainer(BaseContainer):
 		self._transcription_label = None
 		self._part_of_speech_label = None
 		self._translation_label = None
+		self._result_label = None
 
 	def set_config(self, config: dict):
 		"""sets configuration values."""
@@ -67,6 +68,7 @@ class ConfigContainer(BaseContainer):
 		self._set_transcription_label(config["transcription_label"])
 		self._set_part_of_speech_label(config["part_of_speech_label"])
 		self._set_translation_label(config["translation_label"])
+		self._set_result_label(config["result_label"])
 
 	@property
 	def root_window(self) -> dict:
@@ -368,3 +370,17 @@ class ConfigContainer(BaseContainer):
 				"set: _translation_label", self._translation_label)
 		else:
 			self._logger.log_warning("try: _translation_label", config)
+
+	@property
+	def result_label(self) -> dict:
+		"""returns _result_label."""
+		return self._result_label
+
+	def _set_result_label(self, config: dict):
+		"""sets a new value for the _result_label."""
+		if self._config_validator.validate(config, "label"):
+			self._result_label = config
+			self._logger.log_debug(
+				"set: _result_label", self._result_label)
+		else:
+			self._logger.log_warning("try: _result_label", config)
