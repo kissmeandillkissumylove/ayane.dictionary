@@ -38,6 +38,10 @@ class ConfigContainer(BaseContainer):
 		self._words_counter_label = None
 		self._mistakes_label = None
 		self._mistakes_counter_label = None
+		self._word_label = None
+		self._transcription_label = None
+		self._part_of_speech_label = None
+		self._translation_label = None
 
 	def set_config(self, config: dict):
 		"""sets configuration values."""
@@ -59,6 +63,10 @@ class ConfigContainer(BaseContainer):
 		self._set_words_counter_label(config["words_counter_label"])
 		self._set_mistakes_label(config["mistakes_label"])
 		self._set_mistakes_counter_label(config["mistakes_counter_label"])
+		self._set_word_label(config["word_label"])
+		self._set_transcription_label(config["transcription_label"])
+		self._set_part_of_speech_label(config["part_of_speech_label"])
+		self._set_translation_label(config["translation_label"])
 
 	@property
 	def root_window(self) -> dict:
@@ -304,3 +312,59 @@ class ConfigContainer(BaseContainer):
 		else:
 			self._logger.log_warning(
 				"try: _mistakes_counter_label", config)
+
+	@property
+	def word_label(self) -> dict:
+		"""returns _word_label."""
+		return self._word_label
+
+	def _set_word_label(self, config: dict):
+		"""sets a new value for the _word_label."""
+		if self._config_validator.validate(config, "label"):
+			self._word_label = config
+			self._logger.log_debug(
+				"set: _word_label", self._word_label)
+		else:
+			self._logger.log_warning("try: _word_label", config)
+
+	@property
+	def transcription_label(self) -> dict:
+		"""returns _transcription_label."""
+		return self._transcription_label
+
+	def _set_transcription_label(self, config: dict):
+		"""sets a new value for the _transcription_label."""
+		if self._config_validator.validate(config, "label"):
+			self._transcription_label = config
+			self._logger.log_debug(
+				"set: _transcription_label", self._transcription_label)
+		else:
+			self._logger.log_warning("try: _transcription_label", config)
+
+	@property
+	def part_of_speech_label(self) -> dict:
+		"""returns _part_of_speech_label."""
+		return self._part_of_speech_label
+
+	def _set_part_of_speech_label(self, config: dict):
+		"""sets a new value for the _part_of_speech_label."""
+		if self._config_validator.validate(config, "label"):
+			self._part_of_speech_label = config
+			self._logger.log_debug(
+				"set: _part_of_speech_label", self._part_of_speech_label)
+		else:
+			self._logger.log_warning("try: _part_of_speech_label", config)
+
+	@property
+	def translation_label(self) -> dict:
+		"""returns _translation_label."""
+		return self._translation_label
+
+	def _set_translation_label(self, config: dict):
+		"""sets a new value for the _translation_label."""
+		if self._config_validator.validate(config, "label"):
+			self._translation_label = config
+			self._logger.log_debug(
+				"set: _translation_label", self._translation_label)
+		else:
+			self._logger.log_warning("try: _translation_label", config)

@@ -208,5 +208,61 @@
     "wraplength": "...",
     "anchor": "center",
     "font": "verdana 7"
+  },
+  "word_label": {
+    "pos_x": 5,
+    "pos_y": 165,
+    "width": 105,
+    "height": 20,
+    "background": "#19191A",
+    "foreground": "#FFFFFF",
+    "bd": 2,
+    "padx": 1,
+    "pady": 1,
+    "wraplength": "...",
+    "anchor": "center",
+    "font": "verdana 8"
+  },
+  "transcription_label": {
+    "pos_x": 5,
+    "pos_y": 190,
+    "width": 105,
+    "height": 20,
+    "background": "#19191A",
+    "foreground": "#FFFFFF",
+    "bd": 2,
+    "padx": 1,
+    "pady": 1,
+    "wraplength": "...",
+    "anchor": "center",
+    "font": "verdana 8"
+  },
+  "part_of_speech_label": {
+    "pos_x": 5,
+    "pos_y": 215,
+    "width": 105,
+    "height": 20,
+    "background": "#19191A",
+    "foreground": "#FFFFFF",
+    "bd": 2,
+    "padx": 1,
+    "pady": 1,
+    "wraplength": "...",
+    "anchor": "center",
+    "font": "verdana 8"
+  },
+  "translation_label": {
+    "pos_x": 5,
+    "pos_y": 240,
+    "width": 105,
+    "height": 20,
+    "background": "#19191A",
+    "foreground": "#FFFFFF",
+    "bd": 2,
+    "padx": 1,
+    "pady": 1,
+    "wraplength": "...",
+    "anchor": "center",
+    "font": "verdana 8"
   }
 }

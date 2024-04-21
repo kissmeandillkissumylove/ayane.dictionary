@@ -177,6 +177,39 @@ class RootWindow(BaseWindow):
 				self._configuration_container.mistakes_counter_label)
 			self._mistakes_counter_label.configure(text=0)
 
+			self._word_label = self.injection_container.get(
+				CreateLabel)
+			self._logger.log_debug(
+				"set: _word_label", self._word_label)
+			self._word_label.set_configuration(
+				self._configuration_container.word_label)
+			self._word_label.configure(text="ᴡᴏʀᴅ:")
+
+			self._transcription_label = self.injection_container.get(
+				CreateLabel)
+			self._logger.log_debug(
+				"set: _transcription_label", self._transcription_label)
+			self._transcription_label.set_configuration(
+				self._configuration_container.transcription_label)
+			self._transcription_label.configure(text="ᴛʀᴀɴsᴄʀɪᴘᴛɪᴏɴ:")
+
+			self._part_of_speech_label = self.injection_container.get(
+				CreateLabel)
+			self._logger.log_debug(
+				"set: _part_of_speech_label",
+				self._part_of_speech_label)
+			self._part_of_speech_label.set_configuration(
+				self._configuration_container.part_of_speech_label)
+			self._part_of_speech_label.configure(text="ᴘᴀʀᴛ ᴏꜰ sᴘᴇᴇᴄʜ:")
+
+			self._translation_label = self.injection_container.get(
+				CreateLabel)
+			self._logger.log_debug(
+				"set: _translation_label", self._translation_label)
+			self._translation_label.set_configuration(
+				self._configuration_container.translation_label)
+			self._translation_label.configure(text="ᴛʀᴀɴsʟᴀᴛɪᴏɴ:")
+
 	@property
 	def configuration_container(self) -> ConfigContainer:
 		"""get _configuration_container value.
