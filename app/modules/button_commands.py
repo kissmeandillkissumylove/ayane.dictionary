@@ -37,11 +37,6 @@ class CommandsContainer(BaseFuncContainer):
 		print("5")
 
 	@staticmethod
-	def save_command():
-		"""saves all the changes in a dictionary to the file."""
-		print("6")
-
-	@staticmethod
 	def add_command():
 		"""adds a new word to the dictionary."""
 		print("7")
@@ -55,3 +50,13 @@ class CommandsContainer(BaseFuncContainer):
 	def edit_command():
 		"""edits word's parameters."""
 		print("9")
+
+	@staticmethod
+	def remove_command():
+		"""removes word from a dictionary."""
+		print("10")
+
+	@staticmethod
+	def save_command():
+		"""saves all the changes in a dictionary to the file."""
+		print("6")

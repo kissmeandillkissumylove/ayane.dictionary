@@ -128,6 +128,14 @@ class RootWindow(BaseWindow):
 				self._configuration_container.edit_button,
 				"edit_command")
 
+			self._remove_button = self.injection_container.get(
+				CreateButton)
+			self._logger.log_debug(
+				"set: _remove_button", self._remove_button)
+			self._remove_button.set_configuration(
+				self._configuration_container.remove_button,
+				"remove_command")
+
 			self._save_button = self.injection_container.get(
 				CreateButton)
 			self._logger.log_debug(

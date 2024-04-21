@@ -29,10 +29,11 @@ class ConfigContainer(BaseContainer):
 		self._right_button = None
 		self._wrong_button = None
 		self._again_button = None
-		self._save_button = None
 		self._add_button = None
 		self._find_button = None
 		self._edit_button = None
+		self._remove_button = None
+		self._save_button = None
 		self._words_label = None
 		self._words_counter_label = None
 		self._mistakes_label = None
@@ -49,10 +50,11 @@ class ConfigContainer(BaseContainer):
 		self._set_right_button(config["right_button"])
 		self._set_wrong_button(config["wrong_button"])
 		self._set_again_button(config["again_button"])
-		self._set_save_button(config["save_button"])
 		self._set_add_button(config["add_button"])
 		self._set_find_button(config["find_button"])
 		self._set_edit_button(config["edit_button"])
+		self._set_remove_button(config["remove_button"])
+		self._set_save_button(config["save_button"])
 		self._set_words_label(config["words_label"])
 		self._set_words_counter_label(config["words_counter_label"])
 		self._set_mistakes_label(config["mistakes_label"])
@@ -175,20 +177,6 @@ class ConfigContainer(BaseContainer):
 			self._logger.log_warning("try: _again_button", config)
 
 	@property
-	def save_button(self) -> dict:
-		"""returns _save_button."""
-		return self._save_button
-
-	def _set_save_button(self, config: dict):
-		"""sets a new value for the _save_button."""
-		if self._config_validator.validate(config, "button", "normal"):
-			self._save_button = config
-			self._logger.log_debug(
-				"set: _save_button", self._save_button)
-		else:
-			self._logger.log_warning("try: _save_button", config)
-
-	@property
 	def add_button(self) -> dict:
 		"""returns _add_button."""
 		return self._add_button
@@ -229,6 +217,34 @@ class ConfigContainer(BaseContainer):
 				"set: _edit_button", self._edit_button)
 		else:
 			self._logger.log_warning("try: _edit_button", config)
+
+	@property
+	def remove_button(self) -> dict:
+		"""returns _remove_button."""
+		return self._remove_button
+
+	def _set_remove_button(self, config: dict):
+		"""sets a new value for the _remove_button."""
+		if self._config_validator.validate(config, "button", "normal"):
+			self._remove_button = config
+			self._logger.log_debug(
+				"set: _remove_button", self._remove_button)
+		else:
+			self._logger.log_warning("try: _remove_button", config)
+
+	@property
+	def save_button(self) -> dict:
+		"""returns _save_button."""
+		return self._save_button
+
+	def _set_save_button(self, config: dict):
+		"""sets a new value for the _save_button."""
+		if self._config_validator.validate(config, "button", "normal"):
+			self._save_button = config
+			self._logger.log_debug(
+				"set: _save_button", self._save_button)
+		else:
+			self._logger.log_warning("try: _save_button", config)
 
 	@property
 	def words_label(self) -> dict:
