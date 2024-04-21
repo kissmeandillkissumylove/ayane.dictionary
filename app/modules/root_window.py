@@ -104,14 +104,6 @@ class RootWindow(BaseWindow):
 				self._configuration_container.again_button,
 				"again_command")
 
-			self._save_button = self.injection_container.get(
-				CreateButton)
-			self._logger.log_debug(
-				"set: _save_button", self._save_button)
-			self._save_button.set_configuration(
-				self._configuration_container.save_button,
-				"save_command")
-
 			self._add_button = self.injection_container.get(
 				CreateButton)
 			self._logger.log_debug(
@@ -135,6 +127,14 @@ class RootWindow(BaseWindow):
 			self._edit_button.set_configuration(
 				self._configuration_container.edit_button,
 				"edit_command")
+
+			self._save_button = self.injection_container.get(
+				CreateButton)
+			self._logger.log_debug(
+				"set: _save_button", self._save_button)
+			self._save_button.set_configuration(
+				self._configuration_container.save_button,
+				"save_command")
 
 			self._words_label = self.injection_container.get(
 				CreateLabel)

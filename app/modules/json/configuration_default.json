@@ -96,7 +96,7 @@
   "add_button": {
     "pos_x": 5,
     "pos_y": 140,
-    "width": 64,
+    "width": 50,
     "height": 20,
     "background": "#19732E",
     "foreground": "#FFFFFF",
@@ -106,9 +106,9 @@
     "bd": 2
   },
   "find_button": {
-    "pos_x": 74,
+    "pos_x": 60,
     "pos_y": 140,
-    "width": 64,
+    "width": 50,
     "height": 20,
     "background": "#19732E",
     "foreground": "#FFFFFF",
@@ -118,9 +118,9 @@
     "bd": 2
   },
   "edit_button": {
-    "pos_x": 143,
+    "pos_x": 115,
     "pos_y": 140,
-    "width": 63,
+    "width": 50,
     "height": 20,
     "background": "#19732E",
     "foreground": "#FFFFFF",
@@ -129,10 +129,22 @@
     "text": "ᴇᴅɪᴛ",
     "bd": 2
   },
-  "save_button": {
-    "pos_x": 211,
+  "remove_button": {
+    "pos_x": 170,
     "pos_y": 140,
-    "width": 64,
+    "width": 50,
+    "height": 20,
+    "background": "#19732E",
+    "foreground": "#FFFFFF",
+    "activebackground": "#2D81B2",
+    "disabledforeground": "#19191A",
+    "text": "ʀᴇᴍᴏᴠᴇ",
+    "bd": 2
+  },
+  "save_button": {
+    "pos_x": 225,
+    "pos_y": 140,
+    "width": 50,
     "height": 20,
     "background": "#2200AC",
     "foreground": "#FFFFFF",
