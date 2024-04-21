@@ -41,6 +41,7 @@ class ConfigContainer(BaseContainer):
 		self._word_label = None
 		self._transcription_label = None
 		self._part_of_speech_label = None
+		self._usage_example_label = None
 		self._translation_label = None
 		self._result_label = None
 
@@ -67,6 +68,7 @@ class ConfigContainer(BaseContainer):
 		self._set_word_label(config["word_label"])
 		self._set_transcription_label(config["transcription_label"])
 		self._set_part_of_speech_label(config["part_of_speech_label"])
+		self._set_usage_example_label(config["usage_example_label"])
 		self._set_translation_label(config["translation_label"])
 		self._set_result_label(config["result_label"])
 
@@ -356,6 +358,20 @@ class ConfigContainer(BaseContainer):
 				"set: _part_of_speech_label", self._part_of_speech_label)
 		else:
 			self._logger.log_warning("try: _part_of_speech_label", config)
+
+	@property
+	def usage_example_label(self) -> dict:
+		"""returns _usage_example_label."""
+		return self._usage_example_label
+
+	def _set_usage_example_label(self, config: dict):
+		"""sets a new value for the _usage_example_label."""
+		if self._config_validator.validate(config, "label"):
+			self._usage_example_label = config
+			self._logger.log_debug(
+				"set: _usage_example_label", self._usage_example_label)
+		else:
+			self._logger.log_warning("try: _usage_example_label", config)
 
 	@property
 	def translation_label(self) -> dict:

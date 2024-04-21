@@ -202,6 +202,15 @@ class RootWindow(BaseWindow):
 				self._configuration_container.part_of_speech_label)
 			self._part_of_speech_label.configure(text="ᴘᴀʀᴛ ᴏꜰ sᴘᴇᴇᴄʜ:")
 
+			self._usage_example_label = self.injection_container.get(
+				CreateLabel)
+			self._logger.log_debug(
+				"set: _usage_example_label",
+				self._usage_example_label)
+			self._usage_example_label.set_configuration(
+				self._configuration_container.usage_example_label)
+			self._usage_example_label.configure(text="ᴜsᴀɢᴇ ᴇxᴀᴍᴘʟᴇ:")
+
 			self._translation_label = self.injection_container.get(
 				CreateLabel)
 			self._logger.log_debug(
