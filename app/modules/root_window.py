@@ -200,6 +200,13 @@ class RootWindow(BaseWindow):
 				self._configuration_container.transcription_label)
 			self._transcription_label.configure(text="ᴛʀᴀɴsᴄʀɪᴘᴛɪᴏɴ:")
 
+			self._transcription_text = self.injection_container.get(
+				CreateText)
+			self._logger.log_debug(
+				"set: _transcription_text", self._transcription_text)
+			self._transcription_text.set_configuration(
+				self._configuration_container.transcription_text)
+
 			self._part_of_speech_label = self.injection_container.get(
 				CreateLabel)
 			self._logger.log_debug(
@@ -208,6 +215,13 @@ class RootWindow(BaseWindow):
 			self._part_of_speech_label.set_configuration(
 				self._configuration_container.part_of_speech_label)
 			self._part_of_speech_label.configure(text="ᴘᴀʀᴛ ᴏꜰ sᴘᴇᴇᴄʜ:")
+
+			self._part_of_speech_text = self.injection_container.get(
+				CreateText)
+			self._logger.log_debug(
+				"set: _part_of_speech_text", self._part_of_speech_text)
+			self._part_of_speech_text.set_configuration(
+				self._configuration_container.part_of_speech_text)
 
 			self._usage_example_label = self.injection_container.get(
 				CreateLabel)
@@ -218,6 +232,13 @@ class RootWindow(BaseWindow):
 				self._configuration_container.usage_example_label)
 			self._usage_example_label.configure(text="ᴜsᴀɢᴇ ᴇxᴀᴍᴘʟᴇ:")
 
+			self._usage_example_text = self.injection_container.get(
+				CreateText)
+			self._logger.log_debug(
+				"set: _usage_example_text", self._usage_example_text)
+			self._usage_example_text.set_configuration(
+				self._configuration_container.usage_example_text)
+
 			self._translation_label = self.injection_container.get(
 				CreateLabel)
 			self._logger.log_debug(
@@ -226,6 +247,13 @@ class RootWindow(BaseWindow):
 				self._configuration_container.translation_label)
 			self._translation_label.configure(text="ᴛʀᴀɴsʟᴀᴛɪᴏɴ:")
 
+			self._translation_text = self.injection_container.get(
+				CreateText)
+			self._logger.log_debug(
+				"set: _translation_text", self._translation_text)
+			self._translation_text.set_configuration(
+				self._configuration_container.translation_text)
+
 			self._result_label = self.injection_container.get(
 				CreateLabel)
 			self._logger.log_debug(
@@ -233,6 +261,13 @@ class RootWindow(BaseWindow):
 			self._result_label.set_configuration(
 				self._configuration_container.result_label)
 			self._result_label.configure(text="ʀᴇsᴜʟᴛ:")
+
+			self._command_label = self.injection_container.get(
+				CreateLabel)
+			self._logger.log_debug(
+				"set: _command_label", self._command_label)
+			self._command_label.set_configuration(
+				self._configuration_container.command_label)
 
 	@property
 	def configuration_container(self) -> ConfigContainer:

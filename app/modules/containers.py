@@ -41,10 +41,15 @@ class ConfigContainer(BaseContainer):
 		self._word_label = None
 		self._word_text = None
 		self._transcription_label = None
+		self._transcription_text = None
 		self._part_of_speech_label = None
+		self._part_of_speech_text = None
 		self._usage_example_label = None
+		self._usage_example_text = None
 		self._translation_label = None
+		self._translation_text = None
 		self._result_label = None
+		self._command_label = None
 
 	def set_config(self, config: dict):
 		"""sets configuration values."""
@@ -69,10 +74,15 @@ class ConfigContainer(BaseContainer):
 		self._set_word_label(config["word_label"])
 		self._set_word_text(config["word_text"])
 		self._set_transcription_label(config["transcription_label"])
+		self._set_transcription_text(config["transcription_text"])
 		self._set_part_of_speech_label(config["part_of_speech_label"])
+		self._set_part_of_speech_text(config["part_of_speech_text"])
 		self._set_usage_example_label(config["usage_example_label"])
+		self._set_usage_example_text(config["usage_example_text"])
 		self._set_translation_label(config["translation_label"])
+		self._set_translation_text(config["translation_text"])
 		self._set_result_label(config["result_label"])
+		self._set_command_label(config["command_label"])
 
 	@property
 	def root_window(self) -> dict:
@@ -362,6 +372,20 @@ class ConfigContainer(BaseContainer):
 			self._logger.log_warning("try: _transcription_label", config)
 
 	@property
+	def transcription_text(self) -> dict:
+		"""returns _transcription_text."""
+		return self._transcription_text
+
+	def _set_transcription_text(self, config: dict):
+		"""sets a new value for the _transcription_text."""
+		if self._config_validator.validate(config, "text"):
+			self._transcription_text = config
+			self._logger.log_debug(
+				"set: _transcription_text", self._transcription_text)
+		else:
+			self._logger.log_warning("try: _transcription_text", config)
+
+	@property
 	def part_of_speech_label(self) -> dict:
 		"""returns _part_of_speech_label."""
 		return self._part_of_speech_label
@@ -374,6 +398,20 @@ class ConfigContainer(BaseContainer):
 				"set: _part_of_speech_label", self._part_of_speech_label)
 		else:
 			self._logger.log_warning("try: _part_of_speech_label", config)
+
+	@property
+	def part_of_speech_text(self) -> dict:
+		"""returns _part_of_speech_text."""
+		return self._part_of_speech_text
+
+	def _set_part_of_speech_text(self, config: dict):
+		"""sets a new value for the _part_of_speech_text."""
+		if self._config_validator.validate(config, "text"):
+			self._part_of_speech_text = config
+			self._logger.log_debug(
+				"set: _part_of_speech_text", self._part_of_speech_text)
+		else:
+			self._logger.log_warning("try: _part_of_speech_text", config)
 
 	@property
 	def usage_example_label(self) -> dict:
@@ -390,6 +428,20 @@ class ConfigContainer(BaseContainer):
 			self._logger.log_warning("try: _usage_example_label", config)
 
 	@property
+	def usage_example_text(self) -> dict:
+		"""returns _usage_example_text."""
+		return self._usage_example_text
+
+	def _set_usage_example_text(self, config: dict):
+		"""sets a new value for the _usage_example_text."""
+		if self._config_validator.validate(config, "text"):
+			self._usage_example_text = config
+			self._logger.log_debug(
+				"set: _usage_example_text", self._usage_example_text)
+		else:
+			self._logger.log_warning("try: _part_of_speech_text", config)
+
+	@property
 	def translation_label(self) -> dict:
 		"""returns _translation_label."""
 		return self._translation_label
@@ -404,6 +456,20 @@ class ConfigContainer(BaseContainer):
 			self._logger.log_warning("try: _translation_label", config)
 
 	@property
+	def translation_text(self) -> dict:
+		"""returns _translation_text."""
+		return self._translation_text
+
+	def _set_translation_text(self, config: dict):
+		"""sets a new value for the _translation_text."""
+		if self._config_validator.validate(config, "text"):
+			self._translation_text = config
+			self._logger.log_debug(
+				"set: _translation_text", self._translation_text)
+		else:
+			self._logger.log_warning("try: _translation_text", config)
+
+	@property
 	def result_label(self) -> dict:
 		"""returns _result_label."""
 		return self._result_label
@@ -416,3 +482,17 @@ class ConfigContainer(BaseContainer):
 				"set: _result_label", self._result_label)
 		else:
 			self._logger.log_warning("try: _result_label", config)
+
+	@property
+	def command_label(self) -> dict:
+		"""returns _command_label."""
+		return self._command_label
+
+	def _set_command_label(self, config: dict):
+		"""sets a new value for the _command_label."""
+		if self._config_validator.validate(config, "label"):
+			self._command_label = config
+			self._logger.log_debug(
+				"set: _command_label", self._command_label)
+		else:
+			self._logger.log_warning("try: _command_label", config)
