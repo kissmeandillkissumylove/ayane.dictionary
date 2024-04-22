@@ -16,5 +16,6 @@
   "font": "\\w+ \\d+",
   "activebackground": "^#[0-9a-fA-F]{6}$",
   "disabledforeground": "^#[0-9a-fA-F]{6}$",
-  "text": null
+  "text": null,
+  "insertbackground": "^#[0-9a-fA-F]{6}$"
 }
