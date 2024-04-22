@@ -175,6 +175,58 @@ class ConfigValidator(BaseValidator):
 			"validator admits button config", config)
 		return True
 
+	def _validate_text(self, config: dict) -> bool:
+		"""helper for the validate function."""
+		keys = {
+			"pos_x",
+			"pos_y",
+			"width",
+			"height",
+			"background",
+			"foreground",
+			"insertbackground",
+			"bd",
+			"padx",
+			"pady",
+			"font"}
+		self._logger.log_debug("set: keys", keys)
+
+		if set(config.keys()) != keys:
+			self._logger.log_warning(
+				"set(config.keys()) != keys", set(config.keys()))
+			return False
+
+		for key in config.keys():
+			if config[key] is not None:
+				self._logger.log_debug("value: %s" % key, config[key])
+
+				if self._patterns[key]:
+					if not re.search(self._patterns[key], config[key]):
+						self._logger.log_warning(
+							"try: re.search(%s, %s)" % (
+								self._patterns[key], config[key]))
+						return False
+					else:
+						continue
+
+				elif key in [
+					"pos_x", "pos_y", "width", "height", "bd", "padx", "pady"]:
+					if not isinstance(config[key], int):
+						self._logger.log_warning(
+							"try: config['%s'] is not int" % key, config[key])
+						return False
+					else:
+						continue
+
+			else:
+				self._logger.log_warning(
+					("try: config['%s'] is None" % key), config[key])
+				return False
+
+		self._logger.log_debug(
+			"validator admits text field config", config)
+		return True
+
 	def validate(self, config: dict, key: str, state: str = "") -> bool:
 		"""validates config."""
 		if not isinstance(config, dict) and not isinstance(key, str):
@@ -183,9 +235,9 @@ class ConfigValidator(BaseValidator):
 
 		if key == "root":
 			return self._validate_root_window(config)
-
-		if key == "label":
+		elif key == "label":
 			return self._validate_label(config)
-
-		if key == "button":
+		elif key == "button":
 			return self._validate_button(config, state)
+		elif key == "text":
+			return self._validate_text(config)
