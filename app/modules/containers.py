@@ -39,6 +39,7 @@ class ConfigContainer(BaseContainer):
 		self._mistakes_label = None
 		self._mistakes_counter_label = None
 		self._word_label = None
+		self._word_text = None
 		self._transcription_label = None
 		self._part_of_speech_label = None
 		self._usage_example_label = None
@@ -66,6 +67,7 @@ class ConfigContainer(BaseContainer):
 		self._set_mistakes_label(config["mistakes_label"])
 		self._set_mistakes_counter_label(config["mistakes_counter_label"])
 		self._set_word_label(config["word_label"])
+		self._set_word_text(config["word_text"])
 		self._set_transcription_label(config["transcription_label"])
 		self._set_part_of_speech_label(config["part_of_speech_label"])
 		self._set_usage_example_label(config["usage_example_label"])
@@ -330,6 +332,20 @@ class ConfigContainer(BaseContainer):
 				"set: _word_label", self._word_label)
 		else:
 			self._logger.log_warning("try: _word_label", config)
+
+	@property
+	def word_text(self) -> dict:
+		"""returns _word_text."""
+		return self._word_text
+
+	def _set_word_text(self, config: dict):
+		"""sets a new value for the _word_text."""
+		if self._config_validator.validate(config, "text"):
+			self._word_text = config
+			self._logger.log_debug(
+				"set: _word_text", self._word_text)
+		else:
+			self._logger.log_warning("try: _word_text", config)
 
 	@property
 	def transcription_label(self) -> dict:

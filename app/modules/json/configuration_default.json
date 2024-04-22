@@ -223,6 +223,19 @@
     "anchor": "center",
     "font": "verdana 8"
   },
+  "word_text": {
+    "pos_x": 115,
+    "pos_y": 165,
+    "width": 380,
+    "height": 20,
+    "background": "#A61111",
+    "foreground": "#FFFFFF",
+    "insertbackground": "#FFFFFF",
+    "bd": 1,
+    "padx": 1,
+    "pady": 1,
+    "font": "verdana 8"
+  },
   "transcription_label": {
     "pos_x": 5,
     "pos_y": 190,

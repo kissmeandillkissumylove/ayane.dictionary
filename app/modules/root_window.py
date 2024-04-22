@@ -4,7 +4,7 @@ from injector import singleton, inject, Injector
 from app.modules.base_structures import BaseWindow
 from app.modules.containers import ConfigContainer
 from app.modules.logger import CustomLogger
-from app.modules.ui_element_factories import CreateLabel, CreateButton
+from app.modules.ui_element_factories import CreateLabel, CreateButton, CreateText
 
 
 @singleton
@@ -184,6 +184,13 @@ class RootWindow(BaseWindow):
 			self._word_label.set_configuration(
 				self._configuration_container.word_label)
 			self._word_label.configure(text="ᴡᴏʀᴅ:")
+
+			self._word_text = self.injection_container.get(
+				CreateText)
+			self._logger.log_debug(
+				"set: _word_text", self._word_text)
+			self._word_text.set_configuration(
+				self._configuration_container.word_text)
 
 			self._transcription_label = self.injection_container.get(
 				CreateLabel)
