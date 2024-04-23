@@ -2,9 +2,11 @@
 from injector import singleton, inject, Injector
 
 from app.modules.base_structures import BaseWindow
-from app.modules.containers import ConfigContainer
+from app.modules.containers import (
+	ConfigContainer, DictionaryContainer)
 from app.modules.logger import CustomLogger
-from app.modules.ui_element_factories import CreateLabel, CreateButton, CreateText
+from app.modules.ui_element_factories import (
+	CreateLabel, CreateButton, CreateText)
 
 
 @singleton
@@ -12,14 +14,24 @@ class RootWindow(BaseWindow):
 	"""main application window."""
 
 	@inject
-	def __init__(self, logger: CustomLogger):
+	def __init__(
+			self,
+			logger: CustomLogger,
+			dictionary: DictionaryContainer):
 		"""RootWindow __init__."""
 		super().__init__()
 
 		if not isinstance(logger, CustomLogger):
-			raise TypeError("wrong type for the logger. %s" % type(logger))
+			raise TypeError(
+				"wrong type for the logger. %s" % type(logger))
 		self._logger = logger
 		self._logger.log_debug("set: _logger", self._logger)
+
+		if not isinstance(dictionary, DictionaryContainer):
+			raise TypeError(
+				"wrong type for the dictionary. %s" % type(dictionary))
+		self._dictionary = dictionary
+		self._logger.log_debug("set: _dictionary", self._dictionary)
 
 		self._configuration_container = None
 		self._injection_container = None
@@ -158,7 +170,8 @@ class RootWindow(BaseWindow):
 				"set: _words_counter_label", self._words_counter_label)
 			self._words_counter_label.set_configuration(
 				self._configuration_container.words_counter_label)
-			self._words_counter_label.configure(text="0/0/0")
+			self._words_counter_label.configure(
+				text="0/%s" % len(self._dictionary.sorted_dictionary))
 
 			self._mistakes_label = self.injection_container.get(
 				CreateLabel)
@@ -325,6 +338,8 @@ class RootWindow(BaseWindow):
 
 	def run(self):
 		"""launches a window."""
+		self._dictionary.preload_dictionary()
+
 		self._setup_configuration()
 
 		self._logger.log_debug("start self.mainloop()")
