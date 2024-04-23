@@ -82,7 +82,7 @@ class RootWindow(BaseWindow):
 				"set: _next_button", self._next_button)
 			self._next_button.set_configuration(
 				self._configuration_container.next_button,
-				"next_command")
+				"next_command", self)
 
 			self._show_button = self.injection_container.get(
 				CreateButton)
@@ -90,7 +90,7 @@ class RootWindow(BaseWindow):
 				"set: _show_button", self._show_button)
 			self._show_button.set_configuration(
 				self._configuration_container.show_button,
-				"show_command")
+				"show_command", self)
 
 			self._right_button = self.injection_container.get(
 				CreateButton)
@@ -98,7 +98,7 @@ class RootWindow(BaseWindow):
 				"set: _right_button", self._right_button)
 			self._right_button.set_configuration(
 				self._configuration_container.right_button,
-				"right_command")
+				"right_command", self)
 
 			self._wrong_button = self.injection_container.get(
 				CreateButton)
@@ -106,7 +106,7 @@ class RootWindow(BaseWindow):
 				"set: _wrong_button", self._wrong_button)
 			self._wrong_button.set_configuration(
 				self._configuration_container.wrong_button,
-				"wrong_command")
+				"wrong_command", self)
 
 			self._again_button = self.injection_container.get(
 				CreateButton)
@@ -114,7 +114,7 @@ class RootWindow(BaseWindow):
 				"set: _again_button", self._again_button)
 			self._again_button.set_configuration(
 				self._configuration_container.again_button,
-				"again_command")
+				"again_command", self)
 
 			self._add_button = self.injection_container.get(
 				CreateButton)
@@ -122,7 +122,7 @@ class RootWindow(BaseWindow):
 				"set: _add_button", self._add_button)
 			self._add_button.set_configuration(
 				self._configuration_container.add_button,
-				"add_command")
+				"add_command", self)
 
 			self._find_button = self.injection_container.get(
 				CreateButton)
@@ -130,7 +130,7 @@ class RootWindow(BaseWindow):
 				"set: _find_button", self._find_button)
 			self._find_button.set_configuration(
 				self._configuration_container.find_button,
-				"find_command")
+				"find_command", self)
 
 			self._edit_button = self.injection_container.get(
 				CreateButton)
@@ -138,7 +138,7 @@ class RootWindow(BaseWindow):
 				"set: _edit_button", self._edit_button)
 			self._edit_button.set_configuration(
 				self._configuration_container.edit_button,
-				"edit_command")
+				"edit_command", self)
 
 			self._remove_button = self.injection_container.get(
 				CreateButton)
@@ -146,7 +146,7 @@ class RootWindow(BaseWindow):
 				"set: _remove_button", self._remove_button)
 			self._remove_button.set_configuration(
 				self._configuration_container.remove_button,
-				"remove_command")
+				"remove_command", self)
 
 			self._save_button = self.injection_container.get(
 				CreateButton)
@@ -154,7 +154,7 @@ class RootWindow(BaseWindow):
 				"set: _save_button", self._save_button)
 			self._save_button.set_configuration(
 				self._configuration_container.save_button,
-				"save_command")
+				"save_command", self)
 
 			self._words_label = self.injection_container.get(
 				CreateLabel)

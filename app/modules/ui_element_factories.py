@@ -4,7 +4,6 @@ from tkinter import WORD
 
 from injector import inject
 
-from app.modules.button_commands import CommandsContainer
 from app.modules.logger import CustomLogger
 
 
@@ -71,7 +70,7 @@ class CreateButton(tkinter.Button):
 		self._logger = logger
 		self._logger.log_debug("set: _logger", self._logger)
 
-	def set_configuration(self, config: dict, command: str):
+	def set_configuration(self, config: dict, command: str, root: tkinter.Tk):
 		"""sets configuration for the label"""
 		if not isinstance(config, dict):
 			self._logger.log_error("try: config", config)
@@ -83,6 +82,8 @@ class CreateButton(tkinter.Button):
 
 		self._logger.log_debug("run: set_configuration()", config)
 
+		from app.modules.button_commands import CommandsContainer
+
 		self.configure(
 			background=config["background"],
 			foreground=config["foreground"],
@@ -91,8 +92,8 @@ class CreateButton(tkinter.Button):
 			disabledforeground=config["disabledforeground"],
 			text=config["text"],
 			state=config["state"],
-			command=getattr(CommandsContainer, command)
-		)
+			command=lambda: getattr(
+				CommandsContainer, command)(root))
 
 		self._set_place(config)
 
