@@ -179,7 +179,7 @@
     "pady": 1,
     "wraplength": "...",
     "anchor": "center",
-    "font": "verdana 7"
+    "font": "verdana 8"
   },
   "mistakes_label": {
     "pos_x": 280,
@@ -207,7 +207,7 @@
     "pady": 1,
     "wraplength": "...",
     "anchor": "center",
-    "font": "verdana 7"
+    "font": "verdana 8"
   },
   "word_label": {
     "pos_x": 5,
