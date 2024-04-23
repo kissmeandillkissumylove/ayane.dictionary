@@ -1,7 +1,9 @@
 from injector import inject
 
+from app.config import database
 from app.modules.base_structures import BaseContainer
 from app.modules.config_validator import ConfigValidator
+from app.modules.file_readers import JsonFileReader
 from app.modules.logger import CustomLogger
 
 
@@ -496,3 +498,45 @@ class ConfigContainer(BaseContainer):
 				"set: _command_label", self._command_label)
 		else:
 			self._logger.log_warning("try: _command_label", config)
+
+
+class DictionaryContainer(BaseContainer):
+	"""contains dictionary."""
+
+	@inject
+	def __init__(
+			self,
+			logger: CustomLogger,
+			file_reader: JsonFileReader):
+		"""DictionaryContainer __init__."""
+		if not isinstance(logger, CustomLogger):
+			raise TypeError("wrong type for the logger.")
+		self._logger = logger
+		self._logger.log_debug("set: _logger", self._logger)
+
+		if not isinstance(file_reader, JsonFileReader):
+			raise TypeError("wrong type for the file reader.")
+		self._file_reader = file_reader
+		self._logger.log_debug("set: _file_reader", self._file_reader)
+
+		self._dictionary = None
+		self._logger.log_debug("set: _dictionary", self._dictionary)
+
+	def preload_dictionary(self, path=database):
+		"""load all the words."""
+		self._dictionary = self._file_reader.read_(path)
+		self._logger.log_debug("set: _dictionary", self._dictionary)
+
+		self._sort_by_priority()
+
+	def _sort_by_priority(self):
+		"""sorts all the words by priority."""
+		self._logger.log_debug("run: _sort_by_priority()")
+
+		self._sorted_dictionary = sorted(
+			self._dictionary.items(), key=lambda x: x[1][-1])
+
+	@property
+	def sorted_dictionary(self) -> list:
+		"""returns _sorted_dictionary."""
+		return self._sorted_dictionary
