@@ -12,7 +12,28 @@ class CommandsContainer(BaseFuncContainer):
 	def next_command(root: RootWindow):
 		"""the "next" button will randomly show the next word from the
 		dictionary."""
-		print("1")
+		if root.dictionary_container.sorted_dictionary:
+			root.show_button.configure(state="normal")
+			root.right_button.configure(state="normal")
+			root.wrong_button.configure(state="normal")
+			root.screen_word_label.configure(text="")
+
+			try:
+				root.screen_translation_label.configure(
+					text=root.dictionary_container.sorted_dictionary[
+						root.counter][1][3])
+
+				root.counter += 1
+				root.words_counter_label.configure(
+					text=str(root.counter) + "/" + str(len(
+						root.dictionary_container.sorted_dictionary)))
+			except IndexError:
+				root.show_button.configure(state="disabled")
+				root.next_button.configure(state="disabled")
+				root.right_button.configure(state="disabled")
+				root.wrong_button.configure(state="disabled")
+				root.screen_word_label.configure(text="")
+				root.screen_translation_label.configure(text="")
 
 	@staticmethod
 	def show_command(root: tkinter.Tk):
