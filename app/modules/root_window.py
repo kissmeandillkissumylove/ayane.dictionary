@@ -291,7 +291,7 @@ class RootWindow(BaseWindow):
 	@configuration_container.setter
 	def configuration_container(self, container: ConfigContainer):
 		"""sets new value for _configuration_container.
-		:param config: ConfigContainer object."""
+		:param container: ConfigContainer object."""
 		if isinstance(container, ConfigContainer):
 			self._configuration_container = container
 			self._logger.log_debug(
@@ -335,6 +335,118 @@ class RootWindow(BaseWindow):
 			"del: _injection_container",
 			self._injection_container)
 		del self._injection_container
+
+	@property
+	def screen_word_label(self):
+		return self._screen_word_label
+
+	@property
+	def screen_translation_label(self):
+		return self._screen_translation_label
+
+	@property
+	def next_button(self):
+		return self._next_button
+
+	@property
+	def show_button(self):
+		return self._show_button
+
+	@property
+	def right_button(self):
+		return self._right_button
+
+	@property
+	def wrong_button(self):
+		return self._wrong_button
+
+	@property
+	def again_button(self):
+		return self._again_button
+
+	@property
+	def add_button(self):
+		return self._add_button
+
+	@property
+	def find_button(self):
+		return self._find_button
+
+	@property
+	def edit_button(self):
+		return self._edit_button
+
+	@property
+	def remove_button(self):
+		return self._remove_button
+
+	@property
+	def save_button(self):
+		return self._save_button
+
+	@property
+	def words_label(self):
+		return self._words_label
+
+	@property
+	def words_counter_label(self):
+		return self._words_counter_label
+
+	@property
+	def mistakes_label(self):
+		return self._mistakes_label
+
+	@property
+	def mistakes_counter_label(self):
+		return self._mistakes_counter_label
+
+	@property
+	def word_label(self):
+		return self._word_label
+
+	@property
+	def word_text(self):
+		return self._word_text
+
+	@property
+	def transcription_label(self):
+		return self._transcription_label
+
+	@property
+	def transcription_text(self):
+		return self._transcription_text
+
+	@property
+	def part_of_speech_label(self):
+		return self._part_of_speech_label
+
+	@property
+	def part_of_speech_text(self):
+		return self._part_of_speech_text
+
+	@property
+	def usage_example_label(self):
+		return self._usage_example_label
+
+	@property
+	def usage_example_text(self):
+		return self._usage_example_text
+
+	@property
+	def translation_label(self):
+		return self._translation_label
+
+	@property
+	def translation_text(self):
+		return self._translation_text
+
+	@property
+	def result_label(self):
+		return self._result_label
+
+	@property
+	def command_label(self):
+		return self._command_label
 
 	def run(self):
 		"""launches a window."""
