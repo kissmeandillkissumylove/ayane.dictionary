@@ -35,6 +35,7 @@ class RootWindow(BaseWindow):
 
 		self._configuration_container = None
 		self._injection_container = None
+		self._counter = 0
 
 	def _setup_configuration(self, *args, **kwargs):
 		"""sets root window configuration."""
@@ -171,7 +172,8 @@ class RootWindow(BaseWindow):
 			self._words_counter_label.set_configuration(
 				self._configuration_container.words_counter_label)
 			self._words_counter_label.configure(
-				text="0/%s" % len(self._dictionary.sorted_dictionary))
+				text="%s/%s" % (
+					self._counter, len(self._dictionary.sorted_dictionary)))
 
 			self._mistakes_label = self.injection_container.get(
 				CreateLabel)
@@ -447,6 +449,18 @@ class RootWindow(BaseWindow):
 	@property
 	def command_label(self):
 		return self._command_label
+
+	@property
+	def dictionary_container(self):
+		return self._dictionary
+
+	@property
+	def counter(self):
+		return self._counter
+
+	@counter.setter
+	def counter(self, value: int):
+		self._counter = value
 
 	def run(self):
 		"""launches a window."""
