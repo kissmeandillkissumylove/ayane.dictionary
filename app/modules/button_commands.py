@@ -3,7 +3,7 @@
 from app.config import (
 	PREPARE_NEW_DICTIONARY, WORD_EXISTS, INDENT_MESSAGE,
 	BOTH_FIELDS_EMPTY, WORD_FIELD_EMPTY, TRANSL_FIELD_EMPTY,
-	WORD_ADDED)
+	WORD_ADDED, NO_SUCH_WORD)
 from app.modules.base_structures import BaseFuncContainer
 from app.modules.root_window import RootWindow
 
@@ -172,7 +172,23 @@ class CommandsContainer(BaseFuncContainer):
 	@staticmethod
 	def find_command(root: RootWindow):
 		"""finds the word and shows it in the fields."""
-		print("8")
+		word = root.word_text.get(1.0, "end").strip()
+
+		if word in root.dictionary_container.dictionary:
+			root.clear_all_the_fields()
+
+			word_data = root.dictionary_container.dictionary[word]
+			root.word_text.insert(1.0, word)
+			root.transcription_text.insert(1.0, word_data[0])
+			root.part_of_speech_text.insert(1.0, word_data[1])
+			root.usage_example_text.insert(1.0, word_data[2])
+			root.translation_text.insert(1.0, word_data[3])
+
+			root.command_label.configure(text="")
+
+		else:
+			root.clear_all_the_fields()
+			root.command_label.configure(text=NO_SUCH_WORD)
 
 	@staticmethod
 	def edit_command(root: RootWindow):
