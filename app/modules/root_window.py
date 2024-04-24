@@ -36,6 +36,7 @@ class RootWindow(BaseWindow):
 		self._configuration_container = None
 		self._injection_container = None
 		self._counter = 0
+		self._mistakes_counter = 0
 
 	def _setup_configuration(self, *args, **kwargs):
 		"""sets root window configuration."""
@@ -462,6 +463,15 @@ class RootWindow(BaseWindow):
 	@counter.setter
 	def counter(self, value: int):
 		self._counter = value
+
+	@property
+	def mistakes_counter(self):
+		return self._mistakes_counter
+
+	@mistakes_counter.setter
+	def mistakes_counter(self, value: int):
+		self._mistakes_counter = value
+
 
 	def run(self):
 		"""launches a window."""
