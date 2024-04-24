@@ -476,6 +476,13 @@ class RootWindow(BaseWindow):
 		self.counter = 0
 		self.mistakes_counter = 0
 
+	def clear_all_the_fields(self):
+		self.word_text.delete(1.0, "end")
+		self.transcription_text.delete(1.0, "end")
+		self.part_of_speech_text.delete(1.0, "end")
+		self.usage_example_text.delete(1.0, "end")
+		self.translation_text.delete(1.0, "end")
+
 	def run(self):
 		"""launches a window."""
 		self._dictionary.preload_dictionary()
