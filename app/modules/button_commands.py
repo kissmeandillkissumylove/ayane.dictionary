@@ -19,14 +19,19 @@ class CommandsContainer(BaseFuncContainer):
 			root.screen_word_label.configure(text="")
 
 			try:
-				root.screen_translation_label.configure(
-					text=root.dictionary_container.sorted_dictionary[
-						root.counter][1][3])
+				# TODO: try to fix indents.
+				text = "%s\n%s" % (
+					root.dictionary_container.sorted_dictionary[
+						root.counter][1][3],
+					root.dictionary_container.sorted_dictionary[
+						root.counter][1][1])
+				root.screen_translation_label.configure(text=text)
 
 				root.counter += 1
 				root.words_counter_label.configure(
 					text=str(root.counter) + "/" + str(len(
 						root.dictionary_container.sorted_dictionary)))
+
 			except IndexError:
 				root.show_button.configure(state="disabled")
 				root.next_button.configure(state="disabled")
