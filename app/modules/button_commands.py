@@ -243,7 +243,20 @@ class CommandsContainer(BaseFuncContainer):
 	@staticmethod
 	def remove_command(root: RootWindow):
 		"""removes word from a dictionary."""
-		print("10")
+		word = root.word_text.get(1.0, "end").strip()
+
+		if word in root.dictionary_container.dictionary:
+			del root.dictionary_container.dictionary[word]
+
+			root.clear_all_the_fields()
+			root.command_label.configure(text=REMOVED)
+
+		else:
+			root.clear_all_the_fields()
+			if word == "":
+				root.command_label.configure(text=WORD_FIELD_EMPTY)
+			else:
+				root.command_label.configure(text=NO_SUCH_WORD)
 
 	@staticmethod
 	def save_command(root: RootWindow):
