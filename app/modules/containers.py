@@ -1,3 +1,5 @@
+import json
+
 from injector import inject
 
 from app.config import database
@@ -541,6 +543,11 @@ class DictionaryContainer(BaseContainer):
 				self._dictionary.items(), key=lambda x: -x[1][-1])
 		else:
 			self._sorted_dictionary = None
+
+	def save_changes(self, path=database):
+		"""saves all the changes to a file."""
+		with open(path, mode="w", encoding="utf-8") as jsonfile:
+			json.dump(self._dictionary, jsonfile)
 
 	@property
 	def sorted_dictionary(self) -> list:
