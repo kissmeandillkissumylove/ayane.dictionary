@@ -3,7 +3,7 @@
 from app.config import (
 	PREPARE_NEW_DICTIONARY, WORD_EXISTS, INDENT_MESSAGE,
 	BOTH_FIELDS_EMPTY, WORD_FIELD_EMPTY, TRANSL_FIELD_EMPTY,
-	WORD_ADDED, NO_SUCH_WORD)
+	WORD_ADDED, NO_SUCH_WORD, EDITED)
 from app.modules.base_structures import BaseFuncContainer
 from app.modules.root_window import RootWindow
 
@@ -126,6 +126,7 @@ class CommandsContainer(BaseFuncContainer):
 		if "\n" in new_word:
 			root.clear_all_the_fields()
 			root.command_label.configure(text=INDENT_MESSAGE)
+			return
 
 		if new_word not in root.dictionary_container.dictionary:
 			new_transcription = root.transcription_text.get(
@@ -144,15 +145,19 @@ class CommandsContainer(BaseFuncContainer):
 					"\n" in new_translation):
 				root.clear_all_the_fields()
 				root.command_label.configure(text=INDENT_MESSAGE)
+				return
 
 			if len(new_word) <= 0 and len(new_translation) <= 0:
 				root.command_label.configure(text=BOTH_FIELDS_EMPTY)
+				return
 
 			elif (len(new_word)) <= 0:
 				root.command_label.configure(text=WORD_FIELD_EMPTY)
+				return
 
 			elif len(new_translation) <= 0:
 				root.command_label.configure(text=TRANSL_FIELD_EMPTY)
+				return
 
 			else:
 				root.dictionary_container.dictionary[new_word] = [
@@ -193,7 +198,47 @@ class CommandsContainer(BaseFuncContainer):
 	@staticmethod
 	def edit_command(root: RootWindow):
 		"""edits word's parameters."""
-		print("9")
+		word = root.word_text.get(1.0, "end").strip()
+
+		if word in root.dictionary_container.dictionary:
+			new_transcription = root.transcription_text.get(
+				1.0, "end").strip()
+			new_part_of_speech = root.part_of_speech_text.get(
+				1.0, "end").strip()
+			new_usage_example = root.usage_example_text.get(
+				1.0, "end").strip()
+			new_translation = root.translation_text.get(
+				1.0, "end").strip()
+
+			if (
+					"\n" in new_transcription) or (
+					"\n" in new_part_of_speech) or (
+					"\n" in new_usage_example) or (
+					"\n" in new_translation):
+				root.clear_all_the_fields()
+				root.command_label.configure(text=INDENT_MESSAGE)
+				return
+
+			root.dictionary_container.dictionary[word] = [
+				(new_transcription if new_transcription != "" else (
+					root.dictionary_container.dictionary[word][0])),
+				(new_part_of_speech if new_part_of_speech != "" else (
+					root.dictionary_container.dictionary[word][1])),
+				(new_usage_example if new_usage_example != "" else (
+					root.dictionary_container.dictionary[word][2])),
+				(new_translation if new_translation != "" else (
+					root.dictionary_container.dictionary[word][3])),
+				(root.dictionary_container.dictionary[word][4])]
+
+			root.clear_all_the_fields()
+			root.command_label.configure(text=EDITED)
+
+		else:
+			root.clear_all_the_fields()
+			if word == "":
+				root.command_label.configure(text=WORD_FIELD_EMPTY)
+			else:
+				root.command_label.configure(text=NO_SUCH_WORD)
 
 	@staticmethod
 	def remove_command(root: RootWindow):
