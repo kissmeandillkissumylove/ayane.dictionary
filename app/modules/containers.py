@@ -529,13 +529,16 @@ class DictionaryContainer(BaseContainer):
 
 		self._sort_by_priority()
 
+	def new_revise_cycle(self):
+		self._sort_by_priority()
+
 	def _sort_by_priority(self):
 		"""sorts all the words by priority."""
 		self._logger.log_debug("run: _sort_by_priority()")
 
 		if self._dictionary is not None:
 			self._sorted_dictionary = sorted(
-				self._dictionary.items(), key=lambda x: x[1][-1])
+				self._dictionary.items(), key=lambda x: -x[1][-1])
 		else:
 			self._sorted_dictionary = None
 
