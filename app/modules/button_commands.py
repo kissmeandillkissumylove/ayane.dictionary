@@ -51,7 +51,18 @@ class CommandsContainer(BaseFuncContainer):
 	@staticmethod
 	def show_command(root: RootWindow):
 		"""displays the word and transcription (if available)."""
+		root.show_button.configure(state="disabled")
 
+		# TODO: try to fix indents.
+		text = """%s\n%s\n%s""" % (
+			root.dictionary_container.sorted_dictionary[
+				root.counter - 1][0],
+			root.dictionary_container.sorted_dictionary[
+				root.counter - 1][1][0],
+			root.dictionary_container.sorted_dictionary[
+				root.counter - 1][1][2])
+
+		root.screen_word_label.configure(text=text)
 
 	@staticmethod
 	def right_command(root: tkinter.Tk):
