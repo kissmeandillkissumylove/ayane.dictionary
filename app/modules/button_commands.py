@@ -3,7 +3,7 @@
 from app.config import (
 	PREPARE_NEW_DICTIONARY, WORD_EXISTS, INDENT_MESSAGE,
 	BOTH_FIELDS_EMPTY, WORD_FIELD_EMPTY, TRANSL_FIELD_EMPTY,
-	WORD_ADDED, NO_SUCH_WORD, EDITED)
+	WORD_ADDED, NO_SUCH_WORD, EDITED, REMOVED, SAVED)
 from app.modules.base_structures import BaseFuncContainer
 from app.modules.root_window import RootWindow
 
@@ -261,4 +261,9 @@ class CommandsContainer(BaseFuncContainer):
 	@staticmethod
 	def save_command(root: RootWindow):
 		"""saves all the changes in a dictionary to the file."""
-		print("6")
+		root.save_button.configure(state="disabled")
+
+		root.dictionary_container.save_changes()
+
+		root.command_label.configure(text=SAVED)
+		root.save_button.configure(state="normal")
