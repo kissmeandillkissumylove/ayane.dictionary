@@ -1,6 +1,6 @@
 """contains button commands container."""
-import tkinter
 
+from app.config import PREPARE_NEW_DICTIONARY
 from app.modules.base_structures import BaseFuncContainer
 from app.modules.root_window import RootWindow
 
@@ -94,7 +94,26 @@ class CommandsContainer(BaseFuncContainer):
 	@staticmethod
 	def again_command(root: RootWindow):
 		"""starts a new cycle of repeating words."""
-		print("5")
+		root.again_button.configure(state="disabled")
+		root.screen_word_label.configure(text="")
+		root.screen_translation_label.configure(text="")
+		root.show_button.configure(state="disabled")
+		root.right_button.configure(state="disabled")
+		root.wrong_button.configure(state="disabled")
+		root.next_button.configure(state="normal")
+
+		if root.dictionary_container.dictionary is not None:
+			root.dictionary_container.new_revise_cycle()
+			root.reset_all_the_counters()
+
+			root.screen_translation_label.configure(
+				text=PREPARE_NEW_DICTIONARY)
+
+			root.words_counter_label.configure(text="%s/%s" % (
+				root.counter, len(root.dictionary_container.dictionary)))
+			root.mistakes_counter_label.configure(text=0)
+
+		root.again_button.configure(state="normal")
 
 	@staticmethod
 	def add_command(root: RootWindow):
