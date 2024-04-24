@@ -472,7 +472,7 @@ class RootWindow(BaseWindow):
 	def mistakes_counter(self, value: int):
 		self._mistakes_counter = value
 
-	def reset_all_counters(self):
+	def reset_all_the_counters(self):
 		self.counter = 0
 		self.mistakes_counter = 0
 
