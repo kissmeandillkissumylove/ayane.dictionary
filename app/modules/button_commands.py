@@ -65,45 +65,45 @@ class CommandsContainer(BaseFuncContainer):
 		root.screen_word_label.configure(text=text)
 
 	@staticmethod
-	def right_command(root: tkinter.Tk):
+	def right_command(root: RootWindow):
 		"""press the button if the answer is correct. the button lowers the
 		priority of displaying the current word next time, because the user
 		knows this word well."""
 		print("3")
 
 	@staticmethod
-	def wrong_command(root: tkinter.Tk):
+	def wrong_command(root: RootWindow):
 		"""press the button if the answer is not correct. the button increases
 		the priority of displaying the current word next time, because the
 		user knows this word poorly."""
 		print("4")
 
 	@staticmethod
-	def again_command(root: tkinter.Tk):
+	def again_command(root: RootWindow):
 		"""starts a new cycle of repeating words."""
 		print("5")
 
 	@staticmethod
-	def add_command(root: tkinter.Tk):
+	def add_command(root: RootWindow):
 		"""adds a new word to the dictionary."""
 		print("7")
 
 	@staticmethod
-	def find_command(root: tkinter.Tk):
+	def find_command(root: RootWindow):
 		"""finds the word and shows it in the fields."""
 		print("8")
 
 	@staticmethod
-	def edit_command(root: tkinter.Tk):
+	def edit_command(root: RootWindow):
 		"""edits word's parameters."""
 		print("9")
 
 	@staticmethod
-	def remove_command(root: tkinter.Tk):
+	def remove_command(root: RootWindow):
 		"""removes word from a dictionary."""
 		print("10")
 
 	@staticmethod
-	def save_command(root: tkinter.Tk):
+	def save_command(root: RootWindow):
 		"""saves all the changes in a dictionary to the file."""
 		print("6")
