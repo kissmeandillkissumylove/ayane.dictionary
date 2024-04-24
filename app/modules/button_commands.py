@@ -23,11 +23,13 @@ class CommandsContainer(BaseFuncContainer):
 
 			try:
 				# TODO: try to fix indents.
-				text = "%s\n%s" % (
+				text = "%s\n%s\n%s" % (
 					root.dictionary_container.sorted_dictionary[
 						root.counter][1][3],
 					root.dictionary_container.sorted_dictionary[
-						root.counter][1][1])
+						root.counter][1][1],
+					root.dictionary_container.sorted_dictionary[
+						root.counter][1][4])
 				root.screen_translation_label.configure(text=text)
 
 				root.counter += 1
