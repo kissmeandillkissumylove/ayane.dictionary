@@ -1,6 +1,9 @@
 """contains button commands container."""
 
-from app.config import PREPARE_NEW_DICTIONARY
+from app.config import (
+	PREPARE_NEW_DICTIONARY, WORD_EXISTS, INDENT_MESSAGE,
+	BOTH_FIELDS_EMPTY, WORD_FIELD_EMPTY, TRANSL_FIELD_EMPTY,
+	WORD_ADDED)
 from app.modules.base_structures import BaseFuncContainer
 from app.modules.root_window import RootWindow
 
@@ -118,7 +121,53 @@ class CommandsContainer(BaseFuncContainer):
 	@staticmethod
 	def add_command(root: RootWindow):
 		"""adds a new word to the dictionary."""
-		print("7")
+		new_word = root.word_text.get(1.0, "end").strip()
+
+		if "\n" in new_word:
+			root.clear_all_the_fields()
+			root.command_label.configure(text=INDENT_MESSAGE)
+
+		if new_word not in root.dictionary_container.dictionary:
+			new_transcription = root.transcription_text.get(
+				1.0, "end").strip()
+			new_part_of_speech = root.part_of_speech_text.get(
+				1.0, "end").strip()
+			new_usage_example = root.usage_example_text.get(
+				1.0, "end").strip()
+			new_translation = root.translation_text.get(
+				1.0, "end").strip()
+
+			if (
+					"\n" in new_transcription) or (
+					"\n" in new_part_of_speech) or (
+					"\n" in new_usage_example) or (
+					"\n" in new_translation):
+				root.clear_all_the_fields()
+				root.command_label.configure(text=INDENT_MESSAGE)
+
+			if len(new_word) <= 0 and len(new_translation) <= 0:
+				root.command_label.configure(text=BOTH_FIELDS_EMPTY)
+
+			elif (len(new_word)) <= 0:
+				root.command_label.configure(text=WORD_FIELD_EMPTY)
+
+			elif len(new_translation) <= 0:
+				root.command_label.configure(text=TRANSL_FIELD_EMPTY)
+
+			else:
+				root.dictionary_container.dictionary[new_word] = [
+					new_transcription,
+					new_part_of_speech,
+					new_usage_example,
+					new_translation,
+					0]
+
+				root.clear_all_the_fields()
+				root.command_label.configure(text=WORD_ADDED)
+
+		else:
+			root.clear_all_the_fields()
+			root.command_label.configure(text=WORD_EXISTS)
 
 	@staticmethod
 	def find_command(root: RootWindow):
