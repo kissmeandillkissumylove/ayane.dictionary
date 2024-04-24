@@ -69,14 +69,27 @@ class CommandsContainer(BaseFuncContainer):
 		"""press the button if the answer is correct. the button lowers the
 		priority of displaying the current word next time, because the user
 		knows this word well."""
-		print("3")
+		root.right_button.configure(state="disabled")
+		root.wrong_button.configure(state="disabled")
+
+		key = root.dictionary_container.sorted_dictionary[
+			root.counter - 1][0]
+		root.dictionary_container.dictionary[key][4] -= 1
 
 	@staticmethod
 	def wrong_command(root: RootWindow):
 		"""press the button if the answer is not correct. the button increases
 		the priority of displaying the current word next time, because the
 		user knows this word poorly."""
-		print("4")
+		root.right_button.configure(state="disabled")
+		root.wrong_button.configure(state="disabled")
+
+		root.mistakes_counter += 1
+		root.mistakes_counter_label.configure(text=root.mistakes_counter)
+
+		key = root.dictionary_container.sorted_dictionary[
+			root.counter - 1][0]
+		root.dictionary_container.dictionary[key][4] += 1
 
 	@staticmethod
 	def again_command(root: RootWindow):
