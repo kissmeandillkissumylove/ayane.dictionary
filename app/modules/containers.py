@@ -533,10 +533,18 @@ class DictionaryContainer(BaseContainer):
 		"""sorts all the words by priority."""
 		self._logger.log_debug("run: _sort_by_priority()")
 
-		self._sorted_dictionary = sorted(
-			self._dictionary.items(), key=lambda x: x[1][-1])
+		if self._dictionary is not None:
+			self._sorted_dictionary = sorted(
+				self._dictionary.items(), key=lambda x: x[1][-1])
+		else:
+			self._sorted_dictionary = None
 
 	@property
 	def sorted_dictionary(self) -> list:
 		"""returns _sorted_dictionary."""
 		return self._sorted_dictionary
+
+	@property
+	def dictionary(self):
+		"""returns _dictionary."""
+		return self._dictionary

@@ -35,10 +35,18 @@ class CommandsContainer(BaseFuncContainer):
 				root.screen_word_label.configure(text="")
 				root.screen_translation_label.configure(text="")
 
+		else:
+			root.show_button.configure(state="disabled")
+			root.next_button.configure(state="disabled")
+			root.right_button.configure(state="disabled")
+			root.wrong_button.configure(state="disabled")
+			root.screen_word_label.configure(text="")
+			root.screen_translation_label.configure(text="")
+
 	@staticmethod
-	def show_command(root: tkinter.Tk):
+	def show_command(root: RootWindow):
 		"""displays the word and transcription (if available)."""
-		print("2")
+
 
 	@staticmethod
 	def right_command(root: tkinter.Tk):

@@ -173,7 +173,8 @@ class RootWindow(BaseWindow):
 				self._configuration_container.words_counter_label)
 			self._words_counter_label.configure(
 				text="%s/%s" % (
-					self._counter, len(self._dictionary.sorted_dictionary)))
+					self._counter, len(self._dictionary.sorted_dictionary) if (
+							self._dictionary.sorted_dictionary is not None) else 0))
 
 			self._mistakes_label = self.injection_container.get(
 				CreateLabel)
