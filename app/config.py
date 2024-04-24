@@ -22,4 +22,11 @@ logs = str(
 LOG_SIZE_LIMIT = 1 * 1024 * 1024
 NUM_LOG_FILES = 10
 MAX_VALUE_LENGTH = 50
-PREPARE_NEW_DICTIONARY = "\ta new list of words has been prepared."
+PREPARE_NEW_DICTIONARY = (
+	"\ta new list of words has been prepared.")
+WORD_EXISTS = "this word is already in the dictionary."
+INDENT_MESSAGE = "don't use indentation in the fields. (enter, '\\n')"
+BOTH_FIELDS_EMPTY = "the word and translation fields are too short."
+WORD_FIELD_EMPTY = "the word field is too short."
+TRANSL_FIELD_EMPTY = "the translation field is too short."
+WORD_ADDED = "the new word added successfully."
