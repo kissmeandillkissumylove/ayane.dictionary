@@ -527,6 +527,9 @@ class DictionaryContainer(BaseContainer):
 	def preload_dictionary(self, path=database):
 		"""load all the words."""
 		self._dictionary = self._file_reader.read_(path)
+		if self._dictionary is None:
+			self._dictionary = {}
+
 		self._logger.log_debug("set: _dictionary", self._dictionary)
 
 		self._sort_by_priority()
