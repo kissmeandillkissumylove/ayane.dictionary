@@ -1,4 +1,6 @@
 """contains the main application window."""
+from tkinter import TclError
+
 from injector import singleton, inject, Injector
 
 from app.modules.base_structures import BaseWindow
@@ -55,9 +57,12 @@ class RootWindow(BaseWindow):
 			self.title(root_config["title"])
 			self._logger.log_debug("set: title", root_config["title"])
 
-			self.iconbitmap(root_config["icon"])
-			self._logger.log_debug(
-				"set: iconbitmap", root_config["icon"])
+			try:
+				self.iconbitmap(root_config["icon"])
+				self._logger.log_debug(
+					"set: iconbitmap", root_config["icon"])
+			except TclError as error:
+				self._logger.log_traceback("can't load icon.", error)
 
 			self.configure(background=root_config["background"])
 			self._logger.log_debug(
